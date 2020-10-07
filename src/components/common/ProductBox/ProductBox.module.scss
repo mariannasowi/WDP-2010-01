@@ -75,13 +75,15 @@
     justify-content: space-between;
     align-items: center;
   }
+
   .heart {
-    color: red;
+    color: $favourite-color;
   }
 
-  .compare{
-    color: blue;
+  .compare {
+    color: $compare-color;
   }
+
   img {
     object-fit: cover;
     width: 300px;
@@ -91,6 +93,6 @@
   .oldPrice {
     font-size: 20px;
     text-decoration: line-through;
-    color: $old-price
+    color: $old-price;
   }
 }
