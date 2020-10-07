@@ -26,7 +26,6 @@
     }
 
     select {
-      @extend %hover-effect;
       -webkit-appearance: none;
       border: 0;
       -moz-appearance: none;
@@ -38,6 +37,7 @@
       position: relative;
       z-index: 1;
       &:hover {
+        @extend %hover-effect;
         color: $primary;
       }
     }
