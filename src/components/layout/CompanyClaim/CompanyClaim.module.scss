@@ -27,6 +27,7 @@
 
   .cart {
     .cartBox {
+      @extend %hover-effect;
       display: inline-block;
       position: relative;
       color: #ffffff;
