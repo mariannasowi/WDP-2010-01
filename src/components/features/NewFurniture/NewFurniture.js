@@ -20,11 +20,24 @@ class NewFurniture extends React.Component {
   }
 
   render() {
-    const { categories, products } = this.props;
+    const { categories, products, viewport } = this.props;
     const { activeCategory, activePage } = this.state;
 
+    let delta;
+
+    switch (viewport) {
+      case 'tablet':
+        delta = 2;
+        break;
+      case 'mobile':
+        delta = 4;
+        break;
+      default:
+        delta = 1;
+    }
+
     const categoryProducts = products.filter(item => item.category === activeCategory);
-    const pagesCount = Math.ceil(categoryProducts.length / 8);
+    const pagesCount = Math.ceil(categoryProducts.length / (12 / delta));
 
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
@@ -68,11 +81,13 @@ class NewFurniture extends React.Component {
             </div>
           </div>
           <div className='row'>
-            {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
-              <div key={item.id} className='col-3'>
-                <ProductBox {...item} />
-              </div>
-            ))}
+            {categoryProducts
+              .slice((activePage * 8) / delta, ((activePage + 1) * 8) / delta)
+              .map(item => (
+                <div key={item.id} className={`col-${3 * delta}`}>
+                  <ProductBox {...item} />
+                </div>
+              ))}
           </div>
         </div>
         <ProductsCompare />
@@ -82,6 +97,7 @@ class NewFurniture extends React.Component {
 }
 
 NewFurniture.propTypes = {
+  viewport: PropTypes.string.isRequired,
   children: PropTypes.node,
   categories: PropTypes.arrayOf(
     PropTypes.shape({

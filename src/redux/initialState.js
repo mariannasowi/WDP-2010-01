@@ -283,6 +283,7 @@ const initialState = {
   compare: {
     products: [],
   },
+  viewport: 'desktop',
 };
 
 export default initialState;
