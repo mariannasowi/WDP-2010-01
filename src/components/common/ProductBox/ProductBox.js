@@ -43,22 +43,6 @@ const ProductBox = ({
   };
   const addToFavouriteHandler = event => {
     event.preventDefault();
-    const isProductAddedToFavourite =
-      favourite.products &&
-      favourite.products.reduce(
-        (accumulator, product) => accumulator || product.id === id,
-        false
-      );
-    // const maxProductsToCompare = 4;
-    // const isProductAddedToCompare =
-    //   compare.products &&
-    //   compare.products.reduce(
-    //     (accumulator, product) => accumulator || product.id === id,
-    //     false
-    //   );
-    if (isProductAddedToFavourite !== true) {
-      setFavourite({ id, image });
-    }
   };
 
   return (

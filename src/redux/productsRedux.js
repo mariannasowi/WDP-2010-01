@@ -24,7 +24,7 @@ export default function reducer(statePart = [], action = {}) {
     case SET_FAVOURITE:
       return {
         ...statePart,
-        favourite: [...statePart.favourite, action.payload],
+        products: [...statePart.products, action.payload],
       };
     default:
       return statePart;
