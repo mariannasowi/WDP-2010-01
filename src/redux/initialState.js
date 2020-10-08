@@ -12,6 +12,7 @@ const initialState = {
       name: 'Aenean Ru Bristique 1',
       category: 'bed',
       price: 30,
+      oldPrice: '$40',
       stars: 2,
       promo: 'sale',
       image:
@@ -23,6 +24,7 @@ const initialState = {
       name: 'Aenean Ru Bristique 2',
       category: 'bed',
       price: 30,
+      oldPrice: '',
       stars: 2,
       promo: 'sale',
       image:
@@ -45,6 +47,7 @@ const initialState = {
       name: 'Aenean Ru Bristique 4',
       category: 'bed',
       price: 30,
+      oldPrice: '$40',
       stars: 2,
       promo: 'sale',
       image:
@@ -67,6 +70,7 @@ const initialState = {
       name: 'Aenean Ru Bristique 6',
       category: 'bed',
       price: 30,
+      oldPrice: '$40',
       stars: 2,
       promo: 'sale',
       image:
@@ -100,6 +104,7 @@ const initialState = {
       name: 'Aenean Ru Bristique 9',
       category: 'bed',
       price: 30,
+      oldPrice: '$40',
       stars: 2,
       promo: 'sale',
       image:
@@ -133,6 +138,7 @@ const initialState = {
       name: 'Aenean Ru Bristique 12',
       category: 'bed',
       price: 30,
+      oldPrice: '$40',
       stars: 2,
       promo: 'sale',
       image:
@@ -175,6 +181,7 @@ const initialState = {
       name: 'Aenean Ru Bristique 16',
       category: 'bed',
       price: 30,
+      oldPrice: '$40',
       stars: 2,
       promo: 'sale',
       image:
@@ -207,6 +214,7 @@ const initialState = {
       name: 'Aenean Ru Bristique 19',
       category: 'bed',
       price: 30,
+      oldPrice: '$40',
       stars: 2,
       promo: 'sale',
       image: 'https://5.imimg.com/data5/NC/HV/MY-37555897/double-bed-500x500.jpg',
@@ -228,6 +236,7 @@ const initialState = {
       name: 'Aenean Ru Bristique 21',
       category: 'bed',
       price: 30,
+      oldPrice: '$40',
       stars: 2,
       promo: 'sale',
       image:
