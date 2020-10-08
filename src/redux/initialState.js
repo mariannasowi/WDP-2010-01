@@ -283,6 +283,7 @@ const initialState = {
   compare: {
     products: [],
   },
+  favourite: [],
 };
 
 export default initialState;

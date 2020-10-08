@@ -22,6 +22,8 @@ const ProductBox = ({
   setCompare,
   count,
   compare,
+  favourite,
+  setFavourite,
 }) => {
   const compareHandler = event => {
     event.preventDefault();
@@ -37,6 +39,25 @@ const ProductBox = ({
       count < maxProductsToCompare
         ? setCompare({ id, image })
         : alert(`You can compare maximum of ${maxProductsToCompare} products!`);
+    }
+  };
+  const addToFavouriteHandler = event => {
+    event.preventDefault();
+    const isProductAddedToFavourite =
+      favourite.products &&
+      favourite.products.reduce(
+        (accumulator, product) => accumulator || product.id === id,
+        false
+      );
+    // const maxProductsToCompare = 4;
+    // const isProductAddedToCompare =
+    //   compare.products &&
+    //   compare.products.reduce(
+    //     (accumulator, product) => accumulator || product.id === id,
+    //     false
+    //   );
+    if (isProductAddedToFavourite !== true) {
+      setFavourite({ id, image });
     }
   };
 
@@ -69,7 +90,7 @@ const ProductBox = ({
       <div className={styles.line}></div>
       <div className={styles.actions}>
         <div className={styles.outlines}>
-          <Button variant='outline'>
+          <Button variant='outline' onClick={addToFavouriteHandler}>
             <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
           </Button>
           <Button variant='outline' onClick={compareHandler}>
@@ -99,6 +120,8 @@ ProductBox.propTypes = {
   setCompare: PropTypes.func.isRequired,
   count: PropTypes.number.isRequired,
   compare: PropTypes.object.isRequired,
+  favourite: PropTypes.object.isRequired,
+  setFavourite: PropTypes.func.isRequired,
 };
 
 export default ProductBox;
