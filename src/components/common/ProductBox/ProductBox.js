@@ -41,22 +41,17 @@ const ProductBox = ({ name, image, price, oldPrice, promo, stars, heart, compare
     <div className={styles.actions}>
       <div className={styles.outlines}>
         <Button variant='outline'>
-          {heart ? (
-            <FontAwesomeIcon icon={faHeart} className={styles.heart}>
-              Favorite
-            </FontAwesomeIcon>
-          ) : (
-            <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
-          )}
+          <FontAwesomeIcon icon={faHeart} className={heart ? styles.heart : ''}>
+            Favorite
+          </FontAwesomeIcon>
         </Button>
         <Button variant='outline'>
-          {compare ? (
-            <FontAwesomeIcon icon={faExchangeAlt} className={styles.compare}>
-              Add to compare
-            </FontAwesomeIcon>
-          ) : (
-            <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
-          )}
+          <FontAwesomeIcon
+            icon={faExchangeAlt}
+            className={compare ? styles.compare : ''}
+          >
+            Add to compare
+          </FontAwesomeIcon>
         </Button>
       </div>
       <div className={styles.oldPrice}>{oldPrice}</div>
