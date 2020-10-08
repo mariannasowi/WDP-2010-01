@@ -74,11 +74,7 @@ const ProductBox = ({
             <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
           </Button>
         </div>
-        <div className={styles.price}>
-          <Button noHover variant='small'>
-            Old price $ {oldPrice}
-          </Button>
-        </div>
+        <div className={styles.oldPrice}>{oldPrice}</div>
         <div className={styles.price}>
           <Button noHover variant='small'>
             $ {price}
@@ -94,7 +90,7 @@ ProductBox.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string,
   price: PropTypes.number,
-  oldPrice: PropTypes.number,
+  oldPrice: PropTypes.string,
   promo: PropTypes.string,
   stars: PropTypes.number,
   image: PropTypes.string,
