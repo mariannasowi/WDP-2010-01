@@ -25,6 +25,7 @@
     }
 
     a {
+      @extend %hover-effect;
       color: $text-color;
       text-transform: uppercase;
       font-size: 12px;
@@ -38,7 +39,6 @@
 
       &:hover,
       &.active {
-        @extend %hover-effect;
         background-color: $primary;
         color: #ffffff;
         border-color: $primary;

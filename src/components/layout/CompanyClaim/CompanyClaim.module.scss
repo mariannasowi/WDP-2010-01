@@ -27,6 +27,7 @@
 
   .cart {
     .cartBox {
+      @extend %hover-effect;
       display: inline-block;
       position: relative;
       color: #ffffff;
@@ -64,7 +65,6 @@
       }
 
       &:hover {
-        @extend %hover-effect;
         .cartIcon {
           background-color: lighten($primary, 10%);
         }

@@ -43,6 +43,7 @@
           font-weight: 600;
 
           a {
+            @extend %hover-effect;
             color: rgb(42, 42, 42);
             position: relative;
             text-decoration: none;
@@ -51,7 +52,6 @@
 
             &.active,
             &:hover {
-              @extend %hover-effect;
               &::before {
                 content: "";
                 position: absolute;
@@ -83,6 +83,7 @@
           margin-left: 0.5rem;
 
           a {
+            @extend %hover-effect;
             display: block;
             width: 13px;
             height: 13px;
@@ -92,7 +93,6 @@
 
             &.active,
             &:hover {
-              @extend %hover-effect;
               background-color: $primary;
             }
           }
