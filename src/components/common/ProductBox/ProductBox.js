@@ -22,6 +22,8 @@ const ProductBox = ({
   setCompare,
   count,
   compare,
+  heart,
+  addCompare,
 }) => {
   const compareHandler = event => {
     event.preventDefault();
@@ -70,10 +72,17 @@ const ProductBox = ({
       <div className={styles.actions}>
         <div className={styles.outlines}>
           <Button variant='outline'>
-            <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
+            <FontAwesomeIcon icon={faHeart} className={heart ? styles.heart : ''}>
+              Favorite
+            </FontAwesomeIcon>
           </Button>
           <Button variant='outline' onClick={compareHandler}>
-            <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
+            <FontAwesomeIcon
+              icon={faExchangeAlt}
+              className={addCompare ? styles.addCompare : ''}
+            >
+              Add to compare
+            </FontAwesomeIcon>
           </Button>
         </div>
         <div className={styles.oldPrice}>{oldPrice}</div>
@@ -95,6 +104,8 @@ ProductBox.propTypes = {
   oldPrice: PropTypes.string,
   promo: PropTypes.string,
   stars: PropTypes.number,
+  heart: PropTypes.bool,
+  addCompare: PropTypes.bool,
   image: PropTypes.string,
   setCompare: PropTypes.func.isRequired,
   count: PropTypes.number.isRequired,
