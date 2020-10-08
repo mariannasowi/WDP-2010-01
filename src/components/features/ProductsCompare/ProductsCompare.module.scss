@@ -16,7 +16,7 @@
     text-align: center;
     text-transform: uppercase;
     padding: 25px;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid $line-color;
   }
 
 }
@@ -70,7 +70,7 @@
   transform: translateY(40px);
 
   svg {
-    opacity: 1 !important;
+    opacity: 1;
   }
 }
 

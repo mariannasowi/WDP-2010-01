@@ -6,13 +6,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Button from '../../common/Button/Button';
 
 const ProductsCompare = ({ compare, unsetCompare }) => {
-  const products = compare.products;
-
+  const products = compare && compare.products;
   const unsetHandler = id => {
     unsetCompare(id);
   };
-
-  if (products.length > 0) {
+  if (products && products.length > 0) {
     return (
       <div className={styles.container}>
         <h3>Product comparison</h3>
@@ -48,9 +46,9 @@ const ProductsCompare = ({ compare, unsetCompare }) => {
 };
 
 ProductsCompare.propTypes = {
-  compare: PropTypes.object,
-  unsetCompare: PropTypes.func,
-  products: PropTypes.array,
+  compare: PropTypes.object.isRequired,
+  unsetCompare: PropTypes.func.isRequired,
+  products: PropTypes.array.isRequired,
 };
 
 export default ProductsCompare;
