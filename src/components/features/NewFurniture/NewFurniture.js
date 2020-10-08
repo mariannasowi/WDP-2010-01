@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBoxContainer';
 import ProductsCompare from '../ProductsCompare/ProductsCompareContainer';
+import SwipeComponent from '../../common/SwipeComponent/SwipeComponent';
 
 class NewFurniture extends React.Component {
   state = {
@@ -12,17 +12,42 @@ class NewFurniture extends React.Component {
   };
 
   handlePageChange(newPage) {
-    this.setState({ activePage: newPage });
+    this.setState({ fade: true });
+    setTimeout(
+      () => this.setState({ activePage: newPage, fade: false, manualPageChange: true }),
+      100
+    );
   }
 
   handleCategoryChange(newCategory) {
-    this.setState({ activeCategory: newCategory });
+    this.setState({ fade: true });
+    setTimeout(
+      () => this.setState({ activeCategory: newCategory, fade: false, activePage: 0 }),
+      100
+    );
   }
+
+  handleLeftAction = () => {
+    const { activePage, manualPageChange } = this.state;
+    if (manualPageChange) {
+      this.setState({ manualPageChange: false });
+    } else {
+      this.setState({ activePage: activePage + 1 });
+    }
+  };
+
+  handleRightAction = () => {
+    const { activePage, manualPageChange } = this.state;
+    if (manualPageChange) {
+      this.setState({ manualPageChange: false });
+    } else if (activePage > 0) {
+      this.setState({ activePage: activePage - 1 });
+    }
+  };
 
   render() {
     const { categories, products } = this.props;
     const { activeCategory, activePage } = this.state;
-
     const categoryProducts = products.filter(item => item.category === activeCategory);
     const pagesCount = Math.ceil(categoryProducts.length / 8);
 
@@ -40,6 +65,19 @@ class NewFurniture extends React.Component {
       );
     }
 
+    const swipeContent = [];
+    for (let page = 0; page < pagesCount; page++) {
+      swipeContent.push(
+        <div className='row'>
+          {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
+            <div key={item.id} className='col-3'>
+              <ProductBox {...item} />
+            </div>
+          ))}
+        </div>
+      );
+    }
+
     return (
       <div className={styles.root}>
         <div className='container'>
@@ -48,11 +86,12 @@ class NewFurniture extends React.Component {
               <div className={'col-auto ' + styles.heading}>
                 <h3>New furniture</h3>
               </div>
-              <div className={'col ' + styles.menu}>
+              <div className={'col-12 col-sm ' + styles.menu}>
                 <ul>
                   {categories.map(item => (
                     <li key={item.id}>
                       <a
+                        href='/#'
                         className={item.id === activeCategory && styles.active}
                         onClick={() => this.handleCategoryChange(item.id)}
                       >
@@ -62,18 +101,18 @@ class NewFurniture extends React.Component {
                   ))}
                 </ul>
               </div>
-              <div className={'col-auto ' + styles.dots}>
+              <div className={'col-12 col-lg-auto ' + styles.dots}>
                 <ul>{dots}</ul>
               </div>
             </div>
           </div>
-          <div className='row'>
-            {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
-              <div key={item.id} className='col-3'>
-                <ProductBox {...item} />
-              </div>
-            ))}
-          </div>
+          <SwipeComponent
+            activePage={this.state.activePage}
+            rightAction={this.handleRightAction}
+            leftAction={this.handleLeftAction}
+          >
+            {swipeContent}
+          </SwipeComponent>
         </div>
         <ProductsCompare />
       </div>
