@@ -12,8 +12,16 @@ $text-color: #2a2a2a;
 
 $form-border-color: #292929;
 
+$line-color: #000;
+
 $old-price: #ff0000;
 
 $favourite-color: #ff0000;
 
 $compare-color: #228B22;
+
+$transition: all 0.25s;
+
+%hover-effect {
+    transition: $transition;
+}
