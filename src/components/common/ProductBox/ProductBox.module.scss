@@ -31,6 +31,7 @@
     .buttons {
       display: flex;
       justify-content: space-between;
+      visibility: hidden;
     }
   }
 
@@ -82,9 +83,18 @@
     height: 200px;
   }
 
+  &:hover {
+    .buttons {
+      visibility: visible;
+    }
+    .price > div {
+      background-color: $primary;
+    }
+  }
+
   .oldPrice {
     font-size: 20px;
     text-decoration: line-through;
-    color: $old-price
+    color: $old-price;
   }
 }
