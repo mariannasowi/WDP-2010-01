@@ -7,9 +7,7 @@ import Button from '../../common/Button/Button';
 
 const ProductsCompare = ({ compare, unsetCompare }) => {
   const products = compare && compare.products;
-  const unsetHandler = id => {
-    unsetCompare(id);
-  };
+
   if (products && products.length > 0) {
     return (
       <div className={styles.container}>
@@ -20,7 +18,7 @@ const ProductsCompare = ({ compare, unsetCompare }) => {
               <div
                 className={styles.thumb}
                 key={product.id}
-                onClick={() => unsetHandler(product.id)}
+                onClick={() => unsetCompare(product.id)}
               >
                 <div className={styles.close}>
                   <FontAwesomeIcon icon={faWindowClose}></FontAwesomeIcon>

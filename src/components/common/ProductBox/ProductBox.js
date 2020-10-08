@@ -26,10 +26,12 @@ const ProductBox = ({
   const compareHandler = event => {
     event.preventDefault();
     const maxProductsToCompare = 4;
-    const isProductAddedToCompare = compare.products.reduce(
-      (accumulator, product) => accumulator || product.id === id,
-      false
-    );
+    const isProductAddedToCompare =
+      compare.products &&
+      compare.products.reduce(
+        (accumulator, product) => accumulator || product.id === id,
+        false
+      );
 
     if (isProductAddedToCompare !== true) {
       count < maxProductsToCompare
