@@ -20,11 +20,17 @@ class NewFurniture extends React.Component {
   }
 
   render() {
-    const { categories, products } = this.props;
+    const { categories, products, viewport } = this.props;
     const { activeCategory, activePage } = this.state;
 
+    const itemsPerViewport = { desktop: 8, tablet: 6, mobile: 3 };
+    const itemsPerPage = itemsPerViewport[viewport];
+
+    const colsPerViewport = { desktop: 3, tablet: 6, mobile: 12 };
+    const colsOnPage = colsPerViewport[viewport];
+
     const categoryProducts = products.filter(item => item.category === activeCategory);
-    const pagesCount = Math.ceil(categoryProducts.length / 8);
+    const pagesCount = Math.ceil(categoryProducts.length / itemsPerPage);
 
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
@@ -68,11 +74,13 @@ class NewFurniture extends React.Component {
             </div>
           </div>
           <div className='row'>
-            {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
-              <div key={item.id} className='col-3'>
-                <ProductBox {...item} />
-              </div>
-            ))}
+            {categoryProducts
+              .slice(activePage * itemsPerPage, (activePage + 1) * itemsPerPage)
+              .map(item => (
+                <div key={item.id} className={`col-${colsOnPage}`}>
+                  <ProductBox {...item} />
+                </div>
+              ))}
           </div>
         </div>
         <ProductsCompare />
@@ -82,6 +90,7 @@ class NewFurniture extends React.Component {
 }
 
 NewFurniture.propTypes = {
+  viewport: PropTypes.string.isRequired,
   children: PropTypes.node,
   categories: PropTypes.arrayOf(
     PropTypes.shape({

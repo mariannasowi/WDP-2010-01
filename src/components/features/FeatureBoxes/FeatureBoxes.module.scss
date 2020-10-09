@@ -3,3 +3,10 @@
 .root {
   padding: 5rem 0;
 }
+
+@media (max-width: 475px) {
+  .featurebox {
+    display: flex;
+    justify-content: space-between;
+  }
+}
