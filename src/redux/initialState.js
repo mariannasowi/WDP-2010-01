@@ -18,6 +18,7 @@ const initialState = {
       image:
         'https://assets.weimgs.com/weimgs/rk/images/wcm/products/202040/0168/anton-solid-wood-bed-o.jpg',
       newFurniture: true,
+      favourite: true,
     },
     {
       id: 'aenean-ru-bristique-2',
@@ -281,9 +282,6 @@ const initialState = {
     products: [],
   },
   compare: {
-    products: [],
-  },
-  favourite: {
     products: [],
   },
 };
