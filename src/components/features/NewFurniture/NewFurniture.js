@@ -9,6 +9,7 @@ class NewFurniture extends React.Component {
   state = {
     activePage: 0,
     activeCategory: 'bed',
+    manualPageChange: false,
   };
 
   handlePageChange(newPage) {
