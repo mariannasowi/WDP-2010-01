@@ -15,7 +15,6 @@ export default function reducer(statePart = '', action = {}) {
   switch (action.type) {
     case SET_VIEWPORT:
       return action.payload;
-
     default:
       return statePart;
   }

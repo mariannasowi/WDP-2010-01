@@ -5,30 +5,32 @@ import { connect } from 'react-redux';
 
 const ViewportListener = ({ setViewport }) => {
   const breakpoints = {
-    tablet: 768,
-    mobile: 320,
+    tablet: 992,
+    mobile: 768,
   };
 
   const resizeHandler = useCallback(() => {
-    const width = window && window.innerWidth;
-
-    if (width < breakpoints.tablet && width > breakpoints.mobile) {
-      setViewport('tablet');
-    } else if (width < breakpoints.mobile) {
-      setViewport('mobile');
+    if (window.innerWidth < breakpoints.mobile) {
+      return 'mobile';
+    } else if (
+      window.innerWidth >= breakpoints.mobile &&
+      window.innerWidth < breakpoints.tablet
+    ) {
+      return 'tablet';
     } else {
-      setViewport('desktop');
+      return 'desktop';
     }
-  }, [breakpoints.mobile, breakpoints.tablet, setViewport]);
+  }, [breakpoints.mobile, breakpoints.tablet]);
 
   useEffect(() => {
-    resizeHandler();
-  }, [resizeHandler]);
+    setViewport(resizeHandler());
+  }, [resizeHandler, setViewport]);
 
   useLayoutEffect(() => {
-    window && window.addEventListener('resize', resizeHandler);
-    return () => window.removeEventListener('resize', resizeHandler);
-  }, [resizeHandler]);
+    window && window.addEventListener('resize', () => setViewport(resizeHandler()));
+    return () =>
+      window.removeEventListener('resize', () => setViewport(resizeHandler()));
+  }, [resizeHandler, setViewport]);
 
   return null;
 };
