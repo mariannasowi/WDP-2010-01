@@ -22,15 +22,15 @@ const ViewportListener = ({ setViewport }) => {
     }
   }
 
-  function handleresize() {
+  function handleResize() {
     setViewport(checkViewport());
   }
 
   useEffect(() => {
     setViewport(checkViewport());
-    window && window.addEventListener('resize', handleresize);
-    return () => window.removeEventListener('resize', handleresize);
-  }, [checkViewport, handleresize, setViewport]);
+    window && window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [checkViewport, handleResize, setViewport]);
 
   return null;
 };
