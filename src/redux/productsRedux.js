@@ -16,16 +16,16 @@ const createActionName = name => `products/favourite/${name}`;
 export const SET_FAVOURITE = createActionName('SET_FAVOURITE');
 
 /* action creator */
-export const setFavourite = payload => ({ payload, type: SET_FAVOURITE });
+export const changeWishlist = payload => ({ payload, type: SET_FAVOURITE });
 
 /* reducer */
 export default function reducer(statePart = [], action = {}) {
   switch (action.type) {
-    case SET_FAVOURITE:
-      return {
-        ...statePart,
-        products: [...statePart.products, action.payload],
-      };
+    // case SET_FAVOURITE:
+    //   return {
+    //     ...statePart,
+    //     products: [...statePart.products, action.payload],
+    //   };
     default:
       return statePart;
   }

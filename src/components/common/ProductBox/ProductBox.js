@@ -23,7 +23,7 @@ const ProductBox = ({
   count,
   compare,
   favourite,
-  setFavourite,
+  changeWishlist,
 }) => {
   const compareHandler = event => {
     event.preventDefault();
@@ -74,7 +74,7 @@ const ProductBox = ({
       <div className={styles.line}></div>
       <div className={styles.actions}>
         <div className={styles.outlines}>
-          <Button variant='outline' onClick={addToFavouriteHandler}>
+          <Button variant='outline' onClick={() => changeWishlist(id)}>
             <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
           </Button>
           <Button variant='outline' onClick={compareHandler}>
@@ -105,7 +105,7 @@ ProductBox.propTypes = {
   count: PropTypes.number.isRequired,
   compare: PropTypes.object.isRequired,
   favourite: PropTypes.object.isRequired,
-  setFavourite: PropTypes.func.isRequired,
+  changeWishlist: PropTypes.func.isRequired,
 };
 
 export default ProductBox;
