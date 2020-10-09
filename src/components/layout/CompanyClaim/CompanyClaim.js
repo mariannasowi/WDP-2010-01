@@ -6,14 +6,17 @@ import styles from './CompanyClaim.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMobileAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
 
+const phoneIcon = <FontAwesomeIcon className={styles.icon} icon={faMobileAlt} />;
+const phoneNumber = '2300 - 3560 - 222';
+
 const CompanyClaim = () => (
   <div className={styles.root}>
     <div className='container'>
       <div className='row align-items-center'>
         <div className={`col text-left ${styles.phoneNumber}`}>
           <p>
-            <FontAwesomeIcon className={styles.icon} icon={faMobileAlt} /> 2300 - 3560 -
-            222
+            {phoneIcon}
+            {phoneNumber}
           </p>
         </div>
         <div className='col text-center'>
@@ -30,8 +33,8 @@ const CompanyClaim = () => (
           </a>
           <div className={styles.phoneNumber}>
             <p>
-              <FontAwesomeIcon className={styles.icon} icon={faMobileAlt} /> 2300 - 3560
-              - 222
+              {phoneIcon}
+              {phoneNumber}
             </p>
           </div>
         </div>
