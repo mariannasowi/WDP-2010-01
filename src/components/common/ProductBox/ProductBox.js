@@ -86,6 +86,8 @@ ProductBox.propTypes = {
   promo: PropTypes.string,
   stars: PropTypes.number,
   isStarred: PropTypes.bool,
+  heart: PropTypes.bool,
+  addCompare: PropTypes.bool,
   image: PropTypes.string,
   setCompare: PropTypes.func.isRequired,
   count: PropTypes.number.isRequired,
