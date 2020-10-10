@@ -3,14 +3,10 @@ import PropTypes from 'prop-types';
 
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faStar,
-  faExchangeAlt,
-  faShoppingBasket,
-} from '@fortawesome/free-solid-svg-icons';
-import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
-import ProductRating from '../../features/ProductRating/ProductRating';
+import ProductRating from '../../features/ProductRating/ProductRatingContainer';
 
 const ProductBox = ({
   id,
@@ -20,6 +16,7 @@ const ProductBox = ({
   oldPrice,
   promo,
   stars,
+  isStarred,
   setCompare,
   count,
   compare,
@@ -56,7 +53,7 @@ const ProductBox = ({
       <div className={styles.content}>
         <h5>{name}</h5>
         <div className={styles.stars}>
-          <ProductRating stars={stars} />
+          <ProductRating id={id} stars={stars} isStarred={isStarred} />
         </div>
       </div>
       <div className={styles.line}></div>
@@ -88,6 +85,7 @@ ProductBox.propTypes = {
   oldPrice: PropTypes.string,
   promo: PropTypes.string,
   stars: PropTypes.number,
+  isStarred: PropTypes.bool,
   image: PropTypes.string,
   setCompare: PropTypes.func.isRequired,
   count: PropTypes.number.isRequired,
