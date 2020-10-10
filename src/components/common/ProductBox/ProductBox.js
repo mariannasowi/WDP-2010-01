@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
-import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 import ProductRating from '../../features/ProductRating/ProductRatingContainer';
+import ProductFavourite from '../../features/ProductFavourite/ProductFavouriteContainer';
 
 const ProductBox = ({
   id,
@@ -21,6 +21,7 @@ const ProductBox = ({
   count,
   compare,
   addToFavourite,
+  removeFromFavourite,
   heart,
   addCompare,
 }) => {
@@ -62,16 +63,12 @@ const ProductBox = ({
       <div className={styles.line}></div>
       <div className={styles.actions}>
         <div className={styles.outlines}>
-          <Button variant='outline' onClick={() => addToFavourite(id)}>
-            <FontAwesomeIcon
-              id={id}
-              heart={heart}
-              icon={faHeart}
-              className={heart ? styles.heart : ''}
-            >
-              Favorite
-            </FontAwesomeIcon>
-          </Button>
+          <ProductFavourite
+            id={id}
+            heart={heart}
+            addToFavourite={addToFavourite}
+            removeFromFavourite={removeFromFavourite}
+          />
           <Button variant='outline' onClick={compareHandler}>
             <FontAwesomeIcon
               icon={faExchangeAlt}
@@ -108,6 +105,7 @@ ProductBox.propTypes = {
   count: PropTypes.number.isRequired,
   compare: PropTypes.object.isRequired,
   addToFavourite: PropTypes.func.isRequired,
+  removeFromFavourite: PropTypes.func.isRequired,
 };
 
 export default ProductBox;
