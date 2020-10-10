@@ -22,7 +22,7 @@ const ProductBox = ({
   setCompare,
   count,
   compare,
-  changeWishlist,
+  addToFavourite,
   heart,
   addCompare,
 }) => {
@@ -41,9 +41,6 @@ const ProductBox = ({
         ? setCompare({ id, image })
         : alert(`You can compare maximum of ${maxProductsToCompare} products!`);
     }
-  };
-  const addToFavouriteHandler = event => {
-    event.preventDefault();
   };
 
   return (
@@ -75,7 +72,7 @@ const ProductBox = ({
       <div className={styles.line}></div>
       <div className={styles.actions}>
         <div className={styles.outlines}>
-          <Button variant='outline' onClick={() => changeWishlist(id)}>
+          <Button variant='outline' onClick={() => addToFavourite(id)}>
             <FontAwesomeIcon icon={faHeart} className={heart ? styles.heart : ''}>
               Favorite
             </FontAwesomeIcon>
@@ -114,8 +111,7 @@ ProductBox.propTypes = {
   setCompare: PropTypes.func.isRequired,
   count: PropTypes.number.isRequired,
   compare: PropTypes.object.isRequired,
-  favourite: PropTypes.object.isRequired,
-  changeWishlist: PropTypes.func.isRequired,
+  addToFavourite: PropTypes.func.isRequired,
 };
 
 export default ProductBox;

@@ -18,7 +18,6 @@ const initialState = {
       image:
         'https://assets.weimgs.com/weimgs/rk/images/wcm/products/202040/0168/anton-solid-wood-bed-o.jpg',
       newFurniture: true,
-      favourite: true,
       heart: false,
       addCompare: false,
     },
