@@ -1,90 +1,122 @@
 @import "../../../styles/settings.scss";
-
-.root {
-  background-color: #ffffff;
-  border: 1px solid #e1e1e1;
-  margin-bottom: 2rem;
-
-  .photo {
-    position: relative;
-    padding: 0 10px 0 10px;
-    background: {
-      color: #f4f5f7;
-      size: contain;
-      position: center;
-      repeat: no-repeat;
-    }
-    overflow: hidden;
-    align-items: flex-end;
-
-    .sale {
-      position: absolute;
-      top: -30px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: #292929;
-      border-radius: 50%;
-      color: #ffffff;
-      padding: 30px 15px 5px 15px;
-    }
-
-    .buttons {
-      display: flex;
-      justify-content: space-between;
-    }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
+}
+.animated {
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 
-  .content {
-    text-align: center;
-    padding: 20px;
-
-    h5 {
-      color: $primary;
-      font-size: 16px;
-      line-height: 24px;
-      letter-spacing: 1px;
-    }
-
-    .stars {
-      a {
-        text-decoration: none;
-        color: rgb(42, 42, 42);
+  .root {
+    background-color: #ffffff;
+    border: 1px solid #e1e1e1;
+    margin-bottom: 2rem;
+  
+    .photo {
+      position: relative;
+      padding: 0 10px 0 10px;
+      background: {
+        color: #f4f5f7;
+        size: contain;
+        position: center;
+        repeat: no-repeat;
+      }
+      overflow: hidden;
+      align-items: flex-end;
+  
+      .sale {
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #292929;
+        border-radius: 50%;
+        color: #ffffff;
+        padding: 30px 15px 5px 15px;
+      }
+  
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+        visibility: hidden;
       }
     }
-  }
-
-  .line {
-    margin: 0 10px;
-    border-bottom: 1px solid #2a2a2a;
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: -1px;
-      left: 50%;
-      width: 30px;
-      border-bottom: 4px solid $primary;
-      transform: translateX(-50%);
+  
+    .content {
+      text-align: center;
+      padding: 20px;
+  
+      h5 {
+        color: $primary;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 1px;
+      }
+  
+      .stars {
+        a {
+          text-decoration: none;
+          color: rgb(42, 42, 42);
+        }
+      }
     }
-  }
-
-  .actions {
-    padding: 15px 10px 10px 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  img {
-    object-fit: cover;
-    width: 300px;
-    height: 200px;
-  }
-
-  .oldPrice {
-    font-size: 20px;
-    text-decoration: line-through;
-    color: $old-price
+  
+    .line {
+      margin: 0 10px;
+      border-bottom: 1px solid #2a2a2a;
+      position: relative;
+  
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 50%;
+        width: 30px;
+        border-bottom: 4px solid $primary;
+        transform: translateX(-50%);
+      }
+    }
+  
+    .actions {
+      padding: 15px 10px 10px 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .heart {
+      color: $favourite-color;
+    }
+  
+    .addCompare {
+      color: $compare-color;
+    }
+  
+    img {
+      object-fit: cover;
+      width: 300px;
+      height: 200px;
+    }
+  
+    &:hover {
+      .buttons {
+        visibility: visible;
+      }
+      .price > div {
+        background-color: $primary;
+      }
+    }
+  
+    .oldPrice {
+      font-size: 20px;
+      text-decoration: line-through;
+      color: $old-price;
+    }
   }
 }
