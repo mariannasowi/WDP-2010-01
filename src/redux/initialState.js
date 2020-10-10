@@ -13,7 +13,8 @@ const initialState = {
       category: 'bed',
       price: 30,
       oldPrice: '$40',
-      stars: 2,
+      stars: 3,
+      isStarred: true,
       promo: 'sale',
       image:
         'https://assets.weimgs.com/weimgs/rk/images/wcm/products/202040/0168/anton-solid-wood-bed-o.jpg',
