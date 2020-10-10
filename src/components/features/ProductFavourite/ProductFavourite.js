@@ -16,8 +16,12 @@ const ProductFavourite = ({ id, heart, addToFavourite, removeFromFavourite }) =>
         heart ? removeFromFavourite({ id }) : addToFavourite({ id });
       }}
     >
-      <Button variant='outline' onClick={addToFavouriteHandler}>
-        <FontAwesomeIcon id={id} icon={faHeart} className={heart ? style.heart : ''}>
+      <Button
+        className={heart ? style.heart : ''}
+        variant='outline'
+        onClick={addToFavouriteHandler}
+      >
+        <FontAwesomeIcon id={id} icon={faHeart}>
           Favorite
         </FontAwesomeIcon>
       </Button>
