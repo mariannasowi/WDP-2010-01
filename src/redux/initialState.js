@@ -19,6 +19,8 @@ const initialState = {
       image:
         'https://assets.weimgs.com/weimgs/rk/images/wcm/products/202040/0168/anton-solid-wood-bed-o.jpg',
       newFurniture: true,
+      heart: false,
+      addCompare: false,
     },
     {
       id: 'aenean-ru-bristique-2',
@@ -31,6 +33,8 @@ const initialState = {
       image:
         'https://ii1.pepperfry.com/media/catalog/product/e/n/568x625/enri-queen-size-bed-with-storage-in-wenge-finish-by-mintwud-enri-queen-size-bed-with-storage-in-weng-x4jyej.jpg',
       newFurniture: true,
+      heart: true,
+      addCompare: false,
     },
     {
       id: 'aenean-ru-bristique-3',
@@ -42,6 +46,8 @@ const initialState = {
       image:
         'https://www.ulcdn.net/images/products/156488/slide/1332x726/Baltoro_High_Gloss_Hydraulic_Storage_Bed_King_1.jpg?1561442441',
       newFurniture: true,
+      heart: false,
+      addCompare: true,
     },
     {
       id: 'aenean-ru-bristique-4',
@@ -54,6 +60,8 @@ const initialState = {
       image:
         'https://assets.pbimgs.com/pbimgs/ab/images/dp/wcm/202022/0016/claremont-bed-c.jpg',
       newFurniture: true,
+      heart: true,
+      addCompare: true,
     },
     {
       id: 'aenean-ru-bristique-5',

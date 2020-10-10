@@ -77,6 +77,14 @@
     align-items: center;
   }
 
+  .heart {
+    color: $favourite-color;
+  }
+
+  .addCompare {
+    color: $compare-color;
+  }
+
   img {
     object-fit: cover;
     width: 300px;
