@@ -49,7 +49,7 @@
             text-decoration: none;
             font-size: 18px;
             display: block;
-
+            
             &.active,
             &:hover {
               &::before {
@@ -81,7 +81,7 @@
         li {
           display: inline-block;
           margin-left: 0.5rem;
-
+          
           a {
             @extend %hover-effect;
             display: block;
@@ -90,6 +90,7 @@
             border-radius: 6px;
             background-color: #e1e1e1;
             font-size: 0;
+            opacity: 2;
 
             &.active,
             &:hover {
