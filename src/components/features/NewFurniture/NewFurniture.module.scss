@@ -1,12 +1,5 @@
 @import "../../../styles/settings.scss";
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+
 .root {
   .panelBar {
     margin-bottom: 30px;
@@ -56,7 +49,6 @@
             font-size: 18px;
             display: block;
             
-
             &.active,
             &:hover {
               &::before {
