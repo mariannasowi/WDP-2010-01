@@ -21,6 +21,7 @@
         list-style: none;
         li {
           a {
+            @extend %hover-effect;
             font-size: 14px;
             line-height: 30px;
             color: rgb(169, 169, 169);
@@ -71,6 +72,7 @@
           margin-left: 1rem;
 
           a {
+            @extend %hover-effect;
             color: rgb(169, 169, 169);
             text-decoration: none;
 
