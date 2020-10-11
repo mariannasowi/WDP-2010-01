@@ -13,19 +13,11 @@ class NewFurniture extends React.Component {
   };
 
   handlePageChange(newPage) {
-    this.setState({ fade: true });
-    setTimeout(
-      () => this.setState({ activePage: newPage, fade: false, manualPageChange: true }),
-      100
-    );
+    this.setState({ activePage: newPage });
   }
 
   handleCategoryChange(newCategory) {
-    this.setState({ fade: true });
-    setTimeout(
-      () => this.setState({ activeCategory: newCategory, fade: false, activePage: 0 }),
-      100
-    );
+    this.setState({ activeCategory: newCategory });
   }
 
   handleLeftAction = () => {
