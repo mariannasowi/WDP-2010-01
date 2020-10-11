@@ -35,7 +35,7 @@
       "git add"
     ],
     "src/**/*.scss": [
-      "stylelint --syntax scss --fix",
+      "stylelint --syntax scss",
       "prettier --write",
       "git add"
     ]
