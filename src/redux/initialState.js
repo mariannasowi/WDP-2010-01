@@ -293,6 +293,29 @@ const initialState = {
     products: [],
   },
   viewport: 'desktop',
+
+  sales: {
+    boxOne: {
+      name: 'Guest room',
+      category: 'Sofa',
+      sale: '-20%',
+      image: 'https://i.postimg.cc/pXMYyxT0/sofa.jpg',
+    },
+    boxTwo: {
+      name: 'Office',
+      category: 'Chair',
+      title: 'collection',
+      price: '$200.00',
+      image: 'https://i.postimg.cc/9X7YWzWR/chair.jpg',
+    },
+    boxThree: {
+      category: 'bed',
+      title: 'special ',
+      subtitle: 'collection',
+      description: 'save up 45% of furniture',
+      image: 'https://i.postimg.cc/jd6679nR/bed.jpg',
+    },
+  },
 };
 
 export default initialState;
