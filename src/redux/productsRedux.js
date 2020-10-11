@@ -14,11 +14,9 @@ const createActionNameFav = name => `products/heart/${name}`;
 
 /* action types */
 export const SET_FAVOURITE = createActionNameFav('SET_FAVOURITE');
-// export const UNSET_FAVOURITE = createActionNameFav('UNSET_FAVOURITE');
 
 /* action creator */
 export const addToFavourite = payload => ({ payload, type: SET_FAVOURITE });
-// export const removeFromFavourite = payload => ({ payload, type: UNSET_FAVOURITE });
 
 /*SECTION STARS*/
 
@@ -50,7 +48,6 @@ export default function reducer(statePart = [], action = {}) {
       const newStatePart = statePart.map(product => {
         if (product.id === action.payload.id) {
           product.heart = !product.heart;
-          // product.heart = true;
           return product;
         } else {
           return product;
@@ -58,17 +55,6 @@ export default function reducer(statePart = [], action = {}) {
       });
       return newStatePart;
     }
-    // case UNSET_FAVOURITE: {
-    //   const newStatePart = statePart.map(product => {
-    //     if (product.id === action.payload.id) {
-    //       product.heart = false;
-    //       return product;
-    //     } else {
-    //       return product;
-    //     }
-    //   });
-    //   return newStatePart;
-    // }
     default:
       return statePart;
   }

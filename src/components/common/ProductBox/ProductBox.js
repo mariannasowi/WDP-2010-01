@@ -21,7 +21,6 @@ const ProductBox = ({
   count,
   compare,
   addToFavourite,
-  removeFromFavourite,
   heart,
   addCompare,
 }) => {
@@ -44,6 +43,7 @@ const ProductBox = ({
 
   const addToFavouriteHandler = event => {
     event.preventDefault();
+    addToFavourite({ id });
   };
 
   return (
@@ -72,10 +72,7 @@ const ProductBox = ({
             variant='outline'
             onClick={addToFavouriteHandler}
           >
-            {/* <FontAwesomeIcon onClick={() => {heart ? removeFromFavourite({ id }) : addToFavourite({ id });}} id={id} icon={faHeart}> */}
-            <FontAwesomeIcon onClick={addToFavourite({ id })} id={id} icon={faHeart}   >
-          Favorite
-            </FontAwesomeIcon>
+            <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
           </Button>
           <Button variant='outline' onClick={compareHandler}>
             <FontAwesomeIcon
