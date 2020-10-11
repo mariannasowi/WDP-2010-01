@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
 import Button from '../Button/Button';
 import ProductRating from '../../features/ProductRating/ProductRatingContainer';
-import ProductFavourite from '../../features/ProductFavourite/ProductFavouriteContainer';
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
 
 const ProductBox = ({
   id,
@@ -42,6 +42,10 @@ const ProductBox = ({
     }
   };
 
+  const addToFavouriteHandler = event => {
+    event.preventDefault();
+  };
+
   return (
     <div className={styles.root}>
       <div className={styles.photo}>
@@ -63,12 +67,16 @@ const ProductBox = ({
       <div className={styles.line}></div>
       <div className={styles.actions}>
         <div className={styles.outlines}>
-          <ProductFavourite
-            id={id}
-            heart={heart}
-            addToFavourite={addToFavourite}
-            removeFromFavourite={removeFromFavourite}
-          />
+          <Button
+            className={heart ? styles.heart : ''}
+            variant='outline'
+            onClick={addToFavouriteHandler}
+          >
+            {/* <FontAwesomeIcon onClick={() => {heart ? removeFromFavourite({ id }) : addToFavourite({ id });}} id={id} icon={faHeart}> */}
+            <FontAwesomeIcon onClick={addToFavourite({ id })} id={id} icon={faHeart}   >
+          Favorite
+            </FontAwesomeIcon>
+          </Button>
           <Button variant='outline' onClick={compareHandler}>
             <FontAwesomeIcon
               icon={faExchangeAlt}

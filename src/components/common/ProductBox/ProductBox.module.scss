@@ -101,4 +101,9 @@
     text-decoration: line-through;
     color: $old-price;
   }
+
+  .heart {
+    color: $favourite-color;
+    background-color: $primary;
+  }
 }
