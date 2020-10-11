@@ -9,7 +9,7 @@ const Sales = ({ sales }) => {
     <div className={styles.root}>
       <div className='container'>
         <div className='row'>
-          <div className={`col ${styles.big}`}>
+          <div className={`col-12 col-md-6 ${styles.big}`}>
             <div className={`${styles.wrapper} ${styles.box}`}>
               <img src={boxOne.image} alt={boxOne.category} />
               <div className={styles.descriptionOne}>
@@ -19,7 +19,7 @@ const Sales = ({ sales }) => {
               </div>
             </div>
           </div>
-          <div className={`col ${styles.big}`}>
+          <div className={`col-12 col-md-6 ${styles.big}`}>
             <div className={`${styles.small} ${styles.wrapper}`}>
               <img src={boxTwo.image} alt={boxTwo.category} />
               <div className={styles.descriptionTwo}>
