@@ -1,18 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import ProductSearch from '../../features/ProductSearch/ProductSearch';
-
 import styles from './MenuBar.module.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const MenuBar = ({ children }) => (
   <div className={styles.root}>
     <div className='container'>
       <div className='row align-items-center'>
-        <div className='col'>
+        <div className={'col-md-12 col-lg-5 ' + styles.product_search}>
           <ProductSearch />
         </div>
-        <div className={'col-auto ' + styles.menu}>
+
+        <input type='checkbox' id='hamburger' className={styles.hamburger}></input>
+        <label htmlFor='hamburger' className={styles.hamburger_label}>
+          <FontAwesomeIcon className={styles.icon} icon={faBars} />
+        </label>
+
+        <div className={'col-md-12 col-lg-7 ' + styles.menu}>
           <ul>
             <li>
               <a href='#' className={styles.active}>

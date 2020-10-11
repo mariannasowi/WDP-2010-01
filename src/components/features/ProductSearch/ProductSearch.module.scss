@@ -66,3 +66,17 @@
     }
   }
 }
+
+@media (max-width: 520px) {
+  .searchField {
+    input {
+      width: 80%;
+    }
+  }
+
+  .category {
+    select {
+      width: 80%;
+    }
+  }
+}
