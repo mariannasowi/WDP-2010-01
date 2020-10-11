@@ -48,10 +48,12 @@
     font-size: 45px;
     color: $sale-color;
     text-transform: uppercase;
+
     .category {
       font-size: 50px;
       font-weight: bold;
     }
+
     .sale {
       border: 5px solid $sale-color;
       padding: 10px;
@@ -68,14 +70,17 @@
     font-size: 30px;
     color: $text-color;
     text-transform: uppercase;
+
     .mainTitle {
       .bold {
         font-weight: bold;
       }
     }
+
     .desc {
       font-size: 25px;
     }
+
     .sale {
       font-size: 35px;
       color: $primary;
@@ -88,15 +93,18 @@
     left: 45%;
     color: $text-color;
     text-transform: uppercase;
+
     .mainTitle {
       color: $primary;
       font-weight: bold;
       font-size: 25px;
+
       .thin {
         font-weight: normal;
         font-size: 25px;
       }
     }
+
     .desc {
       font-size: 20px;
     }
