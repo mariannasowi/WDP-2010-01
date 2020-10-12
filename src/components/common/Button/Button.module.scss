@@ -27,15 +27,14 @@
   font-weight: 400;
 }
 
-.big{
+.big {
   @extend .main;
   font-size: 13px;
   line-height: 24px;
   padding: 10px 15px;
   font-weight: 400;
-  color: black;
-  background-color: #ffffff;
-
+  color: $text-color;
+  background-color: $promo-text-color;
 }
 
 .outline {

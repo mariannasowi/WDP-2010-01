@@ -2,17 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './PromotedProduct.module.scss';
-import PromotedProductBox from '../../common/PromotedProductBox/PromotedProductBox';
+import PromotedProductBox from '../../common/PromotedProductBox/PromotedProductBoxContainer';
 import Button from '../../common/Button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
 const PromotedProduct = ({
-  firstProduct,
+  product,
   title,
   subTitle,
   spanTitle,
-  image,
+  images,
   imageAlt,
   button,
 }) => {
@@ -21,7 +21,7 @@ const PromotedProduct = ({
       <div className='container'>
         <div className='row'>
           <div className='col-4'>
-            <div className={styles.HotDeals}>
+            <div className={styles.hotDeals}>
               <div className='row'>
                 <div className='col-8'>
                   <p>Hot deals</p>
@@ -41,11 +41,11 @@ const PromotedProduct = ({
                 </div>
               </div>
             </div>
-            <PromotedProductBox {...firstProduct} />
+            <PromotedProductBox {...product[0]} />
           </div>
           <div className={`col-8 ${styles.secondProduct}`}>
             <div className={styles.carousel}>
-              <img src={image} alt={imageAlt} />
+              <img src={images[0]} alt={imageAlt[0]} />
               <div className={styles.description}>
                 <h2>
                   {title}
@@ -81,12 +81,22 @@ const PromotedProduct = ({
 };
 
 PromotedProduct.propTypes = {
-  firstProduct: PropTypes.object,
+  product: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      name: PropTypes.string,
+      category: PropTypes.string,
+      price: PropTypes.number,
+      stars: PropTypes.number,
+      promo: PropTypes.string,
+      newFurniture: PropTypes.bool,
+    })
+  ),
   title: PropTypes.string,
   spanTitle: PropTypes.string,
   subTitle: PropTypes.string,
   button: PropTypes.string,
-  image: PropTypes.string,
+  images: PropTypes.arrayOf(PropTypes.string),
   imageAlt: PropTypes.string,
 };
 
