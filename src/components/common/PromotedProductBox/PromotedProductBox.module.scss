@@ -27,6 +27,7 @@
       color: #ffffff;
       padding: 30px 15px 5px 15px;
     }
+
     .promoCounter {
       height: 0;
     }
@@ -43,6 +44,7 @@
         color: #ffffff;
         z-index: 2;
         line-height: 0.5;
+        text-align: center;
       }
 
       p {
@@ -133,9 +135,11 @@
     .dots {
       visibility: visible;
     }
+
     .buttons {
       visibility: visible;
     }
+
     .price > div {
       background-color: $primary;
     }

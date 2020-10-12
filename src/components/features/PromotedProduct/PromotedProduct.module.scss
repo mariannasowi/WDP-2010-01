@@ -7,45 +7,45 @@
   color: #ffffff;
   text-transform: uppercase;
 
-  p{
+  p {
     padding: 10px;
     font-size: 20px;
   }
+}
 
-  .dots {
-    position: absolute;
-    right: 0;
-    top: 0;
+.dots {
+  position: absolute;
+  right: 0;
+  top: 0;
 
-    ul {
-      margin: 0;
-      padding: 0 0 0 1rem;
-      list-style: none;
-      background-color: $text-color;
-      transform: translateY(15px);
+  ul {
+    margin: 0;
+    padding: 0 0 0 1rem;
+    list-style: none;
+    background-color: $text-color;
+    transform: translateY(15px);
 
-      li {
-        display: inline-block;
-        margin-left: 0.5rem;
+    li {
+      display: inline-block;
+      margin-left: 0.5rem;
 
-        a {
-          @extend %hover-effect;
-          display: block;
-          width: 13px;
-          height: 13px;
-          border-radius: 6px;
-          background-color: #e1e1e1;
-          font-size: 0;
+      a {
+        @extend %hover-effect;
+        display: block;
+        width: 13px;
+        height: 13px;
+        border-radius: 6px;
+        background-color: #e1e1e1;
+        font-size: 0;
 
-          &.active,
-          &:hover {
-            background-color: $primary;
-          }
+        &.active &:hover {
+          background-color: $primary;
         }
       }
     }
   }
 }
+
 .secondProduct {
   .carousel {
     height: 400px;
@@ -97,6 +97,7 @@
       z-index: -1;
     }
   }
+
   .carouselButtonWrapper {
     position: relative;
 
