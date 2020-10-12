@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
-import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 import ProductRating from '../../features/ProductRating/ProductRatingContainer';
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
 
 const ProductBox = ({
   id,
@@ -20,6 +20,7 @@ const ProductBox = ({
   setCompare,
   count,
   compare,
+  addToFavourite,
   heart,
   addCompare,
 }) => {
@@ -38,6 +39,11 @@ const ProductBox = ({
         ? setCompare({ id, image })
         : alert(`You can compare maximum of ${maxProductsToCompare} products!`);
     }
+  };
+
+  const addToFavouriteHandler = event => {
+    event.preventDefault();
+    addToFavourite(id);
   };
 
   return (
@@ -61,10 +67,12 @@ const ProductBox = ({
       <div className={styles.line}></div>
       <div className={styles.actions}>
         <div className={styles.outlines}>
-          <Button variant='outline'>
-            <FontAwesomeIcon icon={faHeart} className={heart ? styles.heart : ''}>
-              Favorite
-            </FontAwesomeIcon>
+          <Button
+            className={heart ? styles.heart : ''}
+            variant='outline'
+            onClick={addToFavouriteHandler}
+          >
+            <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
           </Button>
           <Button variant='outline' onClick={compareHandler}>
             <FontAwesomeIcon
@@ -101,6 +109,8 @@ ProductBox.propTypes = {
   setCompare: PropTypes.func.isRequired,
   count: PropTypes.number.isRequired,
   compare: PropTypes.object.isRequired,
+  addToFavourite: PropTypes.func.isRequired,
+  removeFromFavourite: PropTypes.func.isRequired,
 };
 
 export default ProductBox;
