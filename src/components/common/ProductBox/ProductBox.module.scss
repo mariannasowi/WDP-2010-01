@@ -91,10 +91,6 @@
     align-items: center;
   }
 
-  .heart {
-    color: $favourite-color;
-  }
-
   .addCompare {
     color: $compare-color;
   }
@@ -119,5 +115,10 @@
     font-size: 20px;
     text-decoration: line-through;
     color: $old-price;
+  }
+
+  .heart {
+    color: $favourite-color;
+    background-color: $primary;
   }
 }
