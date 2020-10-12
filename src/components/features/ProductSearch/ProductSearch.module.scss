@@ -25,7 +25,7 @@
       z-index: 0;
     }
 
-    select {
+    ul {
       @extend %hover-effect;
       -webkit-appearance: none;
       border: 0;
@@ -37,10 +37,26 @@
       font-size: 14px;
       position: relative;
       z-index: 1;
+      list-style-type: none;
+      display: block;
 
       &:hover {
         color: $primary;
       }
+    }
+
+    ul li {
+      display: none;
+    }
+
+    ul:hover li {
+      display: block;
+      text-align: left;
+      background-color: #ffffff;
+      padding: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
     }
   }
 
