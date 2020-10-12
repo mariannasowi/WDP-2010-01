@@ -1,7 +1,7 @@
 const initialState = {
   categories: [
     { id: 'bed', name: 'Bed' },
-    { id: 'chair', name: 'Chair' },
+    { id: 'chairi', name: 'Chair' },
     { id: 'sofa', name: 'Sofa' },
     { id: 'table', name: 'Table' },
     { id: 'dining', name: 'Dining' },
@@ -971,16 +971,6 @@ const initialState = {
     },
   ],
 
-  text: [
-    {
-      id: 'aenean-ru-bristique-111',
-      text: 'Aenean Ru Bristique ',
-
-      image:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcScThfCm3xP7sKpUdfn7aSt_nJf2Gr7nA8yBQ&usqp=CAU',
-      clientFeedback: true,
-    },
-  ],
   cart: {
     products: [],
   },
@@ -988,6 +978,42 @@ const initialState = {
     products: [],
   },
   viewport: 'desktop',
+
+  sales: {
+    boxOne: {
+      name: 'Guest room',
+      category: 'Sofa',
+      sale: '-20%',
+      image: 'https://i.postimg.cc/pXMYyxT0/sofa.jpg',
+    },
+    boxTwo: {
+      name: 'Office',
+      category: 'Chair',
+      title: 'collection',
+      price: '$200.00',
+      image: 'https://i.postimg.cc/9X7YWzWR/chair.jpg',
+    },
+    boxThree: {
+      category: 'bed',
+      title: 'special ',
+      subtitle: 'collection',
+      description: 'save up 45% of furniture',
+      image: 'https://i.postimg.cc/jd6679nR/bed.jpg',
+    },
+  },
+
+  feedback: [
+    {
+      id: '111',
+      name: '111',
+      title: 'Aenean Ru Bristique ',
+      category: 'one',
+      text:
+        'dgfshlfghsdghos;dfghsdfjhg;soighor;tihgr[wrtwihtgrofghifoghoritiorothorhgbnrgirjp',
+      image:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcScThfCm3xP7sKpUdfn7aSt_nJf2Gr7nA8yBQ&usqp=CAU',
+    },
+  ],
 };
 
 export default initialState;
