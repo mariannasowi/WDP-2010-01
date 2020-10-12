@@ -5,7 +5,7 @@ import styles from './Homepage.module.scss';
 
 import FeatureBoxes from '../../features/FeatureBoxes/FeatureBoxes';
 import NewFurniture from '../../features/NewFurniture/NewFurnitureContainer';
-import PromotedProduct from '../../features/PromotedProduct/PromotedProduct';
+import PromotedProduct from '../../features/PromotedProduct/PromotedProductContainer';
 
 const Homepage = () => (
   <div className={styles.root}>

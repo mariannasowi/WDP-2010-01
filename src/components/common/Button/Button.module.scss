@@ -27,6 +27,17 @@
   font-weight: 400;
 }
 
+.big{
+  @extend .main;
+  font-size: 13px;
+  line-height: 24px;
+  padding: 10px 15px;
+  font-weight: 400;
+  color: black;
+  background-color: #ffffff;
+
+}
+
 .outline {
   @extend %hover-effect;
   display: inline-block;

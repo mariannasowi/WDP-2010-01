@@ -291,6 +291,38 @@ const initialState = {
   compare: {
     products: [],
   },
+  promotedProducts: {
+    firstProduct: {
+      title: 'HOT DEALS',
+      id: 'aenean-ru-bristique-4',
+      name: 'Aenean Ru Bristique 4',
+      category: 'bed',
+      price: 30,
+      oldPrice: '$40',
+      stars: 2,
+      promo: 'sale',
+      image:
+        'https://assets.pbimgs.com/pbimgs/ab/images/dp/wcm/202022/0016/claremont-bed-c.jpg',
+      newFurniture: true,
+      heart: true,
+      addCompare: true,
+    },
+    secondProduct: {
+      title: 'indoor',
+      spanTitle: 'furniture',
+      subtitle: 'save up to 50% of all furniture',
+      button: 'shop now',
+      image:
+        'https://images.pexels.com/photos/545012/pexels-photo-545012.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      imageAlt: 'bed',
+      image2:
+        'https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',
+      imageAlt2: 'sofa',
+      image3:
+        'https://images.pexels.com/photos/509922/pexels-photo-509922.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      imageAlt3: 'chair',
+    },
+  },
 };
 
 export default initialState;
