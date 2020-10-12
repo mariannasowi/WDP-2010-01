@@ -46,7 +46,7 @@ export default function reducer(statePart = [], action = {}) {
     }
     case SET_FAVOURITE: {
       const newStatePart = statePart.map(product => {
-        if (product.id === action.payload.id) {
+        if (product.id === action.payload) {
           product.heart = !product.heart;
           return product;
         } else {

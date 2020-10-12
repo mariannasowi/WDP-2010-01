@@ -43,7 +43,7 @@ const ProductBox = ({
 
   const addToFavouriteHandler = event => {
     event.preventDefault();
-    addToFavourite({ id });
+    addToFavourite(id);
   };
 
   return (
