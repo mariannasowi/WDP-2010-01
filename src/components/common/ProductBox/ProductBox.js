@@ -22,7 +22,6 @@ const ProductBox = ({
   compare,
   addToFavourite,
   heart,
-  addCompare,
 }) => {
   const compareHandler = event => {
     event.preventDefault();
@@ -39,6 +38,7 @@ const ProductBox = ({
         ? setCompare({ id, image })
         : alert(`You can compare maximum of ${maxProductsToCompare} products!`);
     }
+    return isProductAddedToCompare;
   };
 
   const addToFavouriteHandler = event => {
@@ -77,7 +77,7 @@ const ProductBox = ({
           <Button variant='outline' onClick={compareHandler}>
             <FontAwesomeIcon
               icon={faExchangeAlt}
-              className={addCompare ? styles.addCompare : ''}
+              className={compareHandler ? styles.productIsCompared : ''}
             >
               Add to compare
             </FontAwesomeIcon>
@@ -104,7 +104,6 @@ ProductBox.propTypes = {
   stars: PropTypes.number,
   isStarred: PropTypes.bool,
   heart: PropTypes.bool,
-  addCompare: PropTypes.bool,
   image: PropTypes.string,
   setCompare: PropTypes.func.isRequired,
   count: PropTypes.number.isRequired,
