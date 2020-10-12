@@ -48,6 +48,26 @@ const PromotedProductBox = ({
       <div className={styles.photo}>
         <img src={image} alt={name} />
         {promo && <div className={styles.sale}>{promo}</div>}
+        <div className={styles.promoCounter}>
+          <div className='row'>
+            <div className={`col-3 ${styles.dots}`}>
+              <h5>25</h5>
+              <p>DAYS</p>
+            </div>
+            <div className={`col-3 ${styles.dots}`}>
+              <h5>10</h5>
+              <p>HRS</p>
+            </div>
+            <div className={`col-3 ${styles.dots}`}>
+              <h5>24</h5>
+              <p>MINS</p>
+            </div>
+            <div className={`col-3 ${styles.dots}`}>
+              <h5>30</h5>
+              <p>SECS</p>
+            </div>
+          </div>
+        </div>
         <div className={styles.buttons}>
           <Button variant='small'>
             <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART

@@ -27,6 +27,43 @@
       color: #ffffff;
       padding: 30px 15px 5px 15px;
     }
+    .promoCounter {
+      height: 0;
+    }
+
+    .dots {
+      display: flex;
+      visibility: hidden;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      transform: translateY(-30px);
+
+      h5 {
+        color: #ffffff;
+        z-index: 2;
+        line-height: 0.5;
+      }
+
+      p {
+        color: #ffffff;
+        z-index: 2;
+      }
+    }
+
+    .dots::after {
+      content: "";
+      border: 1px solid #292929;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -60%);
+      width: 76px;
+      height: 76px;
+      border-radius: 100%;
+      background-color: #292929;
+      z-index: 1;
+    }
 
     .buttons {
       display: flex;
@@ -93,6 +130,9 @@
   }
 
   &:hover {
+    .dots {
+      visibility: visible;
+    }
     .buttons {
       visibility: visible;
     }
