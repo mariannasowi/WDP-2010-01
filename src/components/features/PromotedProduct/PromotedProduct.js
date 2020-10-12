@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './PromotedProduct.module.scss';
-// import ProductBox from '../../common/ProductBox/ProductBox';
+import PromotedProductBox from '../../common/PromotedProductBox/PromotedProductBox';
 import Button from '../../common/Button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
@@ -41,7 +41,7 @@ const PromotedProduct = ({
                 </div>
               </div>
             </div>
-            {/* <ProductBox {...firstProduct} /> */}
+            <PromotedProductBox {...firstProduct} />
           </div>
           <div className={`col-8 ${styles.secondProduct}`}>
             <div className={styles.carousel}>
