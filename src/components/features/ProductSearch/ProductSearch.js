@@ -10,30 +10,33 @@ const ProductSearch = () => (
   <form action='' className={styles.root}>
     <div className={styles.category}>
       <FontAwesomeIcon className={styles.icon} icon={faListUl} />
-      <ul>
-        <li>
-          <a href=''>Home</a>
+      <ul className={styles.list}>
+        <li className={styles.listCategory}>
+          <span value=''>Select a category</span>
         </li>
-        <li>
-          <a href=''>Furniture</a>
+        <li className={styles.activeList}>
+          <span value=''>HOME</span>
         </li>
-        <li>
-          <a href=''>Chair</a>
+        <li className={styles.activeList}>
+          <span value=''>FURNITURE</span>
         </li>
-        <li>
-          <a href=''>Table</a>
+        <li className={styles.activeList}>
+          <span value=''>CHAIR</span>
         </li>
-        <li>
-          <a href=''>Sofa</a>
+        <li className={styles.activeList}>
+          <span value=''>TABLE</span>
         </li>
-        <li>
-          <a href=''>Bedroom</a>
+        <li className={styles.activeList}>
+          <span value=''>SOFA</span>
         </li>
-        <li>
-          <a href=''>Blog</a>
+        <li className={styles.activeList}>
+          <span value=''>BEDROOM</span>
+        </li>
+        <li className={styles.activeList}>
+          <span value=''>BLOG</span>
         </li>
       </ul>
-      <FontAwesomeIcon className={styles.icon} />
+      <FontAwesomeIcon className={styles.icon} icon={faCaretDown} />
     </div>
     <div className={styles.searchField}>
       <input placeholder='Search products...' type='text' />
