@@ -983,11 +983,22 @@ const initialState = {
     subtitle: 'save up to 50% of all furniture',
     button: 'shop now',
     images: [
-      'https://images.pexels.com/photos/545012/pexels-photo-545012.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-      'https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',
-      'https://images.pexels.com/photos/509922/pexels-photo-509922.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      {
+        image:
+          'https://images.pexels.com/photos/545012/pexels-photo-545012.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+        imageAlt: 'bed',
+      },
+      {
+        image:
+          'https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',
+        imageAlt: 'sofa',
+      },
+      {
+        image:
+          'https://images.pexels.com/photos/509922/pexels-photo-509922.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+        imageAlt: 'chair',
+      },
     ],
-    imageAlt: ['bed', 'sofa', 'chair'],
   },
   viewport: 'desktop',
 

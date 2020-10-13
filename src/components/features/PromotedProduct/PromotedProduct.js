@@ -7,15 +7,7 @@ import Button from '../../common/Button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
-const PromotedProduct = ({
-  product,
-  title,
-  subTitle,
-  spanTitle,
-  images,
-  imageAlt,
-  button,
-}) => {
+const PromotedProduct = ({ products, title, subTitle, spanTitle, images, button }) => {
   return (
     <div className={styles.root}>
       <div className='container'>
@@ -41,11 +33,11 @@ const PromotedProduct = ({
                 </div>
               </div>
             </div>
-            <PromotedProductBox {...product[0]} />
+            <PromotedProductBox {...products[0]} />
           </div>
           <div className={`col-8 ${styles.secondProduct}`}>
             <div className={styles.carousel}>
-              <img src={images[0]} alt={imageAlt[0]} />
+              <img src={images[0].image} alt={images[0].imageAlt} />
               <div className={styles.description}>
                 <h2>
                   {title}
@@ -81,7 +73,7 @@ const PromotedProduct = ({
 };
 
 PromotedProduct.propTypes = {
-  product: PropTypes.arrayOf(
+  products: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
       name: PropTypes.string,
@@ -96,8 +88,7 @@ PromotedProduct.propTypes = {
   spanTitle: PropTypes.string,
   subTitle: PropTypes.string,
   button: PropTypes.string,
-  images: PropTypes.arrayOf(PropTypes.string),
-  imageAlt: PropTypes.string,
+  images: PropTypes.array.isRequired,
 };
 
 export default PromotedProduct;

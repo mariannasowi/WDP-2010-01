@@ -4,7 +4,18 @@ import PromotedProduct from './PromotedProduct';
 
 describe('Component PromotedProduct', () => {
   it('should render without crashing', () => {
-    const component = shallow(<PromotedProduct />);
+    const image = [
+      {
+        image: 'abc',
+        imageAlt: 'abc',
+      },
+    ];
+    const products = [
+      {
+        id: 'abc',
+      },
+    ];
+    const component = shallow(<PromotedProduct images={image} products={products} />);
     expect(component).toBeTruthy();
   });
 });
