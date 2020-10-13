@@ -23,6 +23,13 @@ const ProductBox = ({
   addToFavourite,
   heart,
 }) => {
+  const isProductAddedToCompare =
+    compare &&
+    compare.products.reduce(
+      (accumulator, product) => accumulator || product.id === id,
+      false
+    );
+
   const compareHandler = event => {
     event.preventDefault();
     const maxProductsToCompare = 4;
@@ -32,13 +39,6 @@ const ProductBox = ({
         : alert(`You can compare maximum of ${maxProductsToCompare} products!`);
     }
   };
-
-  const isProductAddedToCompare =
-    compare &&
-    compare.products.reduce(
-      (accumulator, product) => accumulator || product.id === id,
-      false
-    );
 
   const addToFavouriteHandler = event => {
     event.preventDefault();
@@ -108,7 +108,6 @@ ProductBox.propTypes = {
   compare: PropTypes.object.isRequired,
   addToFavourite: PropTypes.func.isRequired,
   removeFromFavourite: PropTypes.func.isRequired,
-  products: PropTypes.array.isRequired,
 };
 
 export default ProductBox;
