@@ -24,8 +24,26 @@ $favourite-color: #ff0000;
 
 $compare-color: #228b22;
 
+$gallery-border: #c7c0c0;
+
+$gallery-background: rgb(221, 215, 215);
+
+$gallery-black: #000;
+
+$gray: rgb(94, 93, 93);
+
+$gallery-price-bg: lighten($gray, 20);
+
+$gallery-green: rgb(1, 226, 1);
+
+$gallery-icon-color: #fff;
+
 $transition: all 0.25s;
 
 %hover-effect {
   transition: $transition;
+}
+
+%hover {
+  transition: ease 250ms;
 }

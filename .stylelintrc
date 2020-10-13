@@ -20,7 +20,7 @@
         ]
       }
     ],
-    "max-nesting-depth": [4, {
+    "max-nesting-depth": [10, {
       "ignore": ["pseudo-classes"]
     }],
     "max-empty-lines": 1,
