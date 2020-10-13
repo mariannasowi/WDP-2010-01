@@ -1,9 +1,23 @@
 @import "../../../styles/settings.scss";
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 .root {
   background-color: #ffffff;
   border: 1px solid #e1e1e1;
   margin-bottom: 2rem;
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 
   .photo {
     position: relative;
@@ -77,10 +91,6 @@
     align-items: center;
   }
 
-  .heart {
-    color: $favourite-color;
-  }
-
   .addCompare {
     color: $compare-color;
   }
@@ -95,6 +105,7 @@
     .buttons {
       visibility: visible;
     }
+
     .price > div {
       background-color: $primary;
     }
@@ -104,5 +115,10 @@
     font-size: 20px;
     text-decoration: line-through;
     color: $old-price;
+  }
+
+  .heart {
+    color: $favourite-color;
+    background-color: $primary;
   }
 }

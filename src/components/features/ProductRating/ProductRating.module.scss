@@ -1,0 +1,13 @@
+@import "../../../styles/settings.scss";
+
+.default {
+  cursor: pointer;
+}
+
+.isStarred {
+  cursor: pointer;
+
+  svg {
+    color: $primary;
+  }
+}
