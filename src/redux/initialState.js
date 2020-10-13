@@ -969,6 +969,34 @@ const initialState = {
         'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcScThfCm3xP7sKpUdfn7aSt_nJf2Gr7nA8yBQ&usqp=CAU',
       newFurniture: true,
     },
+    {
+      id: 'Jone-Dove',
+      name: 'Jone Dove',
+      category: 'Furniture client',
+      text:
+        'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable.',
+      image: 'https://collectionimages.npg.org.uk/large/mw192616/John-Dove.jpg',
+      newFurniture: true,
+    },
+    {
+      id: 'Bob-Dylan',
+      name: 'Bob Dylan',
+      category: 'Furniture client',
+      text:
+        'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters',
+      image:
+        'https://bi.im-g.pl/im/1/11556/z11556131V,Bob-Dylan--portret-z-lat-60-.jpg',
+      newFurniture: true,
+    },
+    {
+      id: 'Marlon-Brando',
+      name: 'Marlon Brando',
+      category: 'Furniture client',
+      text:
+        'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable.',
+      image: 'https://fwcdn.pl/ppo/01/40/140/449871.2.jpg',
+      newFurniture: true,
+    },
   ],
 
   cart: {
@@ -1001,19 +1029,6 @@ const initialState = {
       image: 'https://i.postimg.cc/jd6679nR/bed.jpg',
     },
   },
-
-  feedback: [
-    {
-      id: '111',
-      name: '111',
-      title: 'Aenean Ru Bristique ',
-      category: 'one',
-      text:
-        'dgfshlfghsdghos;dfghsdfjhg;soighor;tihgr[wrtwihtgrofghifoghoritiorothorhgbnrgirjp',
-      image:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcScThfCm3xP7sKpUdfn7aSt_nJf2Gr7nA8yBQ&usqp=CAU',
-    },
-  ],
 };
 
 export default initialState;

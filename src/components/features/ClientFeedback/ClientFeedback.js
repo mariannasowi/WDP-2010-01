@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './ClientFeedback.module.scss';
-import Feedback from '../../common/Feedback/Feedback';
+import Feedback from '../../common/Feedback/FeedbackContainer';
 
 class ClientFeedback extends React.Component {
   state = {
     activePage: 0,
-    activeCategory: 'one',
+    activeCategory: 'Furniture client',
   };
 
   handlePageChange(newPage) {
@@ -19,17 +19,17 @@ class ClientFeedback extends React.Component {
   }
 
   render() {
-    const { feedback, viewport } = this.props;
+    const { products, viewport } = this.props;
     const { activeCategory, activePage } = this.state;
 
     const itemsPerViewport = { desktop: 1, tablet: 1, mobile: 1 };
     const itemsPerPage = itemsPerViewport[viewport];
 
-    const colsPerViewport = { desktop: 1, tablet: 1, mobile: 1 };
+    const colsPerViewport = { desktop: 12, tablet: 6, mobile: 1 };
     const colsOnPage = colsPerViewport[viewport];
 
-    const categoryFeedback = feedback.filter(item => item.category === activeCategory);
-    const pagesCount = Math.ceil(categoryFeedback.length / itemsPerPage);
+    const categoryProducts = products.filter(item => item.category === activeCategory);
+    const pagesCount = Math.ceil(categoryProducts.length / itemsPerPage);
 
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
@@ -51,16 +51,16 @@ class ClientFeedback extends React.Component {
           <div className={styles.panelBar}>
             <div className='row no-gutters align-items-end'>
               <div className={'col-auto ' + styles.heading}>
-                <h3>New furniture</h3>
+                <h3>Client Feedback</h3>
               </div>
-              <div className={'col ' + styles.menu}></div>
+              <div className={'col '}></div>
               <div className={'col-auto ' + styles.dots}>
                 <ul>{dots}</ul>
               </div>
             </div>
           </div>
           <div className='row'>
-            {feedback
+            {categoryProducts
               .slice(activePage * itemsPerPage, (activePage + 1) * itemsPerPage)
               .map(item => (
                 <div key={item.id} className={`col-${colsOnPage}`}>
@@ -77,18 +77,18 @@ class ClientFeedback extends React.Component {
 ClientFeedback.propTypes = {
   viewport: PropTypes.string.isRequired,
   children: PropTypes.node,
-  feedback: PropTypes.arrayOf(
+  products: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
       name: PropTypes.string,
-      title: PropTypes.string,
       category: PropTypes.string,
+      text: PropTypes.string,
     })
   ),
 };
 
 ClientFeedback.defaultProps = {
-  feedback: [],
+  products: [],
 };
 
 export default ClientFeedback;
