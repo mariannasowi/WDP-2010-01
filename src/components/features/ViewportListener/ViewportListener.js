@@ -9,28 +9,27 @@ const ViewportListener = ({ setViewport }) => {
     mobile: 768,
   };
 
-  function checkViewport() {
-    if (window.innerWidth < breakpoints.mobile) {
-      return 'mobile';
-    } else if (
-      window.innerWidth >= breakpoints.mobile &&
-      window.innerWidth < breakpoints.tablet
-    ) {
-      return 'tablet';
-    } else {
-      return 'desktop';
-    }
-  }
-
-  function handleResize() {
-    setViewport(checkViewport());
-  }
-
   useEffect(() => {
+    function checkViewport() {
+      if (window.innerWidth < breakpoints.mobile) {
+        return 'mobile';
+      } else if (
+        window.innerWidth >= breakpoints.mobile &&
+        window.innerWidth < breakpoints.tablet
+      ) {
+        return 'tablet';
+      } else {
+        return 'desktop';
+      }
+    }
+
+    function handleResize() {
+      setViewport(checkViewport());
+    }
     setViewport(checkViewport());
     window && window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, [checkViewport, handleResize, setViewport]);
+  }, [breakpoints.mobile, breakpoints.tablet, setViewport]);
 
   return null;
 };
