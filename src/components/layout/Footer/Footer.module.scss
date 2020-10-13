@@ -23,7 +23,7 @@
 
   .menuWrapper {
     h6 {
-      color: #ffffff;
+      color: $footer-menu-h6;
       text-transform: uppercase;
       margin: 0 0 1rem 0;
     }
@@ -34,13 +34,13 @@
       list-style: none;
 
       li > a {
-        @extend %hover-effect;
+        //@extend %hover-effect;
         font-size: 14px;
         line-height: 30px;
-        color: rgb(169, 169, 169);
+        color: $footer-menu-a;
 
         &:hover {
-          color: #ffffff;
+          color: $footer-menu-hover;
         }
       }
     }
@@ -56,7 +56,7 @@
     .copyright {
       p {
         margin: 0;
-        color: $text-color-two;
+        color: $footer-copyright-p;
         font-size: 14px;
         line-height: 26px;
       }
@@ -75,8 +75,8 @@
       }
 
       li a {
-        @extend %hover-effect;
-        color: rgb(169, 169, 169);
+        //@extend %hover-effect;
+        color: $footer-socialMedia-a;
         text-decoration: none;
 
         &:hover {
@@ -106,7 +106,7 @@
       .newText {
         max-width: 100%;
         text-align: center;
-        color: $text-color-two;
+        color: $primary;
       }
     }
   }

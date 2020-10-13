@@ -13,8 +13,8 @@
       line-height: 55px;
 
       a {
-        @extend %hover-effect;
-        color: #ffffff;
+        //@extend %hover-effect;
+        color: $header-topbar-a;
         font-size: 13px;
 
         &:hover {

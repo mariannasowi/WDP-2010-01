@@ -4,16 +4,16 @@
 // }
 
 .main {
-  @extend %hover-effect;
-  background-color: #2a2a2a;
-  color: #ffffff;
+  //@extend %hover-effect;
+  background-color: $button-main-bgc;
+  color: $button-main-color;
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
   padding: 10px 30px;
 
   &:not(.noHover):hover {
-    color: #ffffff !important;
+    color: $button-main-not-color !important;
     background-color: $primary;
     text-decoration: none;
   }
@@ -28,16 +28,16 @@
 }
 
 .outline {
-  @extend %hover-effect;
+  //@extend %hover-effect;
   display: inline-block;
   padding: 5px 10px;
-  border: 1px solid #2a2a2a;
-  color: #2a2a2a;
+  border: 1px solid $button-outline-border;
+  color: $button-outline-color;
   font-size: 13px;
   line-height: 22px;
 
   &:not(.noHover):hover {
-    background-color: #2a2a2a;
-    color: #ffffff;
+    background-color: $button-outline-border;
+    color: $button-outline-not-color;
   }
 }

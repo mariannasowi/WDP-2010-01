@@ -1,31 +1,75 @@
+// WE DON'T USE THESE VARIABLES IN ANY OTHER FILE
+
+$darkGray: #2a2a2a;
+$veryDarkGray: #292929;
+$mediumDarkGray: #b6b6b6;
+$gray: #a5a5a5;
+$mediumGray: #a9a9a9;
+$lightGray: #d8d8d8;
+$mediumLightGray: #e2e2e2;
+$veryLightGray: #e1e1e1;
+$lightGrayishBlue: #e0e3ed;
+$mediumLightGrayishBlue: #f4f5f7;
+$battleshipGray: #434343;
+$shadow: #363636;
+$orange: #d58e32;
+$white: #ffffff;
+
+$header-topbar-bg: $battleshipGray;
+$header-topbar-a: $white;
+$header-bg: $shadow;
+
+$newFurniture-panelBar-border: $mediumLightGray;
+$newFurniture-menu-a: $darkGray;
+$newFurniture-dots-bgc: $white;
+$newFurniture-dots-a: $veryLightGray;
+
+$companyClaim-phoneNumber-p: $lightGray;
+$companyClaim-cardCounter-color: $lightGrayishBlue;
+$companyClaim-cardBox-color: $white;
+
+$menuBar-active-color: $white;
+$menuBar-a-border: $white;
+$menuBar-root-bgc: $white;
+
+$footer-claim-bg: $darkGray;
+$footer-bg: $shadow;
+$footer-menu-h6: $white;
+$footer-menu-a: $mediumGray;
+$footer-menu-hover: $white;
+$footer-copyright-p: $mediumGray;
+$footer-socialMedia-a: $mediumGray;
+
+$productBox-root-bgc: $white;
+$productBox-root-border: $veryLightGray;
+$productBox-photo-color: $mediumLightGrayishBlue;
+$productBox-sale-bgc: $veryDarkGray;
+$productBox-sale-color: $white;
+$productBox-stars-color: $darkGray;
+$productBox-line-border: $darkGray;
+
+$featureBox-root-border: $mediumDarkGray;
+$featureBox-root-icon-color: $white;
+$featureBox-icon-border: $mediumDarkGray;
+$featureBox-icon-bgc: $white;
+$featureBox-content-color: $darkGray;
+
+$button-main-bgc: $darkGray;
+$button-main-color: $white;
+$button-main-not-color: $white;
+$button-main-not-color: $white;
+$button-outline-border: $darkGray;
+$button-outline-color: $darkGray;
+$button-outline-not-bgc: $darkGray;
+$button-outline-not-color: $white;
+$button-favorite-color: $white;
+$button-compare-color: $white;
+
+$primary: $orange;
+
+$text-color: $darkGray;
+$old-price-text-color: $gray;
+
+$form-border-color: $veryDarkGray;
+
 $base-padding: 24px;
-
-$header-topbar-bg: #434343;
-$header-bg: #363636;
-
-$footer-claim-bg: #2a2a2a;
-$footer-bg: #363636;
-
-$primary: #d58e32;
-
-$text-color: #2a2a2a;
-
-$sale-color: #ffff;
-
-$text-color-two: rgb(169, 169, 169);
-
-$form-border-color: #292929;
-
-$line-color: #000;
-
-$old-price: #ff0000;
-
-$favourite-color: #ff0000;
-
-$compare-color: #228b22;
-
-$transition: all 0.25s;
-
-%hover-effect {
-  transition: $transition;
-}
