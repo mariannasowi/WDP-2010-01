@@ -968,6 +968,7 @@ const initialState = {
       image:
         'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcScThfCm3xP7sKpUdfn7aSt_nJf2Gr7nA8yBQ&usqp=CAU',
       newFurniture: true,
+      hotDeal: true,
     },
   ],
   cart: {
@@ -975,6 +976,29 @@ const initialState = {
   },
   compare: {
     products: [],
+  },
+  promotedProduct: {
+    title: 'indoor',
+    spanTitle: 'furniture',
+    subtitle: 'save up to 50% of all furniture',
+    button: 'shop now',
+    images: [
+      {
+        image:
+          'https://images.pexels.com/photos/545012/pexels-photo-545012.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+        imageAlt: 'bed',
+      },
+      {
+        image:
+          'https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',
+        imageAlt: 'sofa',
+      },
+      {
+        image:
+          'https://images.pexels.com/photos/509922/pexels-photo-509922.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+        imageAlt: 'chair',
+      },
+    ],
   },
   viewport: 'desktop',
 
