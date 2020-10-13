@@ -7,7 +7,7 @@ import Button from '../../common/Button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
-const PromotedProduct = ({ products, title, subTitle, spanTitle, images, button }) => {
+const PromotedProduct = ({ hotDeal, title, subTitle, spanTitle, images, button }) => {
   return (
     <div className={styles.root}>
       <div className='container'>
@@ -33,7 +33,7 @@ const PromotedProduct = ({ products, title, subTitle, spanTitle, images, button 
                 </div>
               </div>
             </div>
-            <PromotedProductBox {...products[0]} />
+            <PromotedProductBox {...hotDeal[0]} />
           </div>
           <div className={`col-8 ${styles.secondProduct}`}>
             <div className={styles.carousel}>
@@ -73,7 +73,7 @@ const PromotedProduct = ({ products, title, subTitle, spanTitle, images, button 
 };
 
 PromotedProduct.propTypes = {
-  products: PropTypes.arrayOf(
+  hotDeal: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
       name: PropTypes.string,

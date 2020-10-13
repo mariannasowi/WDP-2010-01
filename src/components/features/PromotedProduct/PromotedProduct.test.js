@@ -15,7 +15,7 @@ describe('Component PromotedProduct', () => {
         id: 'abc',
       },
     ];
-    const component = shallow(<PromotedProduct images={image} products={products} />);
+    const component = shallow(<PromotedProduct images={image} hotDeal={products} />);
     expect(component).toBeTruthy();
   });
 });

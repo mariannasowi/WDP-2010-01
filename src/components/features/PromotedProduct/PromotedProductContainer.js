@@ -1,14 +1,14 @@
 import { connect } from 'react-redux';
 
 import PromotedProduct from './PromotedProduct';
-import { getPromoted } from '../../../redux/productsRedux.js';
+import { getHotDeal } from '../../../redux/productsRedux.js';
 
 const mapStateToProps = state => {
   const promotedProduct = state.promotedProduct;
 
   return {
     ...promotedProduct,
-    products: getPromoted(state),
+    hotDeal: getHotDeal(state),
   };
 };
 

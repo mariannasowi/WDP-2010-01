@@ -968,7 +968,7 @@ const initialState = {
       image:
         'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcScThfCm3xP7sKpUdfn7aSt_nJf2Gr7nA8yBQ&usqp=CAU',
       newFurniture: true,
-      promotedProduct: true,
+      hotDeal: true,
     },
   ],
   cart: {
