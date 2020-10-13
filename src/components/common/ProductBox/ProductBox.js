@@ -25,6 +25,7 @@ const ProductBox = ({
 }) => {
   const isProductAddedToCompare =
     compare &&
+    compare.products &&
     compare.products.reduce(
       (accumulator, product) => accumulator || product.id === id,
       false
