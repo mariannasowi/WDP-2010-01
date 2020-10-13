@@ -26,20 +26,21 @@ const ProductBox = ({
   const compareHandler = event => {
     event.preventDefault();
     const maxProductsToCompare = 4;
-    const isProductAddedToCompare =
-      compare.products &&
-      compare.products.reduce(
-        (accumulator, product) => accumulator || product.id === id,
-        false
-      );
+    
 
     if (isProductAddedToCompare !== true) {
       count < maxProductsToCompare
         ? setCompare({ id, image })
         : alert(`You can compare maximum of ${maxProductsToCompare} products!`);
     }
-    return isProductAddedToCompare;
   };
+
+  const isProductAddedToCompare =
+  compare.products &&
+  compare.products.reduce(
+    (accumulator, product) => accumulator || product.id === id,
+    false
+  );
 
   const addToFavouriteHandler = event => {
     event.preventDefault();
@@ -74,10 +75,10 @@ const ProductBox = ({
           >
             <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
           </Button>
-          <Button variant='outline' onClick={compareHandler}>
+          <Button className={isProductAddedToCompare ? styles.productIsCompared : ''} variant='outline' onClick={compareHandler}  >
             <FontAwesomeIcon
               icon={faExchangeAlt}
-              className={compareHandler ? styles.productIsCompared : ''}
+             
             >
               Add to compare
             </FontAwesomeIcon>
