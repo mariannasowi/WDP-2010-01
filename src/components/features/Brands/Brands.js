@@ -1,14 +1,14 @@
 import React from 'react';
-import styles from '../Brands/Brands.module.scss';
+import styles from './Brands.module.scss';
 import PropTypes from 'prop-types';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Brands = ({ brands }) => {
   return (
-    <div className='root'>
+    <div className={styles.root}>
       <div className='container'>
-        <div className='row'>
+        <div className={`row ${styles.wrapper}`}>
           <div className={styles.arrow}>
             <FontAwesomeIcon className={styles.icon} icon={faAngleLeft} />
           </div>
