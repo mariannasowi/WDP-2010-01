@@ -1,4 +1,4 @@
-// WE DON'T USE THESE VARIABLES IN ANY OTHER FILE
+// VARIABLES WE DON'T USE IN ANY ANOTHER FILES
 
 $darkGray: #2a2a2a;
 $veryDarkGray: #292929;
@@ -14,6 +14,8 @@ $battleshipGray: #434343;
 $shadow: #363636;
 $orange: #d58e32;
 $white: #ffffff;
+
+// VARIABLES WE ARE USING IN ANOTHER FILES
 
 $header-topbar-bg: $battleshipGray;
 $header-topbar-a: $white;
@@ -73,3 +75,9 @@ $old-price-text-color: $gray;
 $form-border-color: $veryDarkGray;
 
 $base-padding: 24px;
+
+$transition: all 0.25s;
+
+%hover-effect {
+  transition: $transition;
+}

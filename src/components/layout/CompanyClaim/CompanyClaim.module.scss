@@ -31,7 +31,7 @@
     }
 
     .cartBox {
-      //@extend %hover-effect;
+      @extend %hover-effect;
       display: inline-block;
       position: relative;
       color: $companyClaim-cardBox-color;

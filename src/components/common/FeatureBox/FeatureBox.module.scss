@@ -1,7 +1,7 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  //@extend %hover-effect;
+  @extend %hover-effect;
   border: 1px solid $featureBox-root-border;
   text-align: center;
   margin-top: 40px;
@@ -10,7 +10,7 @@
   .iconWrapper {
     height: 60px;
     transform: translateY(-50%);
-    color: $featureBox-root-icon-color;
+    color: $featureBox-content-color;
     display: inline-flex;
     justify-content: center;
     align-items: center;

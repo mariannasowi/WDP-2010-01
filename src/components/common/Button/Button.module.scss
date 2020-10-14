@@ -4,7 +4,7 @@
 // }
 
 .main {
-  //@extend %hover-effect;
+  @extend %hover-effect;
   background-color: $button-main-bgc;
   color: $button-main-color;
   font-size: 16px;
@@ -28,7 +28,7 @@
 }
 
 .outline {
-  //@extend %hover-effect;
+  @extend %hover-effect;
   display: inline-block;
   padding: 5px 10px;
   border: 1px solid $button-outline-border;
