@@ -89,12 +89,12 @@ class NewFurniture extends React.Component {
                 <ul>
                   {categories.map(item => (
                     <li key={item.id}>
-                      <div
+                      <a
                         className={item.id === activeCategory && styles.active}
                         onClick={() => this.handleCategoryChange(item.id)}
                       >
                         {item.name}
-                      </div>
+                      </a>
                     </li>
                   ))}
                 </ul>
