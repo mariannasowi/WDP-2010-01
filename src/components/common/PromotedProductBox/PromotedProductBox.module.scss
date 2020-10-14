@@ -118,11 +118,11 @@
   }
 
   .heart {
-    color: $favourite-color;
+    color: $productBox-stars-color;
   }
 
   .productIsCompared {
-    color: $compare-color;
+    color: $productBox-stars-color;
     background-color: $primary;
   }
 
@@ -149,6 +149,6 @@
   .oldPrice {
     font-size: 20px;
     text-decoration: line-through;
-    color: $old-price;
+    color: $old-price-text-color;
   }
 }
