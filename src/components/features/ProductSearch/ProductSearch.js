@@ -13,27 +13,43 @@ const ProductSearch = () => (
       <ul className={styles.list}>
         <li className={styles.listCategory}>
           <span value=''>Select a category</span>
-        </li>
-        <li className={styles.activeList}>
-          <span value=''>HOME</span>
-        </li>
-        <li className={styles.activeList}>
-          <span value=''>FURNITURE</span>
-        </li>
-        <li className={styles.activeList}>
-          <span value=''>CHAIR</span>
-        </li>
-        <li className={styles.activeList}>
-          <span value=''>TABLE</span>
-        </li>
-        <li className={styles.activeList}>
-          <span value=''>SOFA</span>
-        </li>
-        <li className={styles.activeList}>
-          <span value=''>BEDROOM</span>
-        </li>
-        <li className={styles.activeList}>
-          <span value=''>BLOG</span>
+          <ul className={styles.listCategoryItems}>
+            <li className={styles.activeList}>
+              <a href='#' value=''>
+                HOME
+              </a>
+            </li>
+            <li className={styles.activeList}>
+              <a href='#' value=''>
+                FURNITURE
+              </a>
+            </li>
+            <li className={styles.activeList}>
+              <a href='#' value=''>
+                CHAIR
+              </a>
+            </li>
+            <li className={styles.activeList}>
+              <a href='#' value=''>
+                TABLE
+              </a>
+            </li>
+            <li className={styles.activeList}>
+              <a href='#' value=''>
+                SOFA
+              </a>
+            </li>
+            <li className={styles.activeList}>
+              <a href='#' value=''>
+                BEDROOM
+              </a>
+            </li>
+            <li className={styles.activeList}>
+              <a href='#' value=''>
+                BLOG
+              </a>
+            </li>
+          </ul>
         </li>
       </ul>
       <FontAwesomeIcon className={styles.icon} icon={faCaretDown} />
