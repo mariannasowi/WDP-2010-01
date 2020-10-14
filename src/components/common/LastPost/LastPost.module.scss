@@ -32,6 +32,7 @@
     }
 
     h4 a {
+      @extend %hover-effect;
       font-size: 16px;
       line-height: 26px;
       letter-spacing: 1px;
