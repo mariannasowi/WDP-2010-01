@@ -34,8 +34,6 @@ SwipeComponent.propTypes = {
   leftAction: PropTypes.func.isRequired,
   activePage: PropTypes.number.isRequired,
   children: PropTypes.node,
-  noSwiping: PropTypes.bool,
-  grabCursor: PropTypes.bool,
 };
 
 export default SwipeComponent;

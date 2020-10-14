@@ -66,11 +66,13 @@ class NewFurniture extends React.Component {
     for (let page = 0; page < pagesCount; page++) {
       swipeContent.push(
         <div className='row'>
-          {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
-            <div key={item.id} className='col-3'>
-              <ProductBox {...item} />
-            </div>
-          ))}
+          {categoryProducts
+            .slice(activePage * itemsPerPage, (activePage + 1) * itemsPerPage)
+            .map(item => (
+              <div key={item.id} className={`col-${colsOnPage}`}>
+                <ProductBox {...item} />
+              </div>
+            ))}
         </div>
       );
     }
@@ -87,13 +89,12 @@ class NewFurniture extends React.Component {
                 <ul>
                   {categories.map(item => (
                     <li key={item.id}>
-                      <a
-                        href='/#'
+                      <div
                         className={item.id === activeCategory && styles.active}
                         onClick={() => this.handleCategoryChange(item.id)}
                       >
                         {item.name}
-                      </a>
+                      </div>
                     </li>
                   ))}
                 </ul>
