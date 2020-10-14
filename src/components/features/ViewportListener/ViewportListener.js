@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useCallback, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { setViewport } from '../../../redux/viewportRedux';
 import { connect } from 'react-redux';
@@ -9,27 +9,28 @@ const ViewportListener = ({ setViewport }) => {
     mobile: 768,
   };
 
-  useEffect(() => {
-    function checkViewport() {
-      if (window.innerWidth < breakpoints.mobile) {
-        return 'mobile';
-      } else if (
-        window.innerWidth >= breakpoints.mobile &&
-        window.innerWidth < breakpoints.tablet
-      ) {
-        return 'tablet';
-      } else {
-        return 'desktop';
-      }
+  const checkViewport = useCallback(() => {
+    if (window.innerWidth < breakpoints.mobile) {
+      return 'mobile';
+    } else if (
+      window.innerWidth >= breakpoints.mobile &&
+      window.innerWidth < breakpoints.tablet
+    ) {
+      return 'tablet';
+    } else {
+      return 'desktop';
     }
+  }, [breakpoints.mobile, breakpoints.tablet]);
 
-    function handleResize() {
-      setViewport(checkViewport());
-    }
+  const handleResize = useCallback(() => {
+    setViewport(checkViewport());
+  }, [checkViewport, setViewport]);
+
+  useEffect(() => {
     setViewport(checkViewport());
     window && window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, [breakpoints.mobile, breakpoints.tablet, setViewport]);
+  }, [checkViewport, handleResize, setViewport]);
 
   return null;
 };
