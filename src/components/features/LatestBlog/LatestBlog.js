@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import styles from './LatestBlog.module.scss';
 
+import LastPost from '../../common/LastPost/LastPost';
+
 class LatestBlog extends React.Component {
   state = {
     activePage: 0,
@@ -39,7 +41,7 @@ class LatestBlog extends React.Component {
         <div className='container'>
           <div className={styles.panelBar}>
             <div className='row no-gutters align-items-end'>
-              <div className={'col-auto ' + styles.heading}>
+              <div className={'col-11 ' + styles.heading}>
                 <h3>Latest blog</h3>
               </div>
               <div className={'col-auto ' + styles.dots}>
@@ -52,8 +54,7 @@ class LatestBlog extends React.Component {
               .slice(activePage * itemsPerPage, (activePage + 1) * itemsPerPage)
               .map(item => (
                 <div key={item.id} className={`col-4`}>
-                  test
-                  {/* <ProductBox {...item} /> */}
+                  <LastPost {...item} />
                 </div>
               ))}
           </div>
@@ -66,13 +67,14 @@ class LatestBlog extends React.Component {
 LatestBlog.propTypes = {
   posts: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string,
+      id: PropTypes.string.isRequired,
+      date: PropTypes.string,
+      comments: PropTypes.string,
+      title: PropTypes.string,
+      description: PropTypes.string,
+      image: PropTypes.string,
     })
   ),
-};
-
-LatestBlog.defaultProps = {
-  posts: [],
 };
 
 export default LatestBlog;

@@ -4,7 +4,12 @@ import LatestBlog from './LatestBlog';
 
 describe('Component LatestBlog', () => {
   it('should render without crashing', () => {
-    const component = shallow(<LatestBlog />);
+    const posts = [
+      {
+        id: 'aaa',
+      },
+    ];
+    const component = shallow(<LatestBlog posts={posts} />);
     expect(component).toBeTruthy();
   });
 });

@@ -1,0 +1,60 @@
+@import "../../../styles/settings.scss";
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.root {
+  margin-bottom: 2rem;
+
+  .photo {
+    position: relative;
+    background: {
+      size: contain;
+      position: center;
+      repeat: no-repeat;
+    }
+    overflow: hidden;
+    align-items: flex-end;
+    width: 100%;
+    height: 280px;
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      visibility: hidden;
+    }
+  }
+
+  .body {
+    text-align: center;
+    padding: 20px;
+
+    h4 {
+      text-align: left;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 1px;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+
+    .description {
+      text-align: justify;
+    }
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
