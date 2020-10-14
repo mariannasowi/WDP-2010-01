@@ -54,7 +54,7 @@ class Gallery extends React.Component {
               {categoryProducts.slice(0, 1).map(product => (
                 <div key={product.id} className={styles.product}>
                   <div className={styles.photo}>
-                    <img alt={product.name} src={product.img} />
+                    <img alt={product.name} src={product.image} />
                   </div>
                   <div className={styles.buttons}>
                     <div className={styles.buttonWrapper}>
@@ -118,7 +118,7 @@ class Gallery extends React.Component {
                 </Button>
                 {categoryProducts.slice(0, 6).map(product => (
                   <div key={product.id} className={styles.imgWrapper}>
-                    <img alt={product.name} src={product.img} />
+                    <img alt={product.name} src={product.image} />
                   </div>
                 ))}
                 <Button className={styles.button} variant='small'>
