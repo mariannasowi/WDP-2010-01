@@ -54,11 +54,12 @@
     }
 
     .list:hover {
-      .activeList {
+      .listCategoryItems {
         display: block;
         cursor: pointer;
-        padding: 10px 10px;
-        align-items: left;
+        padding: 5px 10px;
+        width: 165px;
+        text-align: left;
       }
     }
   }

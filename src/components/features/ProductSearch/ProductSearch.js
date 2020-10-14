@@ -14,37 +14,37 @@ const ProductSearch = () => (
         <li className={styles.listCategory}>
           <span value=''>Select a category</span>
           <ul className={styles.listCategoryItems}>
-            <li className={styles.activeList}>
+            <li className={styles.listCategoryItems}>
               <a href='#' value=''>
                 HOME
               </a>
             </li>
-            <li className={styles.activeList}>
+            <li className={styles.listCategoryItems}>
               <a href='#' value=''>
                 FURNITURE
               </a>
             </li>
-            <li className={styles.activeList}>
+            <li className={styles.listCategoryItems}>
               <a href='#' value=''>
                 CHAIR
               </a>
             </li>
-            <li className={styles.activeList}>
+            <li className={styles.listCategoryItems}>
               <a href='#' value=''>
                 TABLE
               </a>
             </li>
-            <li className={styles.activeList}>
+            <li className={styles.listCategoryItems}>
               <a href='#' value=''>
                 SOFA
               </a>
             </li>
-            <li className={styles.activeList}>
+            <li className={styles.listCategoryItems}>
               <a href='#' value=''>
                 BEDROOM
               </a>
             </li>
-            <li className={styles.activeList}>
+            <li className={styles.listCategoryItems}>
               <a href='#' value=''>
                 BLOG
               </a>
