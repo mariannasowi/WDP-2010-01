@@ -1,15 +1,5 @@
 @import "../../../styles/settings.scss";
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
 .root {
   margin-bottom: 2rem;
 
@@ -24,26 +14,32 @@
     align-items: flex-end;
     width: 100%;
     height: 280px;
-
-    .buttons {
-      display: flex;
-      justify-content: space-between;
-      visibility: hidden;
-    }
   }
 
   .body {
+    background-color: $component-bg-color;
+    margin-left: 7%;
+    margin-right: 7%;
+    height: 300px;
     text-align: center;
     padding: 20px;
+    transform: translateY(-50px);
+    font-size: 12px;
 
     h4 {
       text-align: left;
-      font-size: 18px;
-      line-height: 24px;
+      padding-top: 10px;
+    }
+
+    h4 a {
+      font-size: 16px;
+      line-height: 26px;
       letter-spacing: 1px;
+      color: $text-color;
 
       &:hover {
         color: $primary;
+        text-decoration: none;
       }
     }
 
@@ -56,5 +52,9 @@
     object-fit: cover;
     width: 100%;
     height: 100%;
+  }
+
+  .button {
+    margin-top: 20px;
   }
 }

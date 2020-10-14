@@ -24,10 +24,12 @@ const LastPost = ({ id, date, comments, title, description, image }) => (
           </p>
         </div>
       </div>
-      <h4>{title}</h4>
+      <h4>
+        <a href='#'>{title}</a>
+      </h4>
       <p className={styles.description}>{description}</p>
-      <div className={styles.buttons}>
-        <Button variant='small'>Read more</Button>
+      <div className={styles.button}>
+        <Button variant='medium'>Read more</Button>
       </div>
     </div>
   </div>
