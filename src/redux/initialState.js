@@ -945,6 +945,7 @@ const initialState = {
       image:
         'https://www.e-restauracja.com/assets/artykul/2016-10-09/rs-2016-10dd-18.jpg',
       newFurniture: true,
+      hotDeal: true,
     },
     {
       id: 'aenean-ru-bristique-83',
@@ -956,6 +957,7 @@ const initialState = {
       image:
         'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSxUReSUM7s__ddS84sXfYznHhz07z1mAGrzw&usqp=CAU',
       newFurniture: true,
+      hotDeal: true,
     },
     {
       id: 'aenean-ru-bristique-84',
@@ -971,12 +973,6 @@ const initialState = {
       hotDeal: true,
     },
   ],
-  cart: {
-    products: [],
-  },
-  compare: {
-    products: [],
-  },
   promotedProduct: {
     title: 'indoor',
     spanTitle: 'furniture',
@@ -1000,8 +996,6 @@ const initialState = {
       },
     ],
   },
-  viewport: 'desktop',
-
   sales: {
     boxOne: {
       name: 'Guest room',
@@ -1024,6 +1018,13 @@ const initialState = {
       image: 'https://i.postimg.cc/jd6679nR/bed.jpg',
     },
   },
+  cart: {
+    products: [],
+  },
+  compare: {
+    products: [],
+  },
+  viewport: 'desktop',
 };
 
 export default initialState;
