@@ -211,6 +211,7 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       img: 'https://s7d5.scene7.com/is/img/UrbanOutfitters/30073654_020_b',
+      image: 'https://s7d5.scene7.com/is/img/UrbanOutfitters/30073654_020_b',
       newFurniture: true,
     },
     {
@@ -222,6 +223,8 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       img:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQKbQfOW7F1pKXDd6C1g3tzarUbBXCTz8BQtw&usqp=CAU',
+      image:
         'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQKbQfOW7F1pKXDd6C1g3tzarUbBXCTz8BQtw&usqp=CAU',
       newFurniture: true,
     },
