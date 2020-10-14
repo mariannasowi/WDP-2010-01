@@ -1,14 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './ProductBox.module.scss';
+import styles from './PromotedProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
+import {
+  faStar,
+  faExchangeAlt,
+  faShoppingBasket,
+  faEye,
+} from '@fortawesome/free-solid-svg-icons';
+import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
-import ProductRating from '../../features/ProductRating/ProductRatingContainer';
-import { faHeart } from '@fortawesome/free-regular-svg-icons';
 
-const ProductBox = ({
+const PromotedProductBox = ({
   id,
   name,
   image,
@@ -16,11 +20,9 @@ const ProductBox = ({
   oldPrice,
   promo,
   stars,
-  isStarred,
   setCompare,
   count,
   compare,
-  addToFavourite,
   heart,
 }) => {
   const isProductAddedToCompare =
@@ -41,18 +43,32 @@ const ProductBox = ({
     }
   };
 
-  const addToFavouriteHandler = event => {
-    event.preventDefault();
-    addToFavourite(id);
-  };
-
   return (
     <div className={styles.root}>
       <div className={styles.photo}>
         <img src={image} alt={name} />
         {promo && <div className={styles.sale}>{promo}</div>}
+        <div className={styles.promoCounter}>
+          <div className='row'>
+            <div className={`col-3 ${styles.dots}`}>
+              <h5>25</h5>
+              <p>DAYS</p>
+            </div>
+            <div className={`col-3 ${styles.dots}`}>
+              <h5>10</h5>
+              <p>HRS</p>
+            </div>
+            <div className={`col-3 ${styles.dots}`}>
+              <h5>24</h5>
+              <p>MINS</p>
+            </div>
+            <div className={`col-3 ${styles.dots}`}>
+              <h5>30</h5>
+              <p>SECS</p>
+            </div>
+          </div>
+        </div>
         <div className={styles.buttons}>
-          <Button variant='small'>Quick View</Button>
           <Button variant='small'>
             <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
           </Button>
@@ -61,18 +77,27 @@ const ProductBox = ({
       <div className={styles.content}>
         <h5>{name}</h5>
         <div className={styles.stars}>
-          <ProductRating id={id} stars={stars} isStarred={isStarred} />
+          {[1, 2, 3, 4, 5].map(i => (
+            <a key={i} href='#'>
+              {i <= stars ? (
+                <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
+              ) : (
+                <FontAwesomeIcon icon={farStar}>{i} stars</FontAwesomeIcon>
+              )}
+            </a>
+          ))}
         </div>
       </div>
       <div className={styles.line}></div>
       <div className={styles.actions}>
         <div className={styles.outlines}>
-          <Button
-            className={heart ? styles.heart : ''}
-            variant='outline'
-            onClick={addToFavouriteHandler}
-          >
-            <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
+          <Button variant='outline'>
+            <FontAwesomeIcon icon={faEye}>View more</FontAwesomeIcon>
+          </Button>
+          <Button variant='outline'>
+            <FontAwesomeIcon icon={faHeart} className={heart ? styles.heart : ''}>
+              Favorite
+            </FontAwesomeIcon>
           </Button>
           <Button
             className={isProductAddedToCompare ? styles.productIsCompared : ''}
@@ -93,22 +118,20 @@ const ProductBox = ({
   );
 };
 
-ProductBox.propTypes = {
+PromotedProductBox.propTypes = {
   children: PropTypes.node,
-  id: PropTypes.string.isRequired,
+  id: PropTypes.string,
   name: PropTypes.string,
   price: PropTypes.number,
   oldPrice: PropTypes.string,
   promo: PropTypes.string,
   stars: PropTypes.number,
-  isStarred: PropTypes.bool,
   heart: PropTypes.bool,
+  addCompare: PropTypes.bool,
   image: PropTypes.string,
-  setCompare: PropTypes.func.isRequired,
-  count: PropTypes.number.isRequired,
-  compare: PropTypes.object.isRequired,
-  addToFavourite: PropTypes.func.isRequired,
-  removeFromFavourite: PropTypes.func.isRequired,
+  setCompare: PropTypes.func,
+  count: PropTypes.number,
+  compare: PropTypes.object,
 };
 
-export default ProductBox;
+export default PromotedProductBox;
