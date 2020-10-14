@@ -1,29 +1,15 @@
 @import "../../../styles/settings.scss";
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
 .root {
-  background-color: $productBox-root-bgc;
-  border: 1px solid $productBox-root-border;
+  background-color: $promo-text-color;
+  border: 1px solid $box-border-color;
   margin-bottom: 2rem;
-  opacity: 0;
-  animation-name: fadeIn;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
 
   .photo {
     position: relative;
     padding: 0 10px 0 10px;
     background: {
-      color: $productBox-photo-color;
+      color: $photo-bg-color;
       size: contain;
       position: center;
       repeat: no-repeat;
@@ -36,16 +22,56 @@
       top: -30px;
       left: 50%;
       transform: translateX(-50%);
-      background-color: $productBox-sale-bgc;
+      background-color: $form-border-color;
       border-radius: 50%;
-      color: $productBox-sale-color;
+      color: $promo-text-color;
       padding: 30px 15px 5px 15px;
+    }
+
+    .promoCounter {
+      height: 0;
+    }
+
+    .dots {
+      display: flex;
+      visibility: hidden;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      transform: translateY(-30px);
+
+      h5 {
+        color: $promo-text-color;
+        z-index: 2;
+        line-height: 0.5;
+        text-align: center;
+      }
+
+      p {
+        color: $promo-text-color;
+        z-index: 2;
+      }
+    }
+
+    .dots::after {
+      content: "";
+      border: 1px solid $form-border-color;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -60%);
+      width: 76px;
+      height: 76px;
+      border-radius: 100%;
+      background-color: $form-border-color;
+      z-index: 1;
     }
 
     .buttons {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       visibility: hidden;
+      transform: translateY(-120px);
     }
   }
 
@@ -63,14 +89,14 @@
     .stars {
       a {
         text-decoration: none;
-        color: $productBox-stars-color;
+        color: $stars-color;
       }
     }
   }
 
   .line {
     margin: 0 10px;
-    border-bottom: 1px solid $productBox-line-border;
+    border-bottom: 1px solid $text-color;
     position: relative;
 
     &::before {
@@ -91,6 +117,10 @@
     align-items: center;
   }
 
+  .heart {
+    color: $favourite-color;
+  }
+
   .productIsCompared {
     color: $compare-color;
     background-color: $primary;
@@ -103,6 +133,10 @@
   }
 
   &:hover {
+    .dots {
+      visibility: visible;
+    }
+
     .buttons {
       visibility: visible;
     }
@@ -115,11 +149,6 @@
   .oldPrice {
     font-size: 20px;
     text-decoration: line-through;
-    color: $primary;
-  }
-
-  .heart {
-    color: $favourite-color;
-    background-color: $primary;
+    color: $old-price;
   }
 }
