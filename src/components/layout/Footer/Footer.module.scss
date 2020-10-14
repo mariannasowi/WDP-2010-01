@@ -3,32 +3,11 @@
 .root {
   .footerMenu {
     background-color: $footer-bg;
-    padding: 3rem 0;
+    padding: 3rem 10%;
 
-    .menuWrapper {
-      h6 {
-        color: #ffffff;
-        text-transform: uppercase;
-        margin: 0 0 1rem 0;
-      }
-
-      ul {
-        margin: 0 0 1.5rem 0;
-        padding: 0;
-        list-style: none;
-        li {
-          a {
-            @extend %hover-effect;
-            font-size: 14px;
-            line-height: 30px;
-            color: rgb(169, 169, 169);
-
-            &:hover {
-              color: #ffffff;
-            }
-          }
-        }
-      }
+    img {
+      margin-left: auto;
+      padding-left: 40%;
     }
 
     .paymentMethods {
@@ -38,6 +17,31 @@
 
       li {
         display: inline-block;
+      }
+    }
+  }
+
+  .menuWrapper {
+    h6 {
+      color: #ffffff;
+      text-transform: uppercase;
+      margin: 0 0 1rem 0;
+    }
+
+    ul {
+      margin: 0 0 1.5rem 0;
+      padding: 0;
+      list-style: none;
+
+      li > a {
+        @extend %hover-effect;
+        font-size: 14px;
+        line-height: 30px;
+        color: rgb(169, 169, 169);
+
+        &:hover {
+          color: #ffffff;
+        }
       }
     }
   }
@@ -52,32 +56,83 @@
     .copyright {
       p {
         margin: 0;
-        color: rgb(169, 169, 169);
+        color: $text-color-two;
         font-size: 14px;
         line-height: 26px;
       }
     }
+  }
 
-    .socialMedia {
-      ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
+  .socialMedia {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
 
-        li {
-          display: inline-block;
-          margin-left: 1rem;
+      li {
+        display: inline-block;
+        margin-left: 1rem;
+      }
 
-          a {
-            @extend %hover-effect;
-            color: rgb(169, 169, 169);
-            text-decoration: none;
+      li a {
+        @extend %hover-effect;
+        color: rgb(169, 169, 169);
+        text-decoration: none;
 
-            &:hover {
-              color: $primary;
-            }
-          }
+        &:hover {
+          color: $primary;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 990px) {
+  .root {
+    .footerMenu {
+      height: 100%;
+      padding: 5% 24%;
+
+      img {
+        padding-bottom: 0;
+      }
+    }
+
+    .bottomBar {
+      :global(.container) > :global(.row) {
+        height: 94px;
+      }
+
+      .newText {
+        max-width: 100%;
+        text-align: center;
+        color: $text-color-two;
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .root {
+    .footerMenu {
+      height: 100%;
+      padding: 5% 24%;
+
+      img {
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 530px) {
+  .root {
+    .footerMenu {
+      height: 100%;
+      padding: 5% 30%;
+
+      img {
+        padding-top: 0;
       }
     }
   }
