@@ -48,7 +48,6 @@
         width: 100%;
       }
 
-
       &.active {
         border-color: $text-color;
       }
@@ -73,8 +72,8 @@
 }
 
 .icon {
-  width: 35px !important;
-  height: 35px !important;
+  width: 35px;
+  height: 35px;
   margin-left: 1rem;
   cursor: pointer;
 }
@@ -83,9 +82,8 @@
 
 .menu {
   align-self: stretch;
-  margin: 10px -15px !important;
-
-  }
+  margin: 10px -15px;
+   }
 }
 
   @media (max-width: 520px) {
@@ -93,7 +91,7 @@
     .product_search {
       flex: 80%;
       order: 0;
-          }
+  }
 
     .hamburger_label {
       display: flex;
@@ -115,7 +113,6 @@
       height: 0;
       overflow-y: auto;
       
-
       ul {
         flex-wrap: wrap;
         border: 1px solid $form-border-color;
@@ -134,5 +131,3 @@
     }
   }
 }
-
-
