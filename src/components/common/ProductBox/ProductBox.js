@@ -22,18 +22,18 @@ const ProductBox = ({
   compare,
   addToFavourite,
   heart,
-  addCompare,
 }) => {
+  const isProductAddedToCompare =
+    compare &&
+    compare.products &&
+    compare.products.reduce(
+      (accumulator, product) => accumulator || product.id === id,
+      false
+    );
+
   const compareHandler = event => {
     event.preventDefault();
     const maxProductsToCompare = 4;
-    const isProductAddedToCompare =
-      compare.products &&
-      compare.products.reduce(
-        (accumulator, product) => accumulator || product.id === id,
-        false
-      );
-
     if (isProductAddedToCompare !== true) {
       count < maxProductsToCompare
         ? setCompare({ id, image })
@@ -74,13 +74,12 @@ const ProductBox = ({
           >
             <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
           </Button>
-          <Button variant='outline' onClick={compareHandler}>
-            <FontAwesomeIcon
-              icon={faExchangeAlt}
-              className={addCompare ? styles.addCompare : ''}
-            >
-              Add to compare
-            </FontAwesomeIcon>
+          <Button
+            className={isProductAddedToCompare ? styles.productIsCompared : ''}
+            variant='outline'
+            onClick={compareHandler}
+          >
+            <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
           </Button>
         </div>
         <div className={styles.oldPrice}>{oldPrice}</div>
@@ -104,13 +103,11 @@ ProductBox.propTypes = {
   stars: PropTypes.number,
   isStarred: PropTypes.bool,
   heart: PropTypes.bool,
-  addCompare: PropTypes.bool,
   image: PropTypes.string,
   setCompare: PropTypes.func.isRequired,
   count: PropTypes.number.isRequired,
   compare: PropTypes.object.isRequired,
   addToFavourite: PropTypes.func.isRequired,
-  removeFromFavourite: PropTypes.func.isRequired,
 };
 
 export default ProductBox;

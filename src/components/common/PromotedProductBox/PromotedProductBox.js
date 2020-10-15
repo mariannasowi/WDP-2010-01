@@ -24,18 +24,18 @@ const PromotedProductBox = ({
   count,
   compare,
   heart,
-  addCompare,
 }) => {
+  const isProductAddedToCompare =
+    compare &&
+    compare.products &&
+    compare.products.reduce(
+      (accumulator, product) => accumulator || product.id === id,
+      false
+    );
+
   const compareHandler = event => {
     event.preventDefault();
     const maxProductsToCompare = 4;
-    const isProductAddedToCompare =
-      compare.products &&
-      compare.products.reduce(
-        (accumulator, product) => accumulator || product.id === id,
-        false
-      );
-
     if (isProductAddedToCompare !== true) {
       count < maxProductsToCompare
         ? setCompare({ id, image })
@@ -99,13 +99,12 @@ const PromotedProductBox = ({
               Favorite
             </FontAwesomeIcon>
           </Button>
-          <Button variant='outline' onClick={compareHandler}>
-            <FontAwesomeIcon
-              icon={faExchangeAlt}
-              className={addCompare ? styles.addCompare : ''}
-            >
-              Add to compare
-            </FontAwesomeIcon>
+          <Button
+            className={isProductAddedToCompare ? styles.productIsCompared : ''}
+            variant='outline'
+            onClick={compareHandler}
+          >
+            <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
           </Button>
         </div>
         <div className={styles.oldPrice}>{oldPrice}</div>
