@@ -1,56 +1,58 @@
 @import "../../../styles/settings.scss";
 
-.photo {
-  position: relative;
-  background: {
-    size: contain;
-    position: center;
-    repeat: no-repeat;
-  }
-  overflow: hidden;
-  align-items: flex-end;
-  width: 100%;
-  height: 280px;
-}
-
-.body {
-  background-color: $component-bg-color;
-  margin-left: 7%;
-  margin-right: 7%;
-  text-align: center;
-  padding: 20px;
-  transform: translateY(-50px);
-  font-size: 12px;
-
-  h4 {
-    text-align: left;
-    padding-top: 10px;
+.root {
+  .photo {
+    position: relative;
+    background: {
+      size: contain;
+      position: center;
+      repeat: no-repeat;
+    }
+    overflow: hidden;
+    align-items: flex-end;
+    width: 100%;
+    height: 280px;
   }
 
-  h4 a {
-    @extend %hover-effect;
-    font-size: 16px;
-    line-height: 26px;
-    letter-spacing: 1px;
-    color: $text-color;
+  .body {
+    background-color: $component-bg-color;
+    margin-left: 7%;
+    margin-right: 7%;
+    text-align: center;
+    padding: 20px;
+    transform: translateY(-50px);
+    font-size: 12px;
 
-    &:hover {
-      color: $primary;
-      text-decoration: none;
+    h4 {
+      text-align: left;
+      padding-top: 10px;
+    }
+
+    h4 a {
+      @extend %hover-effect;
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: 1px;
+      color: $text-color;
+
+      &:hover {
+        color: $primary;
+        text-decoration: none;
+      }
+    }
+
+    .description {
+      text-align: justify;
     }
   }
 
-  .description {
-    text-align: justify;
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
   }
-}
 
-img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-.button {
-  margin-top: 20px;
+  .button {
+    margin-top: 20px;
+  }
 }
