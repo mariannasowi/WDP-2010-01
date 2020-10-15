@@ -1,34 +1,50 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBoxContainer';
 import ProductsCompare from '../ProductsCompare/ProductsCompareContainer';
+import SwipeComponent from '../../common/SwipeComponent/SwipeComponent';
 
 class NewFurniture extends React.Component {
   state = {
     activePage: 0,
     activeCategory: 'bed',
+    manualPageChange: false,
   };
 
   handlePageChange(newPage) {
-    this.setState({ activePage: newPage });
+    this.setState({ activePage: newPage, manualPageChange: true });
   }
 
   handleCategoryChange(newCategory) {
-    this.setState({ activeCategory: newCategory });
+    this.setState({ activeCategory: newCategory, activePage: 0 });
   }
+
+  handleLeftAction = () => {
+    const { activePage, manualPageChange } = this.state;
+    if (manualPageChange) {
+      this.setState({ manualPageChange: false });
+    } else {
+      this.setState({ activePage: activePage + 1 });
+    }
+  };
+
+  handleRightAction = () => {
+    const { activePage, manualPageChange } = this.state;
+    if (manualPageChange) {
+      this.setState({ manualPageChange: false });
+    } else if (activePage > 0) {
+      this.setState({ activePage: activePage - 1 });
+    }
+  };
 
   render() {
     const { categories, products, viewport } = this.props;
     const { activeCategory, activePage } = this.state;
-
     const itemsPerViewport = { desktop: 8, tablet: 6, mobile: 3 };
     const itemsPerPage = itemsPerViewport[viewport];
-
     const colsPerViewport = { desktop: 3, tablet: 6, mobile: 12 };
     const colsOnPage = colsPerViewport[viewport];
-
     const categoryProducts = products.filter(item => item.category === activeCategory);
     const pagesCount = Math.ceil(categoryProducts.length / itemsPerPage);
 
@@ -46,6 +62,21 @@ class NewFurniture extends React.Component {
       );
     }
 
+    const swipeContent = [];
+    for (let page = 0; page < pagesCount; page++) {
+      swipeContent.push(
+        <div className='row'>
+          {categoryProducts
+            .slice(activePage * itemsPerPage, (activePage + 1) * itemsPerPage)
+            .map(item => (
+              <div key={item.id} className={`col-${colsOnPage}`}>
+                <ProductBox {...item} />
+              </div>
+            ))}
+        </div>
+      );
+    }
+
     return (
       <div className={styles.root}>
         <div className='container'>
@@ -54,7 +85,7 @@ class NewFurniture extends React.Component {
               <div className={'col-auto ' + styles.heading}>
                 <h3>New furniture</h3>
               </div>
-              <div className={'col ' + styles.menu}>
+              <div className={'col-12 col-sm ' + styles.menu}>
                 <ul>
                   {categories.map(item => (
                     <li key={item.id}>
@@ -68,20 +99,18 @@ class NewFurniture extends React.Component {
                   ))}
                 </ul>
               </div>
-              <div className={'col-auto ' + styles.dots}>
+              <div className={'col-12 col-lg-auto ' + styles.dots}>
                 <ul>{dots}</ul>
               </div>
             </div>
           </div>
-          <div className='row'>
-            {categoryProducts
-              .slice(activePage * itemsPerPage, (activePage + 1) * itemsPerPage)
-              .map(item => (
-                <div key={item.id} className={`col-${colsOnPage}`}>
-                  <ProductBox {...item} />
-                </div>
-              ))}
-          </div>
+          <SwipeComponent
+            activePage={this.state.activePage}
+            rightAction={this.handleRightAction}
+            leftAction={this.handleLeftAction}
+          >
+            {swipeContent}
+          </SwipeComponent>
         </div>
         <ProductsCompare />
       </div>

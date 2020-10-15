@@ -1024,6 +1024,60 @@ const initialState = {
       image: 'https://i.postimg.cc/jd6679nR/bed.jpg',
     },
   },
+  posts: [
+    {
+      id: 'How to design your space?',
+      date: '15 JAN 2020',
+      comments: '4 comments',
+      title: 'How to design your space?',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      image:
+        'https://images.pexels.com/photos/4050299/pexels-photo-4050299.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+    },
+    {
+      id: 'Six Tips for Choosing the Perfect Sofa',
+      date: '12 JAN 2020',
+      comments: '4 comments',
+      title: 'Six Tips for Choosing the Perfect Sofa',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      image:
+        'https://images.pexels.com/photos/2440471/pexels-photo-2440471.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+    },
+    {
+      id: 'Functional, Comfortable and Beautiful',
+      date: '5 JAN 2020',
+      comments: '4 comments',
+      title: 'Functional, Comfortable and Beautiful',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      image:
+        'https://images.pexels.com/photos/1125136/pexels-photo-1125136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+    },
+    {
+      id: 'How To Choose A Mattress in 5 Easy Steps',
+      date: '19 DEC 2019',
+      comments: '4 comments',
+      title: 'How To Choose A Mattress in 5 Easy Steps',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      image:
+        'https://images.pexels.com/photos/4297820/pexels-photo-4297820.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+    },
+  ],
+  brands: [
+    { id: 'Brand1', name: 'Brand1', image: 'https://i.postimg.cc/QCYMSpsQ/2.jpg' },
+    { id: 'Brand2', name: 'Brand2', image: 'https://i.postimg.cc/C59gzJSQ/7.jpg' },
+    { id: 'Brand3', name: 'Brand3', image: 'https://i.postimg.cc/Z58S5rgw/8.jpg' },
+    { id: 'Brand4', name: 'Brand4', image: 'https://i.postimg.cc/rmP6Pg0w/9.jpg' },
+    { id: 'Brand5', name: 'Brand5', image: 'https://i.postimg.cc/sg4gNdVf/10.jpg' },
+    { id: 'Brand6', name: 'Brand6', image: 'https://i.postimg.cc/9MKm7cBb/12.jpg' },
+    // { id: 'Brand7', name: 'Brand7', image: 'https://i.postimg.cc/CLyMML5L/14.jpg' },
+    // { id: 'Brand8', name: 'Brand8', image: 'https://i.postimg.cc/wThq18R5/16.jpg' },
+    // { id: 'Brand9', name: 'Brand9', image: 'https://i.postimg.cc/HLPHqTFm/17.jpg' },
+    // { id: 'Brand10', name: 'Brand10', image: 'https://i.postimg.cc/C5bgnk5M/18.jpg' },
+  ],
 };
 
 export default initialState;
