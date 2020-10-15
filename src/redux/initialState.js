@@ -1065,6 +1065,7 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/4297820/pexels-photo-4297820.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
     },
+  ],
   brands: [
     { id: 'Brand1', name: 'Brand1', image: 'https://i.postimg.cc/QCYMSpsQ/2.jpg' },
     { id: 'Brand2', name: 'Brand2', image: 'https://i.postimg.cc/C59gzJSQ/7.jpg' },
