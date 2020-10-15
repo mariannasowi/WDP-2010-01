@@ -133,13 +133,12 @@
     .photo {
       padding: 0px;
 
-      &:hover {
-        .buttons {
-          justify-content: center;
+      .buttons {
+        justify-content: center;
+        visibility: visible;
 
-          .button {
-            margin: 0 20px;
-          }
+        .button {
+          margin: 0 20px;
         }
       }
     }
