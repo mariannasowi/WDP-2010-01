@@ -92,7 +92,7 @@
   }
 
   .productIsCompared {
-    color: $compare-color;
+    color: $productBox-stars-color;
     background-color: $primary;
   }
 
@@ -119,7 +119,7 @@
   }
 
   .heart {
-    color: $favourite-color;
+    color: $productBox-stars-color;
     background-color: $primary;
   }
 }
