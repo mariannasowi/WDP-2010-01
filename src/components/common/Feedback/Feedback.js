@@ -8,7 +8,7 @@ const Feedback = ({ image, text, name, category }) => {
   return (
     <div className={styles.root}>
       <div className='container'>
-        <div className={styles.icona}>
+        <div className={styles.icon}>
           <FontAwesomeIcon icon={faQuoteRight}></FontAwesomeIcon>
         </div>
         <div className={styles.text}>{text}</div>

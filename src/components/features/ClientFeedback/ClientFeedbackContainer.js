@@ -1,15 +1,10 @@
 import { connect } from 'react-redux';
-
 import ClientFeedback from './ClientFeedback';
 
-import { getAll } from '../../../redux/categoriesRedux.js';
-import { getNew } from '../../../redux/productsRedux.js';
-import { getViewport } from '../../../redux/viewportRedux';
+const getNew = ({ feedback }) => feedback.filter(item => item.newFeedback === true);
 
 const mapStateToProps = state => ({
-  categories: getAll(state),
-  products: getNew(state),
-  viewport: getViewport(state),
+  feedback: getNew(state),
 });
 
 export default connect(mapStateToProps)(ClientFeedback);

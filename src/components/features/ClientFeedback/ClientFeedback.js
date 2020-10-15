@@ -2,34 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './ClientFeedback.module.scss';
-import Feedback from '../../common/Feedback/FeedbackContainer';
+import Feedback from '../../common/Feedback/Feedback';
 
 class ClientFeedback extends React.Component {
   state = {
     activePage: 0,
-    activeCategory: 'Furniture client',
   };
 
   handlePageChange(newPage) {
     this.setState({ activePage: newPage });
   }
 
-  handleCategoryChange(newCategory) {
-    this.setState({ activeCategory: newCategory });
-  }
-
   render() {
-    const { products, viewport } = this.props;
-    const { activeCategory, activePage } = this.state;
+    const { feedback } = this.props;
+    const { activePage } = this.state;
 
-    const itemsPerViewport = { desktop: 1, tablet: 1, mobile: 1 };
-    const itemsPerPage = itemsPerViewport[viewport];
-
-    const colsPerViewport = { desktop: 12, tablet: 6, mobile: 1 };
-    const colsOnPage = colsPerViewport[viewport];
-
-    const categoryProducts = products.filter(item => item.category === activeCategory);
-    const pagesCount = Math.ceil(categoryProducts.length / itemsPerPage);
+    const currentFeedbackProps = feedback[activePage];
+    const pagesCount = Math.ceil(feedback.length);
 
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
@@ -59,14 +48,8 @@ class ClientFeedback extends React.Component {
               </div>
             </div>
           </div>
-          <div className='row'>
-            {categoryProducts
-              .slice(activePage * itemsPerPage, (activePage + 1) * itemsPerPage)
-              .map(item => (
-                <div key={item.id} className={`col-${colsOnPage}`}>
-                  <Feedback {...item} />
-                </div>
-              ))}
+          <div className={'row'}>
+            <Feedback {...currentFeedbackProps} />
           </div>
         </div>
       </div>
@@ -75,20 +58,19 @@ class ClientFeedback extends React.Component {
 }
 
 ClientFeedback.propTypes = {
-  viewport: PropTypes.string.isRequired,
   children: PropTypes.node,
-  products: PropTypes.arrayOf(
+  feedback: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
       name: PropTypes.string,
       category: PropTypes.string,
-      text: PropTypes.string,
+      //newFeedback: PropTypes.string,
     })
   ),
 };
 
 ClientFeedback.defaultProps = {
-  products: [],
+  feedback: [],
 };
 
 export default ClientFeedback;

@@ -6,7 +6,7 @@
     position: relative;
 
     :global(.row) > * {
-      border-bottom: 4px solid #e2e2e2;
+      border-bottom: 4px solid $box-border-color;
     }
   }
 
@@ -41,7 +41,7 @@
       margin: 0;
       padding: 0 0 0 1rem;
       list-style: none;
-      background-color: #ffffff;
+      background-color: $sale-color;
       transform: translateY(15px);
     }
 
@@ -55,7 +55,7 @@
         width: 13px;
         height: 13px;
         border-radius: 6px;
-        background-color: #e1e1e1;
+        background-color: $box-border-color;
         font-size: 0;
         opacity: 2;
 
