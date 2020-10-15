@@ -1065,6 +1065,17 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/4297820/pexels-photo-4297820.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
     },
+  brands: [
+    { id: 'Brand1', name: 'Brand1', image: 'https://i.postimg.cc/QCYMSpsQ/2.jpg' },
+    { id: 'Brand2', name: 'Brand2', image: 'https://i.postimg.cc/C59gzJSQ/7.jpg' },
+    { id: 'Brand3', name: 'Brand3', image: 'https://i.postimg.cc/Z58S5rgw/8.jpg' },
+    { id: 'Brand4', name: 'Brand4', image: 'https://i.postimg.cc/rmP6Pg0w/9.jpg' },
+    { id: 'Brand5', name: 'Brand5', image: 'https://i.postimg.cc/sg4gNdVf/10.jpg' },
+    { id: 'Brand6', name: 'Brand6', image: 'https://i.postimg.cc/9MKm7cBb/12.jpg' },
+    // { id: 'Brand7', name: 'Brand7', image: 'https://i.postimg.cc/CLyMML5L/14.jpg' },
+    // { id: 'Brand8', name: 'Brand8', image: 'https://i.postimg.cc/wThq18R5/16.jpg' },
+    // { id: 'Brand9', name: 'Brand9', image: 'https://i.postimg.cc/HLPHqTFm/17.jpg' },
+    // { id: 'Brand10', name: 'Brand10', image: 'https://i.postimg.cc/C5bgnk5M/18.jpg' },
   ],
 };
 
