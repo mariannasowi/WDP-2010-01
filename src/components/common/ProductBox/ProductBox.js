@@ -7,6 +7,8 @@ import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-ico
 import Button from '../Button/Button';
 import ProductRating from '../../features/ProductRating/ProductRatingContainer';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
+import ProductPage from '../../views/ProductPage/ProductPage';
+import { Link } from 'react-router-dom';
 
 const ProductBox = ({
   id,
@@ -45,11 +47,13 @@ const ProductBox = ({
     event.preventDefault();
     addToFavourite(id);
   };
-
+  let url = '/product/' + { id };
   return (
     <div className={styles.root}>
       <div className={styles.photo}>
-        <img src={image} alt={name} />
+        <Link id={id} exact to={url}>
+          <img src={image} alt={name} />
+        </Link>
         {promo && <div className={styles.sale}>{promo}</div>}
         <div className={styles.buttons}>
           <Button variant='small'>Quick View</Button>

@@ -32,6 +32,9 @@ export const SET_STARS = createActionName('SET_STARS');
 /* action creator */
 export const setStars = payload => ({ payload, type: SET_STARS });
 
+export const getProductById = ({ products }, productId) =>
+  products.filter(product => product.id === productId);
+
 /* reducer */
 export default function reducer(statePart = [], action = {}) {
   switch (action.type) {

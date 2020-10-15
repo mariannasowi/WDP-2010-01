@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBoxContainer';
 import ProductsCompare from '../ProductsCompare/ProductsCompareContainer';
+import { Link } from 'react-router-dom';
 
 class NewFurniture extends React.Component {
   state = {
