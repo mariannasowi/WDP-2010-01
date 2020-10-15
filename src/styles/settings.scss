@@ -70,6 +70,7 @@ $button-compare-color: $white;
 $primary: $orange;
 
 $text-color: $darkGray;
+
 $old-price-text-color: $gray;
 
 $form-border-color: $veryDarkGray;
@@ -81,6 +82,8 @@ $form-border-color: #292929;
 $line-color: #000;
 
 $old-price: #ff0000;
+
+$sale-color: #ff0000;
 
 $border-color: #cccccc;
 
@@ -96,8 +99,6 @@ $box-border-color: #e1e1e1;
 
 $stars-color: #2a2a2a;
 
-$transition: all 0.25s;
-
 $panelBar-border-color: #e2e2e2;
 
 $component-bg-color: #ffff;
@@ -105,6 +106,8 @@ $component-bg-color: #ffff;
 $dot-bg-color: #e1e1e1;
 
 $base-padding: 24px;
+
+$transition: all 0.25s;
 
 %hover-effect {
   transition: $transition;
