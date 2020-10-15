@@ -6,6 +6,7 @@ import categoriesReducer from './categoriesRedux';
 import productsReducer from './productsRedux';
 import compareProductsReducer from './compareRedux';
 import viewportReducer from './viewportRedux';
+import postsReducer from './postsRedux ';
 import brandsReducer from './brandsRedux';
 
 // define reducers
