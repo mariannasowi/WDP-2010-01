@@ -58,27 +58,13 @@ class Gallery extends React.Component {
                   </div>
                   <div className={styles.buttons}>
                     <div className={styles.buttonWrapper}>
-                      <Button
-                        className={styles.button}
-                        variant={product.wishlist ? 'outline__checked' : 'outline'}
-                        onClick={event => {
-                          event.preventDefault();
-                          return setWishList(product.id);
-                        }}
-                      >
+                      <Button className={styles.button} variant='outline'>
                         <FontAwesomeIcon icon={faHeart}></FontAwesomeIcon>
                       </Button>
                       <span>Add To Wishlist</span>
                     </div>
                     <div className={styles.buttonWrapper}>
-                      <Button
-                        className={styles.button}
-                        variant={product.compare ? 'outline__checked' : 'outline'}
-                        onClick={event => {
-                          event.preventDefault();
-                          return setCompareList(product.id);
-                        }}
-                      >
+                      <Button className={styles.button} variant='outline'>
                         <FontAwesomeIcon icon={faExchangeAlt}></FontAwesomeIcon>
                       </Button>
                       <span>Add To Compare</span>
