@@ -1,23 +1,21 @@
 import { useEffect, useState, useRef, useCallback } from 'react';
 
-const useSlider = (delayTime, autoplayTime) => {
+const useSlider = (delayTime = 0, autoplayTime = 0) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [sliderLength, setSliderLength] = useState(0);
   const [isPause, setIsPause] = useState(false);
 
   const slider = useRef(null);
   const savedCallback = useRef(null);
 
-  const delay = delayTime ? delayTime * 1000 : null;
-  const autoplay = autoplayTime ? autoplayTime * 1000 : null;
-
-  let sliderLength;
+  const delay = delayTime * 1000;
 
   const setPause = useCallback(() => {
     setIsPause(true);
     setTimeout(() => {
       setIsPause(false);
-    }, autoplay);
-  }, [setIsPause, autoplay]);
+    }, autoplayTime * 1000);
+  }, [setIsPause, autoplayTime]);
 
   const setSlide = useCallback(
     i => {
@@ -52,17 +50,23 @@ const useSlider = (delayTime, autoplayTime) => {
   useEffect(() => {
     const counter = () => savedCallback.current();
 
-    if (delay !== null && isPause !== true) {
+    if (delay > 0 && isPause !== true) {
       const id = setInterval(counter, delay);
       return () => clearInterval(id);
     }
   }, [delay, isPause]);
 
   useEffect(() => {
-    sliderLength = slider.current.childElementCount - 1;
-  });
+    if (slider.current == null) {
+      throw new Error(
+        'You need to add a slider reference: ref={slider} to your slider wrapper. '
+      );
+    }
 
-  return { slider, currentSlide, nextSlide, prevSlide, setSlide };
+    setSliderLength(slider.current.childElementCount - 1);
+  }, [sliderLength]);
+
+  return { slider, currentSlide, nextSlide, prevSlide, setSlide, setIsPause };
 };
 
 export { useSlider };
