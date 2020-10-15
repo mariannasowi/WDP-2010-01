@@ -5,7 +5,8 @@ import { useSlider } from '../../../hooks/useSlider';
 import PromotedProductBox from '../../common/PromotedProductBox/PromotedProductBoxContainer';
 
 const PromotedProductCarousel = ({ hotDeal }) => {
-  const { slider, setSlide, currentSlide } = useSlider(3, 10);
+  const { slider, setSlide, setIsPause, currentSlide } = useSlider(3, 10);
+
   return (
     <>
       <div className={styles.hotDeals}>
@@ -30,6 +31,12 @@ const PromotedProductCarousel = ({ hotDeal }) => {
       <div className={styles.slider} ref={slider}>
         {hotDeal.map((i, index) => (
           <div
+            onMouseLeave={() => {
+              setIsPause(false);
+            }}
+            onMouseOver={() => {
+              setIsPause(true);
+            }}
             className={`${styles.slide} ${
               currentSlide === index ? styles.fadeIn : styles.fadeOut
             }`}
