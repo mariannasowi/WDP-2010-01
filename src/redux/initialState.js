@@ -945,6 +945,7 @@ const initialState = {
       image:
         'https://www.e-restauracja.com/assets/artykul/2016-10-09/rs-2016-10dd-18.jpg',
       newFurniture: true,
+      hotDeal: true,
     },
     {
       id: 'aenean-ru-bristique-83',
@@ -956,6 +957,7 @@ const initialState = {
       image:
         'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSxUReSUM7s__ddS84sXfYznHhz07z1mAGrzw&usqp=CAU',
       newFurniture: true,
+      hotDeal: true,
     },
     {
       id: 'aenean-ru-bristique-84',
@@ -971,44 +973,6 @@ const initialState = {
       hotDeal: true,
     },
   ],
-
-  feedback: [
-    {
-      id: 'Jone-Dove',
-      name: 'Jone Dove',
-      category: 'Furniture client',
-      text:
-        'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable.',
-      image: 'https://collectionimages.npg.org.uk/large/mw192616/John-Dove.jpg',
-      newFeedback: true,
-    },
-    {
-      id: 'Bob-Dylan',
-      name: 'Bob Dylan',
-      category: 'Furniture client',
-      text:
-        'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters',
-      image:
-        'https://bi.im-g.pl/im/1/11556/z11556131V,Bob-Dylan--portret-z-lat-60-.jpg',
-      newFeedback: true,
-    },
-    {
-      id: 'Marlon-Brando',
-      name: 'Marlon Brando',
-      category: 'Furniture client',
-      text:
-        'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable.',
-      image: 'https://fwcdn.pl/ppo/01/40/140/449871.2.jpg',
-      newFeedback: true,
-    },
-  ],
-
-  cart: {
-    products: [],
-  },
-  compare: {
-    products: [],
-  },
   promotedProduct: {
     title: 'indoor',
     spanTitle: 'furniture',
@@ -1032,8 +996,6 @@ const initialState = {
       },
     ],
   },
-  viewport: 'desktop',
-
   sales: {
     boxOne: {
       name: 'Guest room',
@@ -1110,6 +1072,43 @@ const initialState = {
     // { id: 'Brand9', name: 'Brand9', image: 'https://i.postimg.cc/HLPHqTFm/17.jpg' },
     // { id: 'Brand10', name: 'Brand10', image: 'https://i.postimg.cc/C5bgnk5M/18.jpg' },
   ],
+  feedback: [
+    {
+      id: 'Jone-Dove',
+      name: 'Jone Dove',
+      category: 'Furniture client',
+      text:
+        'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable.',
+      image: 'https://collectionimages.npg.org.uk/large/mw192616/John-Dove.jpg',
+      newFeedback: true,
+    },
+    {
+      id: 'Bob-Dylan',
+      name: 'Bob Dylan',
+      category: 'Furniture client',
+      text:
+        'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters',
+      image:
+        'https://bi.im-g.pl/im/1/11556/z11556131V,Bob-Dylan--portret-z-lat-60-.jpg',
+      newFeedback: true,
+    },
+    {
+      id: 'Marlon-Brando',
+      name: 'Marlon Brando',
+      category: 'Furniture client',
+      text:
+        'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable.',
+      image: 'https://fwcdn.pl/ppo/01/40/140/449871.2.jpg',
+      newFeedback: true,
+    },
+  ],
+  cart: {
+    products: [],
+  },
+  compare: {
+    products: [],
+  },
+  viewport: 'desktop',
 };
 
 export default initialState;
