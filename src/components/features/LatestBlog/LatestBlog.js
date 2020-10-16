@@ -53,7 +53,7 @@ class LatestBlog extends React.Component {
             {posts
               .slice(activePage * itemsPerPage, (activePage + 1) * itemsPerPage)
               .map(item => (
-                <div key={item.id} className={`col-4`}>
+                <div key={item.id} className={`col-md-12 col-lg-4`}>
                   <LastPost {...item} />
                 </div>
               ))}
