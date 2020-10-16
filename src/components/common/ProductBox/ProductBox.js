@@ -47,6 +47,7 @@ const ProductBox = ({
     event.preventDefault();
     addToFavourite(id);
   };
+
   return (
     <div className={styles.root}>
       <div className={styles.photo}>
