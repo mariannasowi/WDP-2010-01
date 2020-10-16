@@ -36,7 +36,7 @@
     width: 90%;
     height: 90%;
     transform: translate(-50%, -50%);
-    background-color: $text-color;
+    background-color: $sales-bc;
     opacity: 0.5;
     z-index: -1;
   }
@@ -55,7 +55,7 @@
     }
 
     .sale {
-      border: 5px solid $primary;
+      border: 5px solid $sales-border;
       padding: 10px;
       width: 120px;
       text-align: center;
@@ -68,7 +68,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 30px;
-    color: $text-color;
+    color: $sales-color;
     text-transform: uppercase;
 
     .mainTitle {
@@ -83,7 +83,7 @@
 
     .sale {
       font-size: 35px;
-      color: $primary;
+      color: $sales-sale-color;
     }
   }
 
@@ -91,11 +91,11 @@
     position: absolute;
     top: 38%;
     left: 45%;
-    color: $text-color;
+    color: $sales-color;
     text-transform: uppercase;
 
     .mainTitle {
-      color: $primary;
+      color: $sales-main-color;
       font-weight: bold;
       font-size: 25px;
 

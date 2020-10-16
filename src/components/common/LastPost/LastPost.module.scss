@@ -17,7 +17,7 @@
   }
 
   .body {
-    background-color: $component-bg-color;
+    background-color: $lastPost-body-bc;
     margin-left: 7%;
     margin-right: 7%;
     height: 300px;
@@ -36,10 +36,10 @@
       font-size: 16px;
       line-height: 26px;
       letter-spacing: 1px;
-      color: $text-color;
+      color: $lastPost-body-a;
 
       &:hover {
-        color: $primary;
+        color: $lastPost-body-hover;
         text-decoration: none;
       }
     }

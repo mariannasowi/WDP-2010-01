@@ -3,8 +3,8 @@
 .hotDeals {
   height: 50px;
   width: 100%;
-  background-color: $text-color;
-  color: $promo-text-color;
+  background-color: $promotedProduct-bc;
+  color: $promotedProduct-color;
   text-transform: uppercase;
 
   p {
@@ -22,7 +22,7 @@
     margin: 0;
     padding: 0 0 0 1rem;
     list-style: none;
-    background-color: $text-color;
+    background-color: $promotedProduct-bc;
     transform: translateY(15px);
 
     li {
@@ -35,12 +35,12 @@
         width: 13px;
         height: 13px;
         border-radius: 6px;
-        background-color: $promo-text-color;
+        background-color: $promotedProduct-dots-a;
         font-size: 0;
 
         &.active,
         &:hover {
-          background-color: $primary;
+          background-color: $promotedProduct-hover-bc;
         }
       }
     }
@@ -69,7 +69,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       text-transform: uppercase;
-      color: $promo-text-color;
+      color: $promotedProduct-color;
       text-align: center;
 
       h2 {
@@ -93,7 +93,7 @@
       width: 100%;
       height: 50%;
       transform: translate(0, -50%);
-      background-color: $text-color;
+      background-color: $promotedProduct-bc;
       opacity: 0.5;
       z-index: -1;
     }
@@ -113,13 +113,13 @@
     }
 
     a {
-      color: $promo-text-color;
+      color: $promotedProduct-color;
 
       .carouselButton {
         height: 40px;
         width: 100%;
-        background-color: $text-color;
-        color: $promo-text-color;
+        background-color: $promotedProduct-bc;
+        color: $promotedProduct-color;
         text-align: center;
 
         .icon {
@@ -127,7 +127,7 @@
         }
 
         &:hover {
-          background-color: $primary;
+          background-color: $promotedProduct-hover-bc;
         }
       }
     }

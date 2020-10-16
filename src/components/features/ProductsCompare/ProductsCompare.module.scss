@@ -16,7 +16,7 @@
     text-align: center;
     text-transform: uppercase;
     padding: 25px;
-    border-bottom: 1px solid $primary;
+    border-bottom: 1px solid $productCampare-border;
   }
 }
 
@@ -94,11 +94,11 @@
 @keyframes containerAnim {
   from {
     height: 0;
-    background: rgba(255, 255, 255, 0.3);
+    background: $productCampare-key-bc;
   }
 
   to {
     height: 350px;
-    background: rgba(255, 255, 255, 0.95);
+    background: $productCampare-key-bc;
   }
 }

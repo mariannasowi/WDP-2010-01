@@ -1,4 +1,4 @@
-// VARIABLES WE DON'T USE IN ANY ANOTHER FILES
+//////////// VARIABLES WE DON'T USE IN ANY ANOTHER FILES
 
 $darkGray: #2a2a2a;
 $veryDarkGray: #292929;
@@ -14,51 +14,31 @@ $battleshipGray: #434343;
 $shadow: #363636;
 $orange: #d58e32;
 $white: #ffffff;
+$black: #000;
+$red: #ff0000;
+$primary: $orange;
+$line-color: #000;
+$text-color: $darkGray;
+$component-bg-color: #ffff;
+$text-color-two: #a9a9a9;
+$form-border-color: #292929;
+$old-price: #ff0000;
+$favourite-color: #ff0000;
+$compare-color: #228b22;
+$promo-text-color: #ffffff;
+$photo-bg-color: #f4f5f7;
+$box-border-color: #e1e1e1;
+$panelBar-border-color: #e2e2e2;
+$dot-bg-color: #e1e1e1;
+$stars-color: #2a2a2a;
+$old-price-text-color: $gray;
+$form-border-color: $veryDarkGray;
 
-// VARIABLES WE ARE USING IN ANOTHER FILES
+//////////// VARIABLES WE ARE USING IN ANOTHER FILES
 
-$header-topbar-bg: $battleshipGray;
-$header-topbar-a: $white;
-$header-bg: $shadow;
-
-$newFurniture-panelBar-border: $mediumLightGray;
-$newFurniture-menu-a: $darkGray;
-$newFurniture-dots-bgc: $white;
-$newFurniture-dots-a: $veryLightGray;
-
-$companyClaim-phoneNumber-p: $lightGray;
-$companyClaim-cardCounter-color: $lightGrayishBlue;
-$companyClaim-cardBox-color: $white;
-
-$menuBar-active-color: $white;
-$menuBar-a-border: $white;
-$menuBar-root-bgc: $white;
-
-$footer-claim-bg: $darkGray;
-$footer-bg: $shadow;
-$footer-menu-h6: $white;
-$footer-menu-a: $mediumGray;
-$footer-menu-hover: $white;
-$footer-copyright-p: $mediumGray;
-$footer-socialMedia-a: $mediumGray;
-
-$productBox-root-bgc: $white;
-$productBox-root-border: $veryLightGray;
-$productBox-photo-color: $mediumLightGrayishBlue;
-$productBox-sale-bgc: $veryDarkGray;
-$productBox-sale-color: $white;
-$productBox-stars-color: $darkGray;
-$productBox-line-border: $darkGray;
-
-$featureBox-root-border: $mediumDarkGray;
-$featureBox-root-icon-color: $white;
-$featureBox-icon-border: $mediumDarkGray;
-$featureBox-icon-bgc: $white;
-$featureBox-content-color: $darkGray;
-
+/* BUTTON */
 $button-main-bgc: $darkGray;
 $button-main-color: $white;
-$button-main-not-color: $white;
 $button-main-not-color: $white;
 $button-outline-border: $darkGray;
 $button-outline-color: $darkGray;
@@ -66,49 +46,138 @@ $button-outline-not-bgc: $darkGray;
 $button-outline-not-color: $white;
 $button-favorite-color: $white;
 $button-compare-color: $white;
+$button-next-back-bgc: $darkGray;
+$button-next-back-color: $white;
+$button-next-back-hover: $orange;
 
-$primary: $orange;
+/* FEATURE BOX */
+$featureBox-root-border: $mediumDarkGray;
+$featureBox-root-icon-color: $white;
+$featureBox-icon-border: $mediumDarkGray;
+$featureBox-icon-bgc: $white;
+$featureBox-content-color: $darkGray;
+$featureBox-hover: $white;
+$featureBox-hover-bc: $orange;
+$featureBox-hover-color: $orange;
 
-$text-color: $darkGray;
+/* LAST POST */
+$lastPost-body-bc: $white;
+$lastPost-body-a: $darkGray;
+$lastPost-body-hover: $orange;
 
-$old-price-text-color: $gray;
+/* PRODUCT BOX */
+$productBox-root-bgc: $white;
+$productBox-root-border: $veryLightGray;
+$productBox-photo-color: $mediumLightGrayishBlue;
+$productBox-sale-bgc: $veryDarkGray;
+$productBox-sale-color: $white;
+$productBox-stars-color: $darkGray;
+$productBox-line-border: $darkGray;
+$productBox-content: $orange;
+$productBox-bc: $orange;
+$productBox-oldprice: $orange;
 
-$form-border-color: $veryDarkGray;
+/* PROMOTED PRODUCT */
+$promotedProductBox-bc: $white;
+$promotedProductBox-border: $veryLightGray;
+$promotedProductBox-photo-bc: $mediumLightGrayishBlue;
+$promotedProductBox-sale-bc: $veryDarkGray;
+$promotedProductBox-color: $white;
+$promotedProductBox-content: $orange;
+$promotedProductBox-stars: $darkGray;
+$promotedProductBox-line: $darkGray;
+$promotedProductBox-line-bb: $orange;
+$promotedProductBox-heart: $darkGray;
+$promotedProductBox-product-c: $darkGray;
+$promotedProductBox-product-bc: $orange;
+$promotedProductBox-price: $orange;
+$promotedProductBox-oldprice: $gray;
 
-$text-color-two: #a9a9a9;
+/* BRANDS */
+$brands-border: $veryLightGray;
+$brands-line: $black;
+$brands-sale: $red;
+$brands-hover: $orange;
 
-$form-border-color: #292929;
+/* LATEST BLOG */
+$latestBlog-global: $mediumLightGray;
+$latestBlog-color: $orange;
+$latestBlog-border: $orange;
+$latestBlog-bc: $white;
+$latestBlog-a-bc: $veryLightGray;
+$latestBlog-hover-bc: $orange;
 
-$line-color: #000;
+/* NEW FURNITURE */
+$newFurniture-panelbar-border: $mediumLightGray;
+$newFurniture-menu-a: $darkGray;
+$newFurniture-dots-bc: $white;
+$newFurniture-dots-a: $veryLightGray;
+$newFurniture-h-color: $orange;
+$newFurniture-border: $orange;
+$newFurniture-bc: $orange;
+$newFurniture-ul-color: $darkGray;
 
-$old-price: #ff0000;
+/* PRODUCT RATING */
+$productRating-color: $orange;
 
-$sale-color: #ff0000;
+/* PRODUCTS COMPARE */
+$productCampare-border: $orange;
+$productCampare-key-bc: $battleshipGray;
 
-$border-color: #cccccc;
+/* PRODUCT SEARCH */
+$productSearch-border: $veryDarkGray;
+$productSearch-color: $orange;
+$productSearch-root-color: $darkGray;
+$productSearch-search-color: $darkGray;
 
-$favourite-color: #ff0000;
+/* PROMOTED PRODUCT */
+$promotedProduct-bc: $darkGray;
+$promotedProduct-color: $white;
+$promotedProduct-dots-a: $white;
+$promotedProduct-hover-bc: $orange;
 
-$compare-color: #228b22;
+/* SALES */
+$sales-bc: $darkGray;
+$sales-border: $orange;
+$sales-color: $darkGray;
+$sales-sale-color: $orange;
+$sales-main-color: $orange;
 
-$promo-text-color: #ffffff;
+/* COMPANY CLAIM */
+$companyClaim-phone-color: $lightGray;
+$companyClaim-cardCounter-color: $lightGrayishBlue;
+$companyClaim-cardBox-color: $white;
+$companyClaim-bg: $shadow;
+$companyClaim-cardIcon-bc: $orange;
 
-$photo-bg-color: #f4f5f7;
+/* FOOTER */
+$footer-claim-bg: $darkGray;
+$footer-bg: $shadow;
+$footer-menu-h6: $white;
+$footer-menu-a: $mediumGray;
+$footer-menu-hover: $white;
+$footer-copyright-p: $mediumGray;
+$footer-socialMedia-a: $mediumGray;
+$footer-socialMedia-hover: $orange;
+$footer-rwd-color: $mediumGray;
 
-$box-border-color: #e1e1e1;
+/* MENU BAR */
+$menuBar-active-color: $white;
+$menuBar-color: $darkGray;
+$menuBar-a-border: $white;
+$menuBar-root-bgc: $white;
+$menuBar-bc: $orange;
+$menuBar-border: $orange;
+$menuBar-hover-bc: $darkGray;
 
-$stars-color: #2a2a2a;
+/* TOP BAR */
+$topBar-bc: $battleshipGray;
+$topBar-color-a: $white;
+$topBar-color: $orange;
 
-$panelBar-border-color: #e2e2e2;
-
-$component-bg-color: #ffff;
-
-$dot-bg-color: #e1e1e1;
-
+/* OTHER */
 $base-padding: 24px;
-
 $transition: all 0.25s;
-
 %hover-effect {
   transition: $transition;
 }

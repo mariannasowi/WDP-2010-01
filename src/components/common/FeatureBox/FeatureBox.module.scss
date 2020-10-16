@@ -62,16 +62,16 @@
 
   &:hover {
     .iconWrapper {
-      color: #ffffff;
+      color: $featureBox-hover;
 
       &::after {
-        background-color: $primary;
-        border-color: $primary;
+        background-color: $featureBox-hover-bc;
+        border-color: $featureBox-hover-bc;
       }
     }
 
     .content {
-      color: $primary;
+      color: $featureBox-hover-color;
     }
   }
 }

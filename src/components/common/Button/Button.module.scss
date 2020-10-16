@@ -14,7 +14,7 @@
 
   &:not(.noHover):hover {
     color: $button-main-not-color !important;
-    background-color: $primary;
+    background-color: $button-next-back-hover;
     text-decoration: none;
   }
 }
@@ -41,7 +41,7 @@
   line-height: 24px;
   padding: 10px 15px;
   font-weight: 400;
-  color: $text-color;
+  color: $button-main-bgc;
   background-color: $promo-text-color;
 }
 

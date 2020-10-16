@@ -80,7 +80,7 @@
         text-decoration: none;
 
         &:hover {
-          color: $primary;
+          color: $footer-socialMedia-hover;
         }
       }
     }
@@ -106,7 +106,7 @@
       .newText {
         max-width: 100%;
         text-align: center;
-        color: $primary;
+        color: $footer-rwd-color;
       }
     }
   }

@@ -54,7 +54,7 @@
     padding: 20px;
 
     h5 {
-      color: $primary;
+      color: $productBox-content;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 1px;
@@ -79,7 +79,7 @@
       bottom: -1px;
       left: 50%;
       width: 30px;
-      border-bottom: 4px solid $primary;
+      border-bottom: 4px solid $productBox-content;
       transform: translateX(-50%);
     }
   }
@@ -93,7 +93,7 @@
 
   .productIsCompared {
     color: $productBox-stars-color;
-    background-color: $primary;
+    background-color: $productBox-bc;
   }
 
   img {
@@ -108,18 +108,18 @@
     }
 
     .price > div {
-      background-color: $primary;
+      background-color: $productBox-bc;
     }
   }
 
   .oldPrice {
     font-size: 20px;
     text-decoration: line-through;
-    color: $primary;
+    color: $productBox-oldprice;
   }
 
   .heart {
     color: $productBox-stars-color;
-    background-color: $primary;
+    background-color: $productBox-bc;
   }
 }
