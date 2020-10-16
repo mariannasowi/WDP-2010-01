@@ -47,11 +47,10 @@ const ProductBox = ({
     event.preventDefault();
     addToFavourite(id);
   };
-  let url = '/product/' + { id };
   return (
     <div className={styles.root}>
       <div className={styles.photo}>
-        <Link id={id} exact to={url}>
+        <Link id={id} exact to={'/product/' + id}>
           <img src={image} alt={name} />
         </Link>
         {promo && <div className={styles.sale}>{promo}</div>}
