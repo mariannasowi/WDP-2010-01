@@ -1,6 +1,7 @@
 @import "../../../styles/settings.scss";
 
 .root {
+  @extend %hover-effect;
   border: 1px solid $productSearch-border;
   display: inline-flex;
   height: 45px;
@@ -11,6 +12,8 @@
     display: flex;
     align-items: center;
     position: relative;
+    display: flex;
+    width: 215px;
 
     .icon:first-child {
       color: $productSearch-color;
@@ -25,21 +28,47 @@
       z-index: 0;
     }
 
-    select {
-      @extend %hover-effect;
-      -webkit-appearance: none;
-      border: 0;
-      -moz-appearance: none;
-      appearance: none;
-      outline: none;
-      background-color: transparent;
-      padding: 5px 30px 5px 35px;
-      font-size: 14px;
+    .list {
+      margin: 0;
       position: relative;
       z-index: 1;
+      height: 100%;
+      width: 100%;
+      list-style-type: none;
 
-      &:hover {
-        color: $productSearch-color;
+      .listCategory {
+        display: block;
+        border: none;
+        background-color: transparent;
+        left: -12%;
+        padding-right: 10px;
+      }
+
+      li {
+        position: relative;
+        padding: 10px 0 0 20px;
+        width: 100%;
+        height: 100%;
+        background-color: $sale-color;
+      }
+    }
+
+    .listCategoryItems {
+      display: none;
+      list-style-type: none;
+    }
+
+    &:hover {
+      color: $productSearch-color;
+    }
+
+    .list:hover {
+      .listCategoryItems {
+        display: block;
+        cursor: pointer;
+        padding: 5px 10px;
+        width: 185px;
+        text-align: left;
       }
     }
   }

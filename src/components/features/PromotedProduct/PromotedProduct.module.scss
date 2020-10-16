@@ -1,5 +1,9 @@
 @import "../../../styles/settings.scss";
 
+.root {
+  margin-top: 40px;
+}
+
 .hotDeals {
   height: 50px;
   width: 100%;
@@ -29,7 +33,7 @@
       display: inline-block;
       margin-left: 0.5rem;
 
-      a {
+      span {
         @extend %hover-effect;
         display: block;
         width: 13px;
@@ -37,6 +41,7 @@
         border-radius: 6px;
         background-color: $promotedProduct-dots-a;
         font-size: 0;
+        cursor: pointer;
 
         &.active,
         &:hover {
@@ -47,73 +52,74 @@
   }
 }
 
-.secondProduct {
-  .carousel {
-    height: 400px;
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+
+  .images {
     position: relative;
-    width: 100%;
-    padding: 0;
-    margin: 0;
+  }
+
+  .image {
+    position: absolute;
+    top: 0;
+    left: 0;
 
     img {
-      position: absolute;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      z-index: -1;
-    }
-
-    .description {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-transform: uppercase;
-      color: $promotedProduct-color;
-      text-align: center;
-
-      h2 {
-        font-size: 40px;
-        font-weight: 200;
-
-        span {
-          font-weight: 600;
-        }
-      }
-
-      p {
-        font-size: 20px;
-      }
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      width: 100%;
-      height: 50%;
-      transform: translate(0, -50%);
-      background-color: $promotedProduct-bc;
-      opacity: 0.5;
-      z-index: -1;
     }
   }
 
-  .carouselButtonWrapper {
-    position: relative;
+  .description {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    text-transform: uppercase;
+    color: $promo-text-color;
+    text-align: center;
+    background: $promotedProductBox-b;
 
-    .colLeft {
-      margin-right: 0px;
-      padding-right: 0px;
+    h2 {
+      font-size: 40px;
+      font-weight: 200;
+
+      span {
+        font-weight: 600;
+        display: block;
+      }
     }
 
-    .colRight {
-      margin-left: 0px;
-      padding-left: 0px;
+    p {
+      font-size: 20px;
     }
+  }
+}
 
-    a {
+.carouselButtonWrapper {
+  position: relative;
+
+  .colLeft {
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+  .colRight {
+    margin-left: 0;
+    padding-left: 0;
+
+    span {
       color: $promotedProduct-color;
+      cursor: pointer;
 
       .carouselButton {
         height: 40px;
@@ -132,4 +138,27 @@
       }
     }
   }
+}
+
+.slider {
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.fadeIn {
+  opacity: 1;
+  transition: all 1s ease-in-out;
+  visibility: visible;
+}
+
+.fadeOut {
+  opacity: 0;
+  transition: all 1s ease-in-out;
+  visibility: hidden;
 }
