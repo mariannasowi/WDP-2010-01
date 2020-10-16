@@ -2,4 +2,194 @@
 
 .root {
   padding: $base-padding 0;
+  background-color: $component-bg-color;
+  border: 1px solid $box-border-color;
+  margin-bottom: 2rem;
+  color: $text-color;
+
+  .photo {
+    position: relative;
+    padding: 0 10px 0 10px;
+    width: 100%;
+    height: 400px;
+    background-color: $photo-bg-color;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .content {
+    h5 {
+      font-size: 22px;
+      line-height: 24px;
+      letter-spacing: 1px;
+    }
+
+    .stars {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: left;
+
+      a {
+        text-decoration: none;
+        color: $stars-color;
+      }
+
+      p {
+        padding-left: 10px;
+        font-size: 14px;
+        color: $text-lighter-color;
+      }
+    }
+  }
+
+  .line {
+    margin: 5px;
+    border-bottom: 1px solid $photo-bg-color;
+    position: relative;
+  }
+
+  .buttons {
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+
+    p {
+      padding: 5px 10px 0 0;
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    input {
+      width: 60px;
+      border: 1px solid $line-color;
+      padding-left: 25px;
+      margin: 0 10px;
+      height: 35px;
+    }
+  }
+
+  .productIsCompared {
+    color: $compare-color;
+    background-color: $primary;
+  }
+
+  .prices {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    font-size: 20px;
+    padding: 5px 0;
+  }
+
+  .oldPrice {
+    text-decoration: line-through;
+    color: $text-color-two;
+    padding-right: 20px;
+    padding-top: 5px;
+  }
+
+  .price {
+    padding: 5px;
+    color: $component-bg-color;
+    background-color: $line-color;
+  }
+
+  .heart {
+    color: $favourite-color;
+    background-color: $primary;
+  }
+
+  .overview {
+    padding-top: 10px;
+
+    h5 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 16px;
+      color: $text-lighter-color;
+      text-align: justify;
+
+      span {
+        padding-right: 5px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .facebook {
+    color: $facebook-color;
+    padding-right: 2px;
+  }
+
+  .buttonFacebook:hover {
+    background-color: $facebook-color;
+    border-color: $facebook-color;
+
+    .facebook {
+      color: $component-bg-color;
+    }
+  }
+
+  .google {
+    color: $google-color;
+    padding-right: 5px;
+  }
+
+  .buttonGoogle:hover {
+    background-color: $google-color;
+    border-color: $google-color;
+
+    .google {
+      color: $component-bg-color;
+    }
+  }
+
+  .twitter {
+    color: $twitter-color;
+    padding-right: 5px;
+  }
+
+  .buttonTwitter:hover {
+    background-color: $twitter-color;
+    border-color: $twitter-color;
+
+    .twitter {
+      color: $component-bg-color;
+    }
+  }
+
+  .pinterest {
+    color: $pinterest-color;
+    padding-right: 5px;
+  }
+
+  .buttonPinterest:hover {
+    background-color: $pinterest-color;
+    border-color: $pinterest-color;
+
+    .printerest {
+      color: $component-bg-color;
+    }
+  }
+
+  .linkedin {
+    color: $linkedin-color;
+    padding-right: 5px;
+  }
+
+  .buttonLinkedin:hover {
+    background-color: $linkedin-color;
+    border-color: $linkedin-color;
+
+    .linkedin {
+      color: $component-bg-color;
+    }
+  }
 }
