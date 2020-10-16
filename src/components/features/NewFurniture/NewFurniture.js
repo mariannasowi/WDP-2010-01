@@ -135,7 +135,7 @@ NewFurniture.propTypes = {
       price: PropTypes.number,
       stars: PropTypes.number,
       promo: PropTypes.string,
-      NewFurniture: PropTypes.bool,
+      newFurniture: PropTypes.bool,
     })
   ),
 };

@@ -48,11 +48,11 @@ class ClientFeedback extends React.Component {
               </div>
             </div>
           </div>
-          <div className={'row'}>
+          <div className='row'>
             {feedback.length ? (
               <Feedback {...currentFeedbackProps} />
             ) : (
-              'There is no client feedbacks'
+              <div className={styles.nocoment}>There is no client feedbacks</div>
             )}
           </div>
         </div>
