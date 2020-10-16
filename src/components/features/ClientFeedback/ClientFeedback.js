@@ -49,7 +49,7 @@ class ClientFeedback extends React.Component {
             </div>
           </div>
           <div className={'row'}>
-            <Feedback {...currentFeedbackProps} />
+            {feedback === true || <Feedback {...currentFeedbackProps} />}
           </div>
         </div>
       </div>
@@ -58,13 +58,12 @@ class ClientFeedback extends React.Component {
 }
 
 ClientFeedback.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
   feedback: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
       name: PropTypes.string,
       category: PropTypes.string,
-      //newFeedback: PropTypes.string,
     })
   ),
 };

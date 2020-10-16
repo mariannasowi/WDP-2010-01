@@ -1080,7 +1080,6 @@ const initialState = {
       text:
         'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable.',
       image: 'https://collectionimages.npg.org.uk/large/mw192616/John-Dove.jpg',
-      newFeedback: true,
     },
     {
       id: 'Bob-Dylan',
@@ -1090,7 +1089,6 @@ const initialState = {
         'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters',
       image:
         'https://bi.im-g.pl/im/1/11556/z11556131V,Bob-Dylan--portret-z-lat-60-.jpg',
-      newFeedback: true,
     },
     {
       id: 'Marlon-Brando',
@@ -1099,7 +1097,6 @@ const initialState = {
       text:
         'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable.',
       image: 'https://fwcdn.pl/ppo/01/40/140/449871.2.jpg',
-      newFeedback: true,
     },
   ],
   cart: {
