@@ -1,7 +1,7 @@
 const initialState = {
   categories: [
     { id: 'bed', name: 'Bed' },
-    { id: 'chairi', name: 'Chair' },
+    { id: 'chair', name: 'Chair' },
     { id: 'sofa', name: 'Sofa' },
     { id: 'table', name: 'Table' },
     { id: 'dining', name: 'Dining' },
