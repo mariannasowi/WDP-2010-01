@@ -5,6 +5,7 @@ import styles from './LastPost.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendar, faComment } from '@fortawesome/free-solid-svg-icons';
 import Button from '../Button/Button';
+import { Link } from 'react-router-dom';
 
 const LastPost = ({ id, date, comments, title, description, image }) => (
   <div className={styles.root}>
@@ -29,7 +30,9 @@ const LastPost = ({ id, date, comments, title, description, image }) => (
       </h4>
       <p className={styles.description}>{description}</p>
       <div className={styles.button}>
-        <Button variant='medium'>Read more</Button>
+        <Link to={`/blog/${id}`}>
+          <Button variant='medium'>Read more</Button>
+        </Link>
       </div>
     </div>
   </div>
