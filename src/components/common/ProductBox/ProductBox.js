@@ -112,7 +112,6 @@ ProductBox.propTypes = {
   count: PropTypes.number.isRequired,
   compare: PropTypes.object.isRequired,
   addToFavourite: PropTypes.func.isRequired,
-  removeFromFavourite: PropTypes.func.isRequired,
 };
 
 export default ProductBox;

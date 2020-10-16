@@ -8,29 +8,16 @@ export const getNew = ({ products }) =>
 export const getHotDeal = ({ products }) =>
   products.filter(item => item.hotDeal === true);
 
-export const getAllFavourite = ({ heart }) => heart;
-
-export const getCountFavourite = ({ heart }) => heart.products.length;
-
 /* action name creator */
-const createActionNameFav = name => `products/heart/${name}`;
-
-/* action types */
-export const SET_FAVOURITE = createActionNameFav('SET_FAVOURITE');
-
-/* action creator */
-export const addToFavourite = payload => ({ payload, type: SET_FAVOURITE });
-
-/*SECTION STARS*/
-
-/* action name creator */
-const createActionName = name => `products/rating/${name}`;
+const createActionName = name => `products/${name}`;
 
 /* action types */
 export const SET_STARS = createActionName('SET_STARS');
+export const SET_FAVOURITE = createActionName('SET_FAVOURITE');
 
 /* action creator */
 export const setStars = payload => ({ payload, type: SET_STARS });
+export const addToFavourite = payload => ({ payload, type: SET_FAVOURITE });
 
 export const getProductById = ({ products }, productId) =>
   products.filter(product => product.id === productId);

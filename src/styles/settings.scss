@@ -20,6 +20,8 @@ $line-color: #000;
 
 $old-price: #ff0000;
 
+$border-color: #cccccc;
+
 $favourite-color: #ff0000;
 
 $compare-color: #228b22;
@@ -33,6 +35,12 @@ $box-border-color: #e1e1e1;
 $stars-color: rgb(42, 42, 42);
 
 $transition: all 0.25s;
+
+$panelBar-border-color: #e2e2e2;
+
+$component-bg-color: #ffff;
+
+$dot-bg-color: #e1e1e1;
 
 %hover-effect {
   transition: $transition;
