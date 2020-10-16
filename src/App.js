@@ -11,6 +11,7 @@ import Homepage from './components/views/Homepage/Homepage';
 import ProductList from './components/views/ProductList/ProductList';
 import ProductPage from './components/views/ProductPage/ProductPage';
 import BlogArticle from './components/views/BlogArticle/BlogArticle';
+
 const App = () => (
   <Provider store={store}>
     <BrowserRouter>
