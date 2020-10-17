@@ -42,7 +42,7 @@
   padding: 10px 15px;
   font-weight: 400;
   color: $button-main-bgc;
-  background-color: $promo-text-color;
+  background-color: $button-main-color;
 }
 
 .outline {
@@ -57,5 +57,33 @@
   &:not(.noHover):hover {
     background-color: $button-outline-border;
     color: $button-outline-not-color;
+  }
+}
+
+.white {
+  @extend %hover-effect;
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid $button-main-bgc;
+  color: $button-main-bgc;
+  font-size: 13px;
+  line-height: 22px;
+  margin-right: 10px;
+
+  &:not(.noHover):hover {
+    background-color: $button-next-back-hover;
+    color: $button-main-color;
+    border: 1px solid $button-next-back-hover;
+    text-decoration: none;
+  }
+}
+
+.quantity {
+  @extend .white;
+  height: 35px;
+
+  &:not(.noHover):hover {
+    background-color: $button-main-color;
+    color: $button-next-back-hover;
   }
 }
