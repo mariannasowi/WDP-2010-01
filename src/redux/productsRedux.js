@@ -8,6 +8,15 @@ export const getNew = ({ products }) =>
 export const getHotDeal = ({ products }) =>
   products.filter(item => item.hotDeal === true);
 
+export const getAllFavourite = ({ heart }) => heart;
+
+export const getCountFavourite = ({ heart }) => heart.products.length;
+
+export const getProductById = ({ products }, productId) => {
+  const filtered = products.filter(product => product.id === productId);
+  return filtered.length ? filtered[0] : { error: true };
+};
+
 /* action name creator */
 const createActionName = name => `products/${name}`;
 
@@ -18,11 +27,6 @@ export const SET_FAVOURITE = createActionName('SET_FAVOURITE');
 /* action creator */
 export const setStars = payload => ({ payload, type: SET_STARS });
 export const addToFavourite = payload => ({ payload, type: SET_FAVOURITE });
-
-export const getProductById = ({ products }, productId) => {
-  const filtered = products.filter(product => product.id === productId);
-  return filtered.length ? filtered[0] : { error: true };
-};
 
 /* reducer */
 export default function reducer(statePart = [], action = {}) {
