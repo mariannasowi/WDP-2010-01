@@ -46,7 +46,8 @@
     top: 47%;
     left: 10%;
     font-size: 45px;
-    color: $primary;
+    color: $sales-boxOne-color;
+
     text-transform: uppercase;
 
     .category {
@@ -55,7 +56,8 @@
     }
 
     .sale {
-      border: 5px solid $sales-border;
+      border: 5px solid $sales-boxOne-color;
+
       padding: 10px;
       width: 120px;
       text-align: center;
