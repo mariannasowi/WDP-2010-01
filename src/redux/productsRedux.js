@@ -8,6 +8,15 @@ export const getNew = ({ products }) =>
 export const getHotDeal = ({ products }) =>
   products.filter(item => item.hotDeal === true);
 
+export const getAllFavourite = ({ heart }) => heart;
+
+export const getCountFavourite = ({ heart }) => heart.products.length;
+
+export const getProductById = ({ products }, productId) => {
+  const filtered = products.filter(product => product.id === productId);
+  return filtered.length ? filtered[0] : { error: true };
+};
+
 /* action name creator */
 const createActionName = name => `products/${name}`;
 

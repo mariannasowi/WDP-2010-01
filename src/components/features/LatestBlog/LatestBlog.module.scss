@@ -6,7 +6,7 @@
     position: relative;
 
     :global(.row) > * {
-      border-bottom: 4px solid $panelBar-border-color;
+      border-bottom: 4px solid $latestBlog-global;
     }
   }
 
@@ -14,7 +14,7 @@
     position: relative;
 
     h3 {
-      color: $primary;
+      color: $latestBlog-color;
       text-transform: uppercase;
       font-size: 20px;
       line-height: 38px;
@@ -28,7 +28,7 @@
       bottom: -4px;
       left: 0;
       width: 45px;
-      border-bottom: 4px solid $primary;
+      border-bottom: 4px solid $latestBlog-border;
     }
   }
 
@@ -41,7 +41,7 @@
       margin: 0;
       padding: 0 0 0 1rem;
       list-style: none;
-      background-color: $component-bg-color;
+      background-color: $latestBlog-bc;
       transform: translateY(15px);
     }
 
@@ -55,13 +55,13 @@
         width: 13px;
         height: 13px;
         border-radius: 6px;
-        background-color: $dot-bg-color;
+        background-color: $latestBlog-a-bc;
         font-size: 0;
         opacity: 2;
 
         &.active,
         &:hover {
-          background-color: $primary;
+          background-color: $latestBlog-hover-bc;
         }
       }
     }

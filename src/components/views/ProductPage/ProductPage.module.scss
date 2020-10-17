@@ -2,4 +2,194 @@
 
 .root {
   padding: $base-padding 0;
+  background-color: $product-bg-color;
+  border: 1px solid $product-root-color;
+  margin-bottom: 2rem;
+  color: $text-color;
+
+  .photo {
+    position: relative;
+    padding: 0 10px 0 10px;
+    width: 100%;
+    height: 400px;
+    background-color: $product-photo-bgc;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .content {
+    h5 {
+      font-size: 22px;
+      line-height: 24px;
+      letter-spacing: 1px;
+    }
+
+    .stars {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: left;
+
+      a {
+        text-decoration: none;
+        color: $stars-color;
+      }
+
+      p {
+        padding-left: 10px;
+        font-size: 14px;
+        color: $product-p-color;
+      }
+    }
+  }
+
+  .line {
+    margin: 5px;
+    border-bottom: 1px solid $product-photo-bgc;
+    position: relative;
+  }
+
+  .buttons {
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+
+    p {
+      padding: 5px 10px 0 0;
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    input {
+      width: 60px;
+      border: 1px solid $product-border-color;
+      padding-left: 25px;
+      margin: 0 10px;
+      height: 35px;
+    }
+  }
+
+  .productIsCompared {
+    color: $product-compare-color;
+    background-color: $product-hover-color;
+  }
+
+  .prices {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    font-size: 20px;
+    padding: 5px 0;
+  }
+
+  .oldPrice {
+    text-decoration: line-through;
+    color: $product-oldPrice-color;
+    padding-right: 20px;
+    padding-top: 5px;
+  }
+
+  .price {
+    padding: 5px;
+    color: $product-icon-color;
+    background-color: $product-border-color;
+  }
+
+  .heart {
+    color: $product-heart-color;
+    background-color: $product-hover-color;
+  }
+
+  .overview {
+    padding-top: 10px;
+
+    h5 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 16px;
+      color: $product-p-color;
+      text-align: justify;
+
+      span {
+        padding-right: 5px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .facebook {
+    color: $facebook-color;
+    padding-right: 2px;
+  }
+
+  .buttonFacebook:hover {
+    background-color: $facebook-color;
+    border-color: $facebook-color;
+
+    .facebook {
+      color: $product-icon-color;
+    }
+  }
+
+  .google {
+    color: $google-color;
+    padding-right: 5px;
+  }
+
+  .buttonGoogle:hover {
+    background-color: $google-color;
+    border-color: $google-color;
+
+    .google {
+      color: $product-icon-color;
+    }
+  }
+
+  .twitter {
+    color: $twitter-color;
+    padding-right: 5px;
+  }
+
+  .buttonTwitter:hover {
+    background-color: $twitter-color;
+    border-color: $twitter-color;
+
+    .twitter {
+      color: $product-icon-color;
+    }
+  }
+
+  .pinterest {
+    color: $pinterest-color;
+    padding-right: 5px;
+  }
+
+  .buttonPinterest:hover {
+    background-color: $pinterest-color;
+    border-color: $pinterest-color;
+
+    .printerest {
+      color: $product-icon-color;
+    }
+  }
+
+  .linkedin {
+    color: $linkedin-color;
+    padding-right: 5px;
+  }
+
+  .buttonLinkedin:hover {
+    background-color: $linkedin-color;
+    border-color: $linkedin-color;
+
+    .linkedin {
+      color: $product-icon-color;
+    }
+  }
 }

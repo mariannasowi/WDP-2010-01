@@ -2,7 +2,7 @@
 
 .root {
   @extend %hover-effect;
-  border: 1px solid #b6b6b6;
+  border: 1px solid $featureBox-root-border;
   text-align: center;
   margin-top: 40px;
   width: 100%;
@@ -10,7 +10,7 @@
   .iconWrapper {
     height: 60px;
     transform: translateY(-50%);
-    color: $text-color;
+    color: $featureBox-content-color;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -22,7 +22,7 @@
 
     &::before {
       content: "";
-      border: 1px solid #b6b6b6;
+      border: 1px solid $featureBox-icon-border;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -30,7 +30,7 @@
       width: 76px;
       height: 76px;
       border-radius: 100%;
-      background-color: #ffffff;
+      background-color: $featureBox-icon-bgc;
       z-index: -1;
     }
 
@@ -43,13 +43,13 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      border: 1px solid #b6b6b6;
+      border: 1px solid $featureBox-icon-border;
     }
   }
 
   .content {
     text-transform: uppercase;
-    color: rgb(42, 42, 42);
+    color: $featureBox-content-color;
     margin-top: -0.5rem;
     letter-spacing: 1px;
     font-weight: 300;
@@ -62,16 +62,16 @@
 
   &:hover {
     .iconWrapper {
-      color: #ffffff;
+      color: $featureBox-hover;
 
       &::after {
-        background-color: $primary;
-        border-color: $primary;
+        background-color: $featureBox-hover-bc;
+        border-color: $featureBox-hover-bc;
       }
     }
 
     .content {
-      color: $primary;
+      color: $featureBox-hover-color;
     }
   }
 }

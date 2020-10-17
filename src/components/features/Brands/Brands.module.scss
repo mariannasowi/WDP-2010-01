@@ -4,26 +4,26 @@
   padding: 2rem 0;
 
   .wrapper {
-    border-top: 2px solid $border-color;
-    border-bottom: 2px solid $border-color;
+    border-top: 2px solid $brands-border;
+    border-bottom: 2px solid $brands-border;
     justify-content: space-between;
     align-items: center;
 
     .arrow {
       height: 92px;
       width: 33px;
-      background-color: $line-color;
+      background-color: $brands-line;
       display: flex;
       justify-content: center;
       align-items: center;
       cursor: pointer;
 
       .icon {
-        color: $sale-color;
+        color: $brands-sale;
         font-size: 20px;
 
         &:hover {
-          color: $primary;
+          color: $brands-hover;
         }
       }
     }
