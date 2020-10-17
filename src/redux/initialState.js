@@ -1072,7 +1072,7 @@ const initialState = {
     // { id: 'Brand9', name: 'Brand9', image: 'https://i.postimg.cc/HLPHqTFm/17.jpg' },
     // { id: 'Brand10', name: 'Brand10', image: 'https://i.postimg.cc/C5bgnk5M/18.jpg' },
   ],
-  feedback: [
+  feedbacks: [
     {
       id: 'Jone-Dove',
       name: 'Jone Dove',

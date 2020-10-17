@@ -14,11 +14,11 @@ class ClientFeedback extends React.Component {
   }
 
   render() {
-    const { feedback } = this.props;
+    const { feedbacks } = this.props;
     const { activePage } = this.state;
 
-    const currentFeedbackProps = feedback[activePage];
-    const pagesCount = Math.ceil(feedback.length);
+    const currentFeedbackProps = feedbacks[activePage];
+    const pagesCount = Math.ceil(feedbacks.length);
 
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
@@ -49,10 +49,10 @@ class ClientFeedback extends React.Component {
             </div>
           </div>
           <div className='row'>
-            {feedback.length ? (
+            {feedbacks.length ? (
               <Feedback {...currentFeedbackProps} />
             ) : (
-              <div className={styles.nocoment}>There is no client feedbacks</div>
+              <div className={styles.noComent}>There is no client feedbacks</div>
             )}
           </div>
         </div>
@@ -63,7 +63,7 @@ class ClientFeedback extends React.Component {
 
 ClientFeedback.propTypes = {
   children: PropTypes.node.isRequired,
-  feedback: PropTypes.arrayOf(
+  feedbacks: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
       name: PropTypes.string,
