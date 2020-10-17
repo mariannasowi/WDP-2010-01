@@ -81,7 +81,7 @@ const ProductPage = ({
           </li>
         </ul>
       </div>
-      <div className='container'>
+      <div className='container product'>
         <div className='row'>
           <div className='col-5'>
             <div className={styles.photo}>

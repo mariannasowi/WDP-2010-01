@@ -198,7 +198,6 @@
   background-color: gray;
   margin-bottom: 50px;
   height: 200px;
-  position: absolute;
 
   .furniture {
     color: $topBar-color-a;
@@ -233,4 +232,8 @@
       content: "\00BB";
     }
   }
+}
+
+.product {
+  position: relative;
 }
