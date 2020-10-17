@@ -81,15 +81,15 @@
     }
 
     &.active {
-      background-color: $mediumDarkGray;
-      border-bottom-color: $mediumDarkGray;
+      background-color: $lightGrayishBlue;
+      border-bottom-color: $lightGrayishBlue;
     }
   }
 
   .product {
     border: 1px solid $featureBox-root-border;
     border-top: none;
-    background-color: $mediumDarkGray;
+    background-color: $lightGrayishBlue;
     position: relative;
 
     .photo {
@@ -122,6 +122,7 @@
         padding: 5px 5px;
         position: relative;
         opacity: 0;
+        left:6px;
 
         &::before {
           content: "";
@@ -143,9 +144,9 @@
         cursor: pointer;
 
         &:hover {
-          color: #fff;
-          background: $black;
-          border-color: $black;
+          color: $primary;
+          background: rgba(0,0,0,0);
+          border-color: $line-color;
 
           + span {
             opacity: 1;
@@ -159,7 +160,7 @@
       bottom: 28%;
       right: 110px;
       transform: translateX(50%);
-      background-color: rgba($black, 0.9);
+      background-color: rgba($battleshipGray, 0.9);
       border-radius: 50%;
       width: 90px;
       height: 90px;
@@ -264,7 +265,7 @@
 }
 
 .rightPanel {
-  background-color: $mediumDarkGray;
+  background-color: $lightGrayishBlue;
   position: relative;
 
   .photo {
@@ -292,7 +293,7 @@
       span {
         font-size: 2.5rem;
         font-weight: 600;
-        color: $gray;
+        color: $compare-color;
       }
     }
 
