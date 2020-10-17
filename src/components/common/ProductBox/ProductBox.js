@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
-import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 import ProductRating from '../../features/ProductRating/ProductRatingContainer';
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
 
 const ProductBox = ({
   id,
@@ -20,24 +20,30 @@ const ProductBox = ({
   setCompare,
   count,
   compare,
+  addToFavourite,
   heart,
-  addCompare,
 }) => {
+  const isProductAddedToCompare =
+    compare &&
+    compare.products &&
+    compare.products.reduce(
+      (accumulator, product) => accumulator || product.id === id,
+      false
+    );
+
   const compareHandler = event => {
     event.preventDefault();
     const maxProductsToCompare = 4;
-    const isProductAddedToCompare =
-      compare.products &&
-      compare.products.reduce(
-        (accumulator, product) => accumulator || product.id === id,
-        false
-      );
-
     if (isProductAddedToCompare !== true) {
       count < maxProductsToCompare
         ? setCompare({ id, image })
         : alert(`You can compare maximum of ${maxProductsToCompare} products!`);
     }
+  };
+
+  const addToFavouriteHandler = event => {
+    event.preventDefault();
+    addToFavourite(id);
   };
 
   return (
@@ -46,8 +52,10 @@ const ProductBox = ({
         <img src={image} alt={name} />
         {promo && <div className={styles.sale}>{promo}</div>}
         <div className={styles.buttons}>
-          <Button variant='small'>Quick View</Button>
-          <Button variant='small'>
+          <Button variant='small' className={styles.button}>
+            Quick View
+          </Button>
+          <Button variant='small' className={styles.button}>
             <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
           </Button>
         </div>
@@ -61,18 +69,19 @@ const ProductBox = ({
       <div className={styles.line}></div>
       <div className={styles.actions}>
         <div className={styles.outlines}>
-          <Button variant='outline'>
-            <FontAwesomeIcon icon={faHeart} className={heart ? styles.heart : ''}>
-              Favorite
-            </FontAwesomeIcon>
+          <Button
+            className={heart ? styles.heart : ''}
+            variant='outline'
+            onClick={addToFavouriteHandler}
+          >
+            <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
           </Button>
-          <Button variant='outline' onClick={compareHandler}>
-            <FontAwesomeIcon
-              icon={faExchangeAlt}
-              className={addCompare ? styles.addCompare : ''}
-            >
-              Add to compare
-            </FontAwesomeIcon>
+          <Button
+            className={isProductAddedToCompare ? styles.productIsCompared : ''}
+            variant='outline'
+            onClick={compareHandler}
+          >
+            <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
           </Button>
         </div>
         <div className={styles.oldPrice}>{oldPrice}</div>
@@ -96,11 +105,11 @@ ProductBox.propTypes = {
   stars: PropTypes.number,
   isStarred: PropTypes.bool,
   heart: PropTypes.bool,
-  addCompare: PropTypes.bool,
   image: PropTypes.string,
   setCompare: PropTypes.func.isRequired,
   count: PropTypes.number.isRequired,
   compare: PropTypes.object.isRequired,
+  addToFavourite: PropTypes.func.isRequired,
 };
 
 export default ProductBox;

@@ -5,16 +5,16 @@
 
 .main {
   @extend %hover-effect;
-  background-color: #2a2a2a;
-  color: #ffffff;
+  background-color: $button-main-bgc;
+  color: $button-main-color;
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
   padding: 10px 30px;
 
   &:not(.noHover):hover {
-    color: #ffffff !important;
-    background-color: $primary;
+    color: $button-main-not-color !important;
+    background-color: $button-next-back-hover;
     text-decoration: none;
   }
 }
@@ -27,25 +27,71 @@
   font-weight: 400;
 }
 
+.medium {
+  @extend .main;
+  font-size: 13px;
+  line-height: 24px;
+  padding: 7px 20px;
+  font-weight: 400;
+}
+
+.big {
+  @extend .main;
+  font-size: 13px;
+  line-height: 24px;
+  padding: 10px 15px;
+  font-weight: 400;
+  color: $button-main-bgc;
+  background-color: $button-main-color;
+}
+
 .outline {
   @extend %hover-effect;
   display: inline-block;
   padding: 5px 10px;
-  border: 1px solid #2a2a2a;
-  color: #2a2a2a;
+  border: 1px solid $button-outline-border;
+  color: $button-outline-color;
   font-size: 13px;
   line-height: 22px;
 
   &:not(.noHover):hover {
-    background-color: #2a2a2a;
-    color: #ffffff;
+    background-color: $button-outline-border;
+    color: $button-outline-not-color;
+  }
+}
+
+.white {
+  @extend %hover-effect;
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid $button-main-bgc;
+  color: $button-main-bgc;
+  font-size: 13px;
+  line-height: 22px;
+  margin-right: 10px;
+
+  &:not(.noHover):hover {
+    background-color: $button-next-back-hover;
+    color: $button-main-color;
+    border: 1px solid $button-next-back-hover;
+    text-decoration: none;
+  }
+}
+
+.quantity {
+  @extend .white;
+  height: 35px;
+
+  &:not(.noHover):hover {
+    background-color: $button-main-color;
+    color: $button-next-back-hover;
   }
 }
 
 .green {
   @extend .main;
-  background-color: $gallery-green;
+  background-color: $compare-color;
   border-radius: 3px;
-  box-shadow: 1px 1px 5px rgba($gallery-black, 0.4);
+  box-shadow: 1px 1px 5px rgba($black, 0.4);
   text-transform: uppercase;
 }

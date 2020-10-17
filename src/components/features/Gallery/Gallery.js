@@ -14,12 +14,7 @@ import { faHeart, faEye } from '@fortawesome/free-regular-svg-icons';
 import Button from '../../common/Button/Button';
 import ProductRating from '../ProductRating/ProductRating';
 
-const Gallery = props => {
-
-  const [activeCategory, setActiveCategory] = useState('topSeller');
-
-  const { setWishList, setCompareList } = props;
-  const categoryProducts = props[activeCategory];
+const Gallery = (props) => {
 
   const categories = [
     { id: 'featured', name: 'featured' },
@@ -27,6 +22,12 @@ const Gallery = props => {
     { id: 'saleOff', name: 'sale off' },
     { id: 'topRated', name: 'top rated' },
   ];
+
+  const defaultTab = categories.find(category => category.name === 'top seller').id;
+  
+  const [activeCategory, setActiveCategory] = useState(defaultTab);
+
+  const categoryProducts = props[activeCategory];
 
   return (
     <div className={styles.root}>

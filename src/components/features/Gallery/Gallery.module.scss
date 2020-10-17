@@ -11,7 +11,7 @@
   .heading {
     position: relative;
     margin-bottom: 30px;
-    border-bottom: 4px solid $gallery-border;
+    border-bottom: 4px solid $featureBox-root-border;
 
     h3 {
       color: $primary;
@@ -47,7 +47,7 @@
         &:last-of-type {
           a {
             font-size: 16px;
-            border-right: 1px solid $gallery-border;
+            border-right: 1px solid $featureBox-root-border;
           }
         }
       }
@@ -59,7 +59,7 @@
     display: block;
     position: relative;
     font-weight: 600;
-    border: 1px solid $gallery-border;
+    border: 1px solid $featureBox-root-border;
     border-right: none;
     cursor: pointer;
     text-transform: uppercase;
@@ -81,15 +81,15 @@
     }
 
     &.active {
-      background-color: $gallery-background;
-      border-bottom-color: $gallery-background;
+      background-color: $mediumDarkGray;
+      border-bottom-color: $mediumDarkGray;
     }
   }
 
   .product {
-    border: 1px solid $gallery-border;
+    border: 1px solid $featureBox-root-border;
     border-top: none;
-    background-color: $gallery-background;
+    background-color: $mediumDarkGray;
     position: relative;
 
     .photo {
@@ -117,7 +117,7 @@
     .buttonWrapper {
       span {
         font-size: 10px;
-        background-color: $gallery-black;
+        background-color: $black;
         color: $sale-color;
         padding: 5px 5px;
         position: relative;
@@ -130,7 +130,7 @@
           left: -4px;
           height: 8px;
           width: 8px;
-          background-color: $gallery-black;
+          background-color: $black;
           transform: translateY(-50%) rotate(45deg);
           z-index: -1;
         }
@@ -144,8 +144,8 @@
 
         &:hover {
           color: #fff;
-          background: $gallery-black;
-          border-color: $gallery-black;
+          background: $black;
+          border-color: $black;
 
           + span {
             opacity: 1;
@@ -159,7 +159,7 @@
       bottom: 28%;
       right: 110px;
       transform: translateX(50%);
-      background-color: rgba($gallery-price-bg, 0.9);
+      background-color: rgba($black, 0.9);
       border-radius: 50%;
       width: 90px;
       height: 90px;
@@ -191,7 +191,7 @@
       justify-content: center;
       align-items: center;
       padding: 15px 30px;
-      box-shadow: -1px 2px 5px rgba($gallery-black, 0.75);
+      box-shadow: -1px 2px 5px rgba($black, 0.75);
       overflow: hidden;
 
       &::before,
@@ -200,7 +200,7 @@
         position: absolute;
         height: 30px;
         width: 30px;
-        background-color: $gallery-black;
+        background-color: $black;
         z-index: 1;
       }
 
@@ -225,7 +225,7 @@
     justify-content: space-between;
     height: 70px;
     align-items: stretch;
-    border: 1px solid $gallery-border;
+    border: 1px solid $featureBox-root-border;
     border-top: none;
 
     .button {
@@ -253,7 +253,7 @@
         left: 0;
         height: 100%;
         width: 100%;
-        background-color: rgba($gallery-black, 0.5);
+        background-color: rgba($black, 0.5);
       }
 
       &:first-of-type:after {
@@ -264,7 +264,7 @@
 }
 
 .rightPanel {
-  background-color: $gallery-background;
+  background-color: $mediumDarkGray;
   position: relative;
 
   .photo {
@@ -292,7 +292,7 @@
       span {
         font-size: 2.5rem;
         font-weight: 600;
-        color: $gallery-green;
+        color: $gray;
       }
     }
 

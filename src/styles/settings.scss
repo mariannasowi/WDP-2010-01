@@ -1,45 +1,193 @@
-$base-padding: 24px;
+//////////// VARIABLES WE DON'T USE IN ANY ANOTHER FILES
 
-$header-topbar-bg: #434343;
-$header-bg: #363636;
-
-$footer-claim-bg: #2a2a2a;
-$footer-bg: #363636;
-
-$primary: #d58e32;
-
-$text-color: #2a2a2a;
-
-$sale-color: #ffff;
-
-$text-color-two: rgb(169, 169, 169);
-
-$form-border-color: #292929;
-
+$darkGray: #2a2a2a;
+$veryDarkGray: #292929;
+$mediumDarkGray: #b6b6b6;
+$gray: #a5a5a5;
+$mediumGray: #a9a9a9;
+$lightGray: #d8d8d8;
+$mediumLightGray: #e2e2e2;
+$veryLightGray: #e1e1e1;
+$lightGrayishBlue: #e0e3ed;
+$mediumLightGrayishBlue: #f4f5f7;
+$battleshipGray: #434343;
+$shadow: #363636;
+$orange: #d58e32;
+$white: #ffffff;
+$black: #000;
+$red: #ff0000;
+$primary: $orange;
 $line-color: #000;
-
-$old-price: #ff0000;
-
-$favourite-color: #ff0000;
-
+$sale-color: #ffff;
+$text-color: $darkGray;
 $compare-color: #228b22;
+$facebook-color: #3b5998;
+$google-color: #db4a39;
+$twitter-color: #00acee;
+$pinterest-color: #c8232c;
+$linkedin-color: #0e76a8;
+$stars-color: #2a2a2a;
+$old-price-text-color: $gray;
+$form-border-color: $veryDarkGray;
 
-$gallery-border: #c7c0c0;
+//////////// VARIABLES WE ARE USING IN ANOTHER FILES
 
-$gallery-background: rgb(221, 215, 215);
+/* BUTTON */
+$button-main-bgc: $darkGray;
+$button-main-color: $white;
+$button-main-not-color: $white;
+$button-outline-border: $darkGray;
+$button-outline-color: $darkGray;
+$button-outline-not-bgc: $darkGray;
+$button-outline-not-color: $white;
+$button-favorite-color: $white;
+$button-compare-color: $white;
+$button-next-back-bgc: $darkGray;
+$button-next-back-color: $white;
+$button-next-back-hover: $orange;
 
-$gallery-black: #000;
+/* FEATURE BOX */
+$featureBox-root-border: $mediumDarkGray;
+$featureBox-root-icon-color: $white;
+$featureBox-icon-border: $mediumDarkGray;
+$featureBox-icon-bgc: $white;
+$featureBox-content-color: $darkGray;
+$featureBox-hover: $white;
+$featureBox-hover-bc: $orange;
+$featureBox-hover-color: $orange;
 
-$gray: rgb(94, 93, 93);
+/* LAST POST */
+$lastPost-body-bc: $white;
+$lastPost-body-a: $darkGray;
+$lastPost-body-hover: $orange;
 
-$gallery-price-bg: lighten($gray, 20);
+/* PRODUCT BOX */
+$productBox-root-bgc: $white;
+$productBox-root-border: $veryLightGray;
+$productBox-photo-color: $mediumLightGrayishBlue;
+$productBox-sale-bgc: $veryDarkGray;
+$productBox-sale-color: $white;
+$productBox-stars-color: $darkGray;
+$productBox-line-border: $darkGray;
+$productBox-content: $orange;
+$productBox-bc: $orange;
+$productBox-oldprice: $orange;
 
-$gallery-green: rgb(1, 226, 1);
+/* PROMOTED PRODUCT */
+$promotedProductBox-bc: $white;
+$promotedProductBox-border: $veryLightGray;
+$promotedProductBox-photo-bc: $mediumLightGrayishBlue;
+$promotedProductBox-sale-bc: $veryDarkGray;
+$promotedProductBox-color: $white;
+$promotedProductBox-content: $orange;
+$promotedProductBox-stars: $darkGray;
+$promotedProductBox-line: $darkGray;
+$promotedProductBox-line-bb: $orange;
+$promotedProductBox-heart: $darkGray;
+$promotedProductBox-product-c: $darkGray;
+$promotedProductBox-product-bc: $orange;
+$promotedProductBox-price: $orange;
+$promotedProductBox-oldprice: $gray;
+$promotedProductBox-b: $black;
 
-$gallery-icon-color: #fff;
+/* BRANDS */
+$brands-border: $veryLightGray;
+$brands-line: $black;
+$brands-sale: $red;
+$brands-hover: $orange;
 
+/* LATEST BLOG */
+$latestBlog-global: $mediumLightGray;
+$latestBlog-color: $orange;
+$latestBlog-border: $orange;
+$latestBlog-bc: $white;
+$latestBlog-a-bc: $veryLightGray;
+$latestBlog-hover-bc: $orange;
+
+/* NEW FURNITURE */
+$newFurniture-panelbar-border: $mediumLightGray;
+$newFurniture-menu-a: $darkGray;
+$newFurniture-dots-bc: $white;
+$newFurniture-dots-a: $veryLightGray;
+$newFurniture-h-color: $orange;
+$newFurniture-border: $orange;
+$newFurniture-bc: $orange;
+$newFurniture-ul-color: $darkGray;
+
+/* PRODUCT RATING */
+$productRating-color: $orange;
+
+/* PRODUCTS COMPARE */
+$productCampare-border: $orange;
+$productCampare-key-bc: $battleshipGray;
+
+/* PRODUCT SEARCH */
+$productSearch-border: $veryDarkGray;
+$productSearch-color: $orange;
+$productSearch-root-color: $darkGray;
+$productSearch-search-color: $darkGray;
+$productSearch-li-bc: $white;
+
+/* PROMOTED PRODUCT */
+$promotedProduct-bc: $darkGray;
+$promotedProduct-color: $white;
+$promotedProduct-dots-a: $white;
+$promotedProduct-hover-bc: $orange;
+
+/* SALES */
+$sales-bc: $darkGray;
+$sales-border: $orange;
+$sales-color: $darkGray;
+$sales-sale-color: $orange;
+$sales-main-color: $orange;
+
+/* COMPANY CLAIM */
+$companyClaim-phone-color: $lightGray;
+$companyClaim-cardCounter-color: $lightGrayishBlue;
+$companyClaim-cardBox-color: $white;
+$companyClaim-bg: $shadow;
+$companyClaim-cardIcon-bc: $orange;
+
+/* FOOTER */
+$footer-claim-bg: $darkGray;
+$footer-bg: $shadow;
+$footer-menu-h6: $white;
+$footer-menu-a: $mediumGray;
+$footer-menu-hover: $white;
+$footer-copyright-p: $mediumGray;
+$footer-socialMedia-a: $mediumGray;
+$footer-socialMedia-hover: $orange;
+$footer-rwd-color: $mediumGray;
+
+/* MENU BAR */
+$menuBar-active-color: $white;
+$menuBar-color: $darkGray;
+$menuBar-a-border: $white;
+$menuBar-root-bgc: $white;
+$menuBar-bc: $orange;
+$menuBar-border: $orange;
+$menuBar-hover-bc: $darkGray;
+
+/* TOP BAR */
+$topBar-bc: $battleshipGray;
+$topBar-color-a: $white;
+$topBar-color: $orange;
+
+/* PRODUCT */
+$product-hover-color: $orange;
+$product-icon-color: $white;
+$product-bg-color: $white;
+$product-border-color: $black;
+$product-heart-color: $red;
+$product-compare-color: $compare-color;
+$product-photo-bgc: $mediumLightGrayishBlue;
+$product-p-color: $battleshipGray;
+$product-oldPrice-color: $mediumGray;
+$product-root-color: $veryLightGray;
+
+/* OTHER */
+$base-padding: 24px;
 $transition: all 0.25s;
-
 %hover-effect {
   transition: $transition;
 }

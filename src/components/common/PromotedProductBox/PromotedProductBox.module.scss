@@ -1,0 +1,154 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  background-color: $promotedProductBox-bc;
+  border: 1px solid $promotedProductBox-border;
+  margin-bottom: 2rem;
+
+  .photo {
+    position: relative;
+    padding: 0 10px 0 10px;
+    background: {
+      color: $promotedProductBox-photo-bc;
+      size: contain;
+      position: center;
+      repeat: no-repeat;
+    }
+    overflow: hidden;
+    align-items: flex-end;
+
+    .sale {
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $promotedProductBox-sale-bc;
+      border-radius: 50%;
+      color: $promotedProductBox-color;
+      padding: 30px 15px 5px 15px;
+    }
+
+    .promoCounter {
+      height: 0;
+    }
+
+    .dots {
+      display: flex;
+      visibility: hidden;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      transform: translateY(-30px);
+
+      h5 {
+        color: $promotedProductBox-color;
+        z-index: 2;
+        line-height: 0.5;
+        text-align: center;
+      }
+
+      p {
+        color: $promotedProductBox-color;
+        z-index: 2;
+      }
+    }
+
+    .dots::after {
+      content: "";
+      border: 1px solid $promotedProductBox-border;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -60%);
+      width: 76px;
+      height: 76px;
+      border-radius: 100%;
+      background-color: $promotedProductBox-border;
+      z-index: 1;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      visibility: hidden;
+      transform: translateY(-120px);
+    }
+  }
+
+  .content {
+    text-align: center;
+    padding: 20px;
+
+    h5 {
+      color: $promotedProductBox-content;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 1px;
+    }
+
+    .stars {
+      a {
+        text-decoration: none;
+        color: $promotedProductBox-stars;
+      }
+    }
+  }
+
+  .line {
+    margin: 0 10px;
+    border-bottom: 1px solid $promotedProductBox-line;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      width: 30px;
+      border-bottom: 4px solid $promotedProductBox-line-bb;
+      transform: translateX(-50%);
+    }
+  }
+
+  .actions {
+    padding: 15px 10px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .heart {
+    color: $promotedProductBox-heart;
+  }
+
+  .productIsCompared {
+    color: $promotedProductBox-product-c;
+    background-color: $promotedProductBox-product-bc;
+  }
+
+  img {
+    object-fit: cover;
+    width: 300px;
+    height: 200px;
+  }
+
+  &:hover {
+    .dots {
+      visibility: visible;
+    }
+
+    .buttons {
+      visibility: visible;
+    }
+
+    .price > div {
+      background-color: $promotedProductBox-price;
+    }
+  }
+
+  .oldPrice {
+    font-size: 20px;
+    text-decoration: line-through;
+    color: $promotedProductBox-oldprice;
+  }
+}

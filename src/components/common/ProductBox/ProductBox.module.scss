@@ -11,8 +11,8 @@
 }
 
 .root {
-  background-color: #ffffff;
-  border: 1px solid #e1e1e1;
+  background-color: $productBox-root-bgc;
+  border: 1px solid $productBox-root-border;
   margin-bottom: 2rem;
   opacity: 0;
   animation-name: fadeIn;
@@ -23,7 +23,7 @@
     position: relative;
     padding: 0 10px 0 10px;
     background: {
-      color: #f4f5f7;
+      color: $productBox-photo-color;
       size: contain;
       position: center;
       repeat: no-repeat;
@@ -36,9 +36,9 @@
       top: -30px;
       left: 50%;
       transform: translateX(-50%);
-      background-color: #292929;
+      background-color: $productBox-sale-bgc;
       border-radius: 50%;
-      color: #ffffff;
+      color: $productBox-sale-color;
       padding: 30px 15px 5px 15px;
     }
 
@@ -54,7 +54,7 @@
     padding: 20px;
 
     h5 {
-      color: $primary;
+      color: $productBox-content;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 1px;
@@ -63,14 +63,14 @@
     .stars {
       a {
         text-decoration: none;
-        color: rgb(42, 42, 42);
+        color: $productBox-stars-color;
       }
     }
   }
 
   .line {
     margin: 0 10px;
-    border-bottom: 1px solid #2a2a2a;
+    border-bottom: 1px solid $productBox-line-border;
     position: relative;
 
     &::before {
@@ -79,7 +79,7 @@
       bottom: -1px;
       left: 50%;
       width: 30px;
-      border-bottom: 4px solid $primary;
+      border-bottom: 4px solid $productBox-content;
       transform: translateX(-50%);
     }
   }
@@ -91,12 +91,9 @@
     align-items: center;
   }
 
-  .heart {
-    color: $favourite-color;
-  }
-
-  .addCompare {
-    color: $compare-color;
+  .productIsCompared {
+    color: $productBox-stars-color;
+    background-color: $productBox-bc;
   }
 
   img {
@@ -111,13 +108,39 @@
     }
 
     .price > div {
-      background-color: $primary;
+      background-color: $productBox-bc;
     }
   }
 
   .oldPrice {
     font-size: 20px;
     text-decoration: line-through;
-    color: $old-price;
+    color: $productBox-oldprice;
+  }
+
+  .heart {
+    color: $productBox-stars-color;
+    background-color: $productBox-bc;
+  }
+}
+
+@media (max-width: 767px) {
+  .root {
+    img {
+      width: 100%;
+    }
+
+    .photo {
+      padding: 0px;
+
+      .buttons {
+        justify-content: center;
+        visibility: visible;
+
+        .button {
+          margin: 0 20px;
+        }
+      }
+    }
   }
 }
