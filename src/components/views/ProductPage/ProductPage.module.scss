@@ -197,7 +197,7 @@
 .menu {
   background-color: gray;
   margin-bottom: 50px;
-  height: 200px;
+  height: 400px;
 
   .furniture {
     color: $topBar-color-a;
@@ -236,4 +236,6 @@
 
 .product {
   position: relative;
+  top: -350px;
+  background-color: white;
 }
