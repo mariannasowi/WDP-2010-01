@@ -2,8 +2,8 @@
 
 .root {
   padding: $base-padding 0;
-  background-color: $component-bg-color;
-  border: 1px solid $box-border-color;
+  background-color: $product-bg-color;
+  border: 1px solid $product-root-color;
   margin-bottom: 2rem;
   color: $text-color;
 
@@ -12,7 +12,7 @@
     padding: 0 10px 0 10px;
     width: 100%;
     height: 400px;
-    background-color: $photo-bg-color;
+    background-color: $product-photo-bgc;
 
     img {
       object-fit: cover;
@@ -41,14 +41,14 @@
       p {
         padding-left: 10px;
         font-size: 14px;
-        color: $text-lighter-color;
+        color: $product-p-color;
       }
     }
   }
 
   .line {
     margin: 5px;
-    border-bottom: 1px solid $photo-bg-color;
+    border-bottom: 1px solid $product-photo-bgc;
     position: relative;
   }
 
@@ -66,7 +66,7 @@
 
     input {
       width: 60px;
-      border: 1px solid $line-color;
+      border: 1px solid $product-border-color;
       padding-left: 25px;
       margin: 0 10px;
       height: 35px;
@@ -74,8 +74,8 @@
   }
 
   .productIsCompared {
-    color: $compare-color;
-    background-color: $primary;
+    color: $product-compare-color;
+    background-color: $product-hover-color;
   }
 
   .prices {
@@ -88,20 +88,20 @@
 
   .oldPrice {
     text-decoration: line-through;
-    color: $text-color-two;
+    color: $product-oldPrice-color;
     padding-right: 20px;
     padding-top: 5px;
   }
 
   .price {
     padding: 5px;
-    color: $component-bg-color;
-    background-color: $line-color;
+    color: $product-icon-color;
+    background-color: $product-border-color;
   }
 
   .heart {
-    color: $favourite-color;
-    background-color: $primary;
+    color: $product-heart-color;
+    background-color: $product-hover-color;
   }
 
   .overview {
@@ -113,7 +113,7 @@
 
     p {
       font-size: 16px;
-      color: $text-lighter-color;
+      color: $product-p-color;
       text-align: justify;
 
       span {
@@ -133,7 +133,7 @@
     border-color: $facebook-color;
 
     .facebook {
-      color: $component-bg-color;
+      color: $product-icon-color;
     }
   }
 
@@ -147,7 +147,7 @@
     border-color: $google-color;
 
     .google {
-      color: $component-bg-color;
+      color: $product-icon-color;
     }
   }
 
@@ -161,7 +161,7 @@
     border-color: $twitter-color;
 
     .twitter {
-      color: $component-bg-color;
+      color: $product-icon-color;
     }
   }
 
@@ -175,7 +175,7 @@
     border-color: $pinterest-color;
 
     .printerest {
-      color: $component-bg-color;
+      color: $product-icon-color;
     }
   }
 
@@ -189,7 +189,7 @@
     border-color: $linkedin-color;
 
     .linkedin {
-      color: $component-bg-color;
+      color: $product-icon-color;
     }
   }
 }

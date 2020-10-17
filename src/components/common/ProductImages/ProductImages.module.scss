@@ -20,22 +20,22 @@
       position: absolute;
       width: 30px;
       height: 30px;
-      border: 1px solid $line-color;
+      border: 1px solid $product-border-color;
     }
 
     &:hover .icon {
-      color: $component-bg-color;
+      color: $product-icon-color;
       z-index: 1;
     }
 
     &:hover::before {
       content: "";
-      border: 1px solid $primary;
-      background-color: $primary;
+      border: 1px solid $product-hover-color;
+      background-color: $product-hover-color;
     }
 
     .icon {
-      color: $line-color;
+      color: $product-border-color;
       font-size: 20px;
     }
   }
