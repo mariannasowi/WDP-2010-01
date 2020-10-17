@@ -6,7 +6,7 @@
     position: relative;
 
     :global(.row) > * {
-      border-bottom: 4px solid $box-border-color;
+      border-bottom: 4px solid $clientFeedback-panelbar-border;
     }
   }
 
@@ -14,7 +14,7 @@
     position: relative;
 
     h3 {
-      color: $primary;
+      color: $clientFeedback-h-color;
       text-transform: uppercase;
       font-size: 20px;
       line-height: 38px;
@@ -28,7 +28,7 @@
       bottom: -4px;
       left: 0;
       width: 45px;
-      border-bottom: 4px solid $primary;
+      border-bottom: 4px solid $clientFeedback-border;
     }
   }
 
@@ -41,7 +41,7 @@
       margin: 0;
       padding: 0 0 0 1rem;
       list-style: none;
-      background-color: $sale-color;
+      background-color: $clientFeedback-dots-bc;
       transform: translateY(15px);
     }
 
@@ -55,13 +55,13 @@
         width: 13px;
         height: 13px;
         border-radius: 6px;
-        background-color: $box-border-color;
+        background-color: $clientFeedback-dots-a;
         font-size: 0;
         opacity: 2;
 
         &.active,
         &:hover {
-          background-color: $primary;
+          background-color: $clientFeedback-hover-dc;
         }
       }
     }
