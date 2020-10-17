@@ -76,22 +76,29 @@
 
   .description {
     position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 50%;
+    height: 100%;
     text-transform: uppercase;
     color: $promotedProductBox-color;
     text-align: center;
-    background: $promotedProductBox-b;
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 50%;
+      position: absolute;
+      background: $promotedProductBox-b;
+      opacity: 0.5;
+    }
 
     h2 {
       font-size: 40px;
       font-weight: 200;
+      z-index: 2;
 
       span {
         font-weight: 600;
@@ -116,7 +123,10 @@
   .colRight {
     margin-left: 0;
     padding-left: 0;
+  }
 
+  .colLeft,
+  .colRight {
     span {
       color: $promotedProduct-color;
       cursor: pointer;
