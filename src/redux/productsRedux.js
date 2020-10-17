@@ -19,8 +19,10 @@ export const SET_FAVOURITE = createActionName('SET_FAVOURITE');
 export const setStars = payload => ({ payload, type: SET_STARS });
 export const addToFavourite = payload => ({ payload, type: SET_FAVOURITE });
 
-export const getProductById = ({ products }, productId) =>
-  products.filter(product => product.id === productId);
+export const getProductById = ({ products }, productId) => {
+  const filtered = products.filter(product => product.id === productId);
+  return filtered.length ? filtered[0] : { error: true };
+};
 
 /* reducer */
 export default function reducer(statePart = [], action = {}) {

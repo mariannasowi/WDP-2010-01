@@ -1,16 +1,20 @@
 import { connect } from 'react-redux';
 import ProductPage from './ProductPage';
-import { getProductById } from '../../../redux/productsRedux';
+import { setCompare, getCount } from '../../../redux/compareRedux';
+import { addToFavourite, getProductById } from '../../../redux/productsRedux';
 
 const mapStateToProps = (state, props) => {
-  const id = props.match.params.id;
-  const filteredProducts = state.products.filter(product => product.id === id);
-  const productParams = filteredProducts[0] || {};
-
+  const product = getProductById(state, props.match.params.productId);
   return {
-    ...productParams,
-    columns: getProductById(state, id),
+    ...product,
+    count: getCount(state),
+    compare: state.compare,
   };
 };
 
-export default connect(mapStateToProps)(ProductPage);
+const mapDispatchToProps = dispatch => ({
+  setCompare: value => dispatch(setCompare(value)),
+  addToFavourite: value => dispatch(addToFavourite(value)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProductPage);

@@ -21,8 +21,8 @@ const App = () => (
           <Route exact path={'/'} component={Homepage} />
           <Route exact path={'/shop/:categoryId'} component={ProductList} />
           <Route exact path={'/product/:productId'} component={ProductPage} />
-          <Route path='*' component={NotFound} />
           <Route exact path={'/blog/:blogId'} component={BlogArticle} />
+          <Route path='*' component={NotFound} />
         </Switch>
       </MainLayout>
     </BrowserRouter>

@@ -7,7 +7,6 @@ import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-ico
 import Button from '../Button/Button';
 import ProductRating from '../../features/ProductRating/ProductRatingContainer';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
-import ProductPage from '../../views/ProductPage/ProductPage';
 import { Link } from 'react-router-dom';
 
 const ProductBox = ({
