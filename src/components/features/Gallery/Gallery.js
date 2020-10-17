@@ -112,7 +112,7 @@ const Gallery = (props) => {
           </div>
           <div className={'col-6 ' + styles.rightPanel}>
             <div className={styles.photo}>
-              <image
+              <img
                 src='http://www.pngall.com/wp-content/uploads/2/Double-Bed.png'
                 alt='furniture'
               />
