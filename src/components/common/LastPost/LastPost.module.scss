@@ -1,8 +1,6 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  margin-bottom: 2rem;
-
   .photo {
     position: relative;
     background: {
@@ -17,10 +15,9 @@
   }
 
   .body {
-    background-color: $component-bg-color;
+    background-color: $lastPost-body-bc;
     margin-left: 7%;
     margin-right: 7%;
-    height: 300px;
     text-align: center;
     padding: 20px;
     transform: translateY(-50px);
@@ -36,10 +33,10 @@
       font-size: 16px;
       line-height: 26px;
       letter-spacing: 1px;
-      color: $text-color;
+      color: $lastPost-body-a;
 
       &:hover {
-        color: $primary;
+        color: $lastPost-body-hover;
         text-decoration: none;
       }
     }

@@ -1,7 +1,7 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  background-color: $header-bg;
+  background-color: $companyClaim-bg;
 
   :global(.container) > :global(.row) {
     height: 145px;
@@ -12,12 +12,12 @@
       margin: 0;
       font-size: 17px;
       line-height: 42px;
-      color: rgb(216, 216, 216);
+      color: $companyClaim-phone-color;
       font-weight: 500;
 
       .icon {
         font-size: 32px;
-        color: $primary;
+        color: $companyClaim-cardIcon-bc;
         vertical-align: middle;
         margin-top: -3px;
         margin-right: 0.8rem;
@@ -34,10 +34,10 @@
       @extend %hover-effect;
       display: inline-block;
       position: relative;
-      color: #ffffff;
+      color: $companyClaim-cardBox-color;
 
       .cartIcon {
-        background-color: $primary;
+        background-color: $companyClaim-cardIcon-bc;
         width: 55px;
         height: 50px;
         border-radius: 3px;
@@ -55,12 +55,12 @@
         width: 28px;
         height: 27px;
         border-radius: 18px;
-        background-color: $header-bg;
+        background-color: $companyClaim-bg;
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 14px;
-        color: rgb(224, 227, 237);
+        color: $companyClaim-cardCounter-color;
         position: absolute;
         top: 50%;
         right: 0;
@@ -70,7 +70,7 @@
 
       &:hover {
         .cartIcon {
-          background-color: lighten($primary, 10%);
+          background-color: lighten($companyClaim-cardIcon-bc, 10%);
         }
       }
     }

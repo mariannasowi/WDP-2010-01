@@ -1218,6 +1218,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
       availability: 'in Stock',
       newFurniture: true,
+      hotDeal: true,
     },
     {
       id: 'aenean-ru-bristique-83',
@@ -1232,6 +1233,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
       availability: 'in Stock',
       newFurniture: true,
+      hotDeal: true,
     },
     {
       id: 'aenean-ru-bristique-84',
@@ -1250,12 +1252,6 @@ const initialState = {
       hotDeal: true,
     },
   ],
-  cart: {
-    products: [],
-  },
-  compare: {
-    products: [],
-  },
   promotedProduct: {
     title: 'indoor',
     spanTitle: 'furniture',
@@ -1279,8 +1275,6 @@ const initialState = {
       },
     ],
   },
-  viewport: 'desktop',
-
   sales: {
     boxOne: {
       name: 'Guest room',
@@ -1357,6 +1351,13 @@ const initialState = {
     // { id: 'Brand9', name: 'Brand9', image: 'https://i.postimg.cc/HLPHqTFm/17.jpg' },
     // { id: 'Brand10', name: 'Brand10', image: 'https://i.postimg.cc/C5bgnk5M/18.jpg' },
   ],
+  cart: {
+    products: [],
+  },
+  compare: {
+    products: [],
+  },
+  viewport: 'desktop',
 };
 
 export default initialState;
