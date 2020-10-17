@@ -20,17 +20,12 @@ $primary: $orange;
 $line-color: #000;
 $sale-color: #ffff;
 $text-color: $darkGray;
-$component-bg-color: #ffff;
-$text-color-two: #a9a9a9;
-$form-border-color: #292929;
-$old-price: #ff0000;
-$favourite-color: #ff0000;
 $compare-color: #228b22;
-$promo-text-color: #ffffff;
-$photo-bg-color: #f4f5f7;
-$box-border-color: #e1e1e1;
-$panelBar-border-color: #e2e2e2;
-$dot-bg-color: #e1e1e1;
+$facebook-color: #3b5998;
+$google-color: #db4a39;
+$twitter-color: #00acee;
+$pinterest-color: #c8232c;
+$linkedin-color: #0e76a8;
 $stars-color: #2a2a2a;
 $old-price-text-color: $gray;
 $form-border-color: $veryDarkGray;
@@ -178,6 +173,18 @@ $menuBar-hover-bc: $darkGray;
 $topBar-bc: $battleshipGray;
 $topBar-color-a: $white;
 $topBar-color: $orange;
+
+/* PRODUCT */
+$product-hover-color: $orange;
+$product-icon-color: $white;
+$product-bg-color: $white;
+$product-border-color: $black;
+$product-heart-color: $red;
+$product-compare-color: $compare-color;
+$product-photo-bgc: $mediumLightGrayishBlue;
+$product-p-color: $battleshipGray;
+$product-oldPrice-color: $mediumGray;
+$product-root-color: $veryLightGray;
 
 /* OTHER */
 $base-padding: 24px;

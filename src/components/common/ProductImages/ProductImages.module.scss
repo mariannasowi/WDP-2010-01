@@ -1,0 +1,54 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  padding: 2rem 0;
+
+  .wrapper {
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      border: 1px solid $product-border-color;
+    }
+
+    &:hover .icon {
+      color: $product-icon-color;
+      z-index: 1;
+    }
+
+    &:hover::before {
+      content: "";
+      border: 1px solid $product-hover-color;
+      background-color: $product-hover-color;
+    }
+
+    .icon {
+      color: $product-border-color;
+      font-size: 20px;
+    }
+  }
+
+  .brandBox {
+    display: flex;
+    overflow: scroll;
+
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin: 10px 10px;
+    }
+  }
+}
