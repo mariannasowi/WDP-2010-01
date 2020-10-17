@@ -11,9 +11,9 @@ import SalesContainer from '../../features/Sales/SalesContainer';
 const Homepage = () => (
   <div className={styles.root}>
     <FeatureBoxes />
-    <Gallery />
     <SalesContainer />
     <NewFurniture />
+    <Gallery />
   </div>
 );
 
