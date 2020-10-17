@@ -22,6 +22,7 @@ import {
   faPinterestP,
 } from '@fortawesome/free-brands-svg-icons';
 import ProductImages from '../../common/ProductImages/ProductImages';
+import { NavLink } from 'react-router-dom';
 
 const ProductPage = ({
   id,
@@ -66,6 +67,20 @@ const ProductPage = ({
 
   return (
     <div className={styles.root}>
+      <div className={styles.menu}>
+        <ul>
+          <li className='col-8'>FURNITURE</li>
+          <li className='col-1'>
+            <a href='/#'>Home</a>
+          </li>
+          <li className='col-1'>
+            <a href='/#'>Furniture </a>
+          </li>
+          <li className='col-1'>
+            <a href='/#'>{category} </a>
+          </li>
+        </ul>
+      </div>
       <div className='container'>
         <div className='row'>
           <div className='col-5'>
