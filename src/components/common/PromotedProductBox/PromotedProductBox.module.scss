@@ -1,15 +1,15 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  background-color: $promo-text-color;
-  border: 1px solid $box-border-color;
+  background-color: $promotedProductBox-bc;
+  border: 1px solid $promotedProductBox-border;
   margin-bottom: 2rem;
 
   .photo {
     position: relative;
     padding: 0 10px 0 10px;
     background: {
-      color: $photo-bg-color;
+      color: $promotedProductBox-photo-bc;
       size: contain;
       position: center;
       repeat: no-repeat;
@@ -22,9 +22,9 @@
       top: -30px;
       left: 50%;
       transform: translateX(-50%);
-      background-color: $form-border-color;
+      background-color: $promotedProductBox-sale-bc;
       border-radius: 50%;
-      color: $promo-text-color;
+      color: $promotedProductBox-color;
       padding: 30px 15px 5px 15px;
     }
 
@@ -41,21 +41,21 @@
       transform: translateY(-30px);
 
       h5 {
-        color: $promo-text-color;
+        color: $promotedProductBox-color;
         z-index: 2;
         line-height: 0.5;
         text-align: center;
       }
 
       p {
-        color: $promo-text-color;
+        color: $promotedProductBox-color;
         z-index: 2;
       }
     }
 
     .dots::after {
       content: "";
-      border: 1px solid $form-border-color;
+      border: 1px solid $promotedProductBox-border;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -63,7 +63,7 @@
       width: 76px;
       height: 76px;
       border-radius: 100%;
-      background-color: $form-border-color;
+      background-color: $promotedProductBox-border;
       z-index: 1;
     }
 
@@ -80,7 +80,7 @@
     padding: 20px;
 
     h5 {
-      color: $primary;
+      color: $promotedProductBox-content;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 1px;
@@ -89,14 +89,14 @@
     .stars {
       a {
         text-decoration: none;
-        color: $stars-color;
+        color: $promotedProductBox-stars;
       }
     }
   }
 
   .line {
     margin: 0 10px;
-    border-bottom: 1px solid $text-color;
+    border-bottom: 1px solid $promotedProductBox-line;
     position: relative;
 
     &::before {
@@ -105,7 +105,7 @@
       bottom: -1px;
       left: 50%;
       width: 30px;
-      border-bottom: 4px solid $primary;
+      border-bottom: 4px solid $promotedProductBox-line-bb;
       transform: translateX(-50%);
     }
   }
@@ -118,12 +118,12 @@
   }
 
   .heart {
-    color: $favourite-color;
+    color: $promotedProductBox-heart;
   }
 
   .productIsCompared {
-    color: $compare-color;
-    background-color: $primary;
+    color: $promotedProductBox-product-c;
+    background-color: $promotedProductBox-product-bc;
   }
 
   img {
@@ -142,13 +142,13 @@
     }
 
     .price > div {
-      background-color: $primary;
+      background-color: $promotedProductBox-price;
     }
   }
 
   .oldPrice {
     font-size: 20px;
     text-decoration: line-through;
-    color: $old-price;
+    color: $promotedProductBox-oldprice;
   }
 }
