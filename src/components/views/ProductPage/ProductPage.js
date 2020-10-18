@@ -70,8 +70,8 @@ const ProductPage = ({
   else
     return (
       <div className={styles.root}>
-        <div className='container'>
-          <div className={'col-auto ' + styles.menu}>
+        <div className={'col-auto ' + styles.menu}>
+          <div className='container'>
             <ul>
               <h2>FURNITURE</h2>
               <li>
@@ -85,6 +85,8 @@ const ProductPage = ({
               </li>
             </ul>
           </div>
+        </div>
+        <div className='container'>
           <div className={styles.product}>
             <div className='row'>
               <div className='col-5'>
