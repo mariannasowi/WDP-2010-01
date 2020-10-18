@@ -186,13 +186,13 @@ $product-oldPrice-color: $mediumGray;
 $product-root-color: $veryLightGray;
 
 /* GALLERY */
-$theme-color: $orange;
-$frame-underline-color: $mediumDarkGray;
-$background-color:  #e0e3ed;
-$buttons-hints-color: #000;
-$price: #fff;
-$price-bigger-font: #228b22;
-
+$gallery-theme-color: $orange;
+$gallery-frame-medium-color: $mediumDarkGray;
+$gallery-frame-light-color: $veryLightGray;
+$gallery-background-color:  $lightGrayishBlue;
+$gallery-buttons-hints-color: $black;
+$gallery-price: $white;
+$gallery-price-bigger-font: $compare-color;
 
 /* OTHER */
 $base-padding: 24px;

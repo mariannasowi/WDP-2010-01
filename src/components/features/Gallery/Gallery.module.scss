@@ -11,10 +11,10 @@
   .heading {
     position: relative;
     margin-bottom: 30px;
-    border-bottom: 4px solid $featureBox-root-border;
+    border-bottom: 4px solid $gallery-frame-light-color;
 
     h3 {
-      color: $theme-color;
+      color: $gallery-theme-color;
       text-transform: uppercase;
       font-size: 20px;
       line-height: 38px;
@@ -28,7 +28,7 @@
       bottom: -4px;
       left: 0;
       width: 45px;
-      border-bottom: 4px solid $theme-color;
+      border-bottom: 4px solid $gallery-theme-color;
     }
   }
 
@@ -47,7 +47,7 @@
         &:last-of-type {
           a {
             font-size: 16px;
-            border-right: 1px solid $featureBox-root-border;
+            border-right: 1px solid $gallery-frame-light-color;
           }
         }
       }
@@ -59,7 +59,7 @@
     display: block;
     position: relative;
     font-weight: 600;
-    border: 1px solid $featureBox-root-border;
+    border: 1px solid $gallery-frame-light-color;
     border-right: none;
     cursor: pointer;
     text-transform: uppercase;
@@ -67,7 +67,7 @@
 
     &.active,
     &:hover {
-      color: $theme-color;
+      color: $gallery-theme-color;
 
       @extend %hover-effect;
 
@@ -77,20 +77,20 @@
         top: -4px;
         left: 0;
         width: 100%;
-        border-top: 4px solid $theme-color;
+        border-top: 4px solid $gallery-theme-color;
       }
     }
 
     &.active {
-      background-color: $background-color;
-      border-bottom-color: $background-color;
+      background-color: $gallery-background-color;
+      border-bottom-color: $gallery-background-color;
     }
   }
 
   .product {
-    border: 1px solid $featureBox-root-border;
+    border: 1px solid $gallery-frame-light-color;
     border-top: none;
-    background-color: $background-color;
+    background-color: $gallery-background-color;
     position: relative;
 
     .photo {
@@ -118,7 +118,7 @@
     .buttonWrapper {
       span {
         font-size: 10px;
-        background-color: $buttons-hints-color;
+        background-color: $gallery-buttons-hints-color;
         color: $sale-color;
         padding: 5px;
         position: relative;
@@ -132,7 +132,7 @@
           left: -4px;
           height: 8px;
           width: 8px;
-          background-color: $buttons-hints-color;
+          background-color: $gallery-buttons-hints-color;
           transform: translateY(-50%) rotate(45deg);
           z-index: -1;
         }
@@ -145,9 +145,9 @@
         cursor: pointer;
 
         &:hover {
-          color: $theme-color;
+          color: $gallery-theme-color;
           background: rgba(0,0,0,0);
-          border-color: $buttons-hints-color;
+          border-color: $gallery-buttons-hints-color;
 
           + span {
             opacity: 1;
@@ -161,7 +161,7 @@
       bottom: 28%;
       right: 110px;
       transform: translateX(50%);
-      background-color: rgba($frame-underline-color, 0.6);
+      background-color: rgba($gallery-buttons-hints-color, 0.6);
       border-radius: 50%;
       width: 90px;
       height: 90px;
@@ -172,12 +172,12 @@
       z-index: 2;
 
       .price {
-        color: $price;
+        color: $gallery-price;
         font-weight: 600;
       }
 
       .oldPrice {
-        color: $price;
+        color: $gallery-price;
         font-size: 0.8rem;
         text-decoration: line-through;
       }
@@ -187,13 +187,13 @@
       position: absolute;
       bottom: 10%;
       right: 4px;
-      background-color: $sale-color;
+      background-color: $gallery-price;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       padding: 15px 30px;
-      box-shadow: -1px 2px 5px rgba($buttons-hints-color, 0.75);
+      box-shadow: -1px 2px 5px rgba($gallery-buttons-hints-color, 0.4);
       overflow: hidden;
 
       &::before,
@@ -202,7 +202,7 @@
         position: absolute;
         height: 30px;
         width: 30px;
-        background-color: $buttons-hints-color;
+        background-color: $gallery-buttons-hints-color;
         z-index: 1;
       }
 
@@ -227,7 +227,7 @@
     justify-content: space-between;
     height: 70px;
     align-items: stretch;
-    border: 1px solid $featureBox-root-border;
+    border: 1px solid $gallery-frame-light-color;
     border-top: none;
 
     .button {
@@ -255,7 +255,7 @@
         left: 0;
         height: 100%;
         width: 100%;
-        background-color: rgba($buttons-hints-color, 0.5);
+        background-color: rgba($gallery-buttons-hints-color, 0.6);
       }
 
       &:first-of-type:after {
@@ -266,7 +266,7 @@
 }
 
 .rightPanel {
-  background-color: $background-color;
+  background-color: $gallery-background-color;
   position: relative;
 
   .photo {
@@ -294,12 +294,12 @@
       span {
         font-size: 2.5rem;
         font-weight: 600;
-        color: $price-bigger-font;
+        color: $gallery-price-bigger-font;
       }
     }
 
     h2 {
-      color: $theme-color;
+      color: $gallery-theme-color;
       font-weight: 600;
     }
 
