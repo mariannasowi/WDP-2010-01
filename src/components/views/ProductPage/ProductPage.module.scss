@@ -1,7 +1,6 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  padding: $base-padding 0;
   background-color: $product-bg-color;
   border: 1px solid $product-root-color;
   margin-bottom: 2rem;
@@ -220,7 +219,7 @@
       a {
         @extend %hover-effect;
         color: $topBar-color-a;
-        font-size: 20px;
+        font-size: 14px;
 
         &:hover {
           color: $topBar-color;
@@ -232,10 +231,17 @@
       content: "\00BB";
     }
   }
+
+  h2 {
+    display: inline-block;
+    color: $topBar-color-a;
+    padding-right: 700px;
+  }
 }
 
 .product {
   position: relative;
   top: -350px;
-  background-color: white;
+  background-color: $product-bg-color;
+  padding: $base-padding 0;
 }

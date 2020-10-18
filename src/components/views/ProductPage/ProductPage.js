@@ -70,21 +70,21 @@ const ProductPage = ({
   else
     return (
       <div className={styles.root}>
-        <div className={styles.menu}>
-          <ul>
-            <li className='col-8'>FURNITURE</li>
-            <li className='col-1'>
-              <a href='/'>Home</a>
-            </li>
-            <li className='col-1'>
-              <a href='/#'>Furniture </a>
-            </li>
-            <li className='col-1'>
-              <a href='/#'>{category} </a>
-            </li>
-          </ul>
-        </div>
         <div className='container'>
+          <div className={'col-auto ' + styles.menu}>
+            <ul>
+              <h2>FURNITURE</h2>
+              <li>
+                <a href='/'>Home</a>
+              </li>
+              <li>
+                <a href='/#'>Furniture </a>
+              </li>
+              <li>
+                <a href='/#'>{category} </a>
+              </li>
+            </ul>
+          </div>
           <div className={styles.product}>
             <div className='row'>
               <div className='col-5'>
