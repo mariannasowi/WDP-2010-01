@@ -12,14 +12,14 @@
     .arrow {
       height: 92px;
       width: 33px;
-      background-color: $brands-line;
+      background-color: $brands-boxArrow;
       display: flex;
       justify-content: center;
       align-items: center;
       cursor: pointer;
 
       .icon {
-        color: $brands-sale;
+        color: $brands-arrow;
         font-size: 20px;
 
         &:hover {

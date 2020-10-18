@@ -5,7 +5,12 @@ import styles from './Homepage.module.scss';
 
 import FeatureBoxes from '../../features/FeatureBoxes/FeatureBoxes';
 import NewFurniture from '../../features/NewFurniture/NewFurnitureContainer';
+<<<<<<< HEAD
 import Gallery from '../../features/Gallery/GalleryContainer';
+=======
+import ClientFeedback from '../../features/ClientFeedback/ClientFeedbackContainer';
+
+>>>>>>> master
 import PromotedProduct from '../../features/PromotedProduct/PromotedProductContainer';
 import SalesContainer from '../../features/Sales/SalesContainer';
 import LatestBlog from '../../features/LatestBlog/LatestBlogContainer';
@@ -20,6 +25,7 @@ const Homepage = () => (
     <Gallery />
     <LatestBlog />
     <Brands />
+    <ClientFeedback />
   </div>
 );
 
