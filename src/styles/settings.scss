@@ -185,6 +185,15 @@ $product-p-color: $battleshipGray;
 $product-oldPrice-color: $mediumGray;
 $product-root-color: $veryLightGray;
 
+/* GALLERY */
+$theme-color: $orange;
+$frame-underline-color: $mediumDarkGray;
+$background-color:  #e0e3ed;
+$buttons-hints-color: #000;
+$price: #fff;
+$price-bigger-font: #228b22;
+
+
 /* OTHER */
 $base-padding: 24px;
 $transition: all 0.25s;
@@ -192,6 +201,6 @@ $transition: all 0.25s;
   transition: $transition;
 }
 
-%hover {
-  transition: ease 250ms;
-}
+
+
+

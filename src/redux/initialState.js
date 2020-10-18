@@ -6,6 +6,16 @@ const initialState = {
     { id: 'table', name: 'Table' },
     { id: 'dining', name: 'Dining' },
   ],
+  galleryTabs: [
+    { id: 'featured', name: 'Featured' },
+    { id: 'topSeller', name: 'Top seller' },
+    { id: 'saleOff', name: 'Sale off' },
+    { id: 'topRated', name: 'Top rated' },
+  ],
+  galleryPromotedProduct: {
+    src:'https://www.pngfind.com/pngs/m/55-553255_double-bed-png-bed-png-transparent-png.png',
+    alt:'furniture'
+  },
   products: [
     {
       id: 'aenean-ru-bristique-1',

@@ -14,7 +14,7 @@
     border-bottom: 4px solid $featureBox-root-border;
 
     h3 {
-      color: $primary;
+      color: $theme-color;
       text-transform: uppercase;
       font-size: 20px;
       line-height: 38px;
@@ -28,7 +28,7 @@
       bottom: -4px;
       left: 0;
       width: 45px;
-      border-bottom: 4px solid $primary;
+      border-bottom: 4px solid $theme-color;
     }
   }
 
@@ -63,12 +63,13 @@
     border-right: none;
     cursor: pointer;
     text-transform: uppercase;
-    
+    text-decoration: none;
+
     &.active,
     &:hover {
-      color: $primary;
+      color: $theme-color;
 
-      @extend %hover;
+      @extend %hover-effect;
 
       &::before {
         content: "";
@@ -76,20 +77,20 @@
         top: -4px;
         left: 0;
         width: 100%;
-        border-top: 4px solid $primary;
+        border-top: 4px solid $theme-color;
       }
     }
 
     &.active {
-      background-color: $lightGrayishBlue;
-      border-bottom-color: $lightGrayishBlue;
+      background-color: $background-color;
+      border-bottom-color: $background-color;
     }
   }
 
   .product {
     border: 1px solid $featureBox-root-border;
     border-top: none;
-    background-color: $lightGrayishBlue;
+    background-color: $background-color;
     position: relative;
 
     .photo {
@@ -117,7 +118,7 @@
     .buttonWrapper {
       span {
         font-size: 10px;
-        background-color: $black;
+        background-color: $buttons-hints-color;
         color: $sale-color;
         padding: 5px;
         position: relative;
@@ -131,7 +132,7 @@
           left: -4px;
           height: 8px;
           width: 8px;
-          background-color: $black;
+          background-color: $buttons-hints-color;
           transform: translateY(-50%) rotate(45deg);
           z-index: -1;
         }
@@ -144,9 +145,9 @@
         cursor: pointer;
 
         &:hover {
-          color: $primary;
+          color: $theme-color;
           background: rgba(0,0,0,0);
-          border-color: $line-color;
+          border-color: $buttons-hints-color;
 
           + span {
             opacity: 1;
@@ -160,7 +161,7 @@
       bottom: 28%;
       right: 110px;
       transform: translateX(50%);
-      background-color: rgba($battleshipGray, 0.9);
+      background-color: rgba($frame-underline-color, 0.6);
       border-radius: 50%;
       width: 90px;
       height: 90px;
@@ -171,12 +172,12 @@
       z-index: 2;
 
       .price {
-        color: $sale-color;
+        color: $price;
         font-weight: 600;
       }
 
       .oldPrice {
-        color: $sale-color;
+        color: $price;
         font-size: 0.8rem;
         text-decoration: line-through;
       }
@@ -192,7 +193,7 @@
       justify-content: center;
       align-items: center;
       padding: 15px 30px;
-      box-shadow: -1px 2px 5px rgba($black, 0.75);
+      box-shadow: -1px 2px 5px rgba($buttons-hints-color, 0.75);
       overflow: hidden;
 
       &::before,
@@ -201,7 +202,7 @@
         position: absolute;
         height: 30px;
         width: 30px;
-        background-color: $black;
+        background-color: $buttons-hints-color;
         z-index: 1;
       }
 
@@ -254,7 +255,7 @@
         left: 0;
         height: 100%;
         width: 100%;
-        background-color: rgba($black, 0.5);
+        background-color: rgba($buttons-hints-color, 0.5);
       }
 
       &:first-of-type:after {
@@ -265,7 +266,7 @@
 }
 
 .rightPanel {
-  background-color: $lightGrayishBlue;
+  background-color: $background-color;
   position: relative;
 
   .photo {
@@ -293,12 +294,12 @@
       span {
         font-size: 2.5rem;
         font-weight: 600;
-        color: $compare-color;
+        color: $price-bigger-font;
       }
     }
 
     h2 {
-      color: $primary;
+      color: $theme-color;
       font-weight: 600;
     }
 

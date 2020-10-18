@@ -5,17 +5,6 @@ export const getCount = ({ products }) => products.length;
 export const getNew = ({ products }) =>
   products.filter(item => item.newFurniture === true);
 
-export const getSalesOff = ({ products }) =>
-  products.filter(product => product.oldPrice !== undefined);
-
-export const getFeatured = ({ products }) =>
-  products.filter(product => product.promo !== undefined);
-
-export const getTopSeller = ({ products }) =>
-  products.filter(product => product.topSeller === true);
-
-export const getTopRated = ({ products }) =>
-  products.filter(product => product.userStars > 2);
 export const getHotDeal = ({ products }) =>
   products.filter(item => item.hotDeal === true);
 

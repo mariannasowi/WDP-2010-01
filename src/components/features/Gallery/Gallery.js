@@ -16,18 +16,15 @@ import ProductRating from '../ProductRating/ProductRating';
 
 const Gallery = (props) => {
 
-  const categories = [
-    { id: 'featured', name: 'featured' },
-    { id: 'topSeller', name: 'top seller' },
-    { id: 'saleOff', name: 'sale off' },
-    { id: 'topRated', name: 'top rated' },
-  ];
+  const {galleryTabs: categories, galleryPromotedProduct} = props;
 
-  const defaultTab = categories.find(category => category.name === 'top seller').id;
+  const defaultTab = categories.find(category => category.name === 'Top seller').id;
   
   const [activeCategory, setActiveCategory] = useState(defaultTab);
 
   const categoryProducts = props[activeCategory];
+
+  
 
   return (
     <div className={styles.root}>
@@ -113,8 +110,8 @@ const Gallery = (props) => {
           <div className={'col-6 ' + styles.rightPanel}>
             <div className={styles.photo}>
               <img
-                src='http://www.pngall.com/wp-content/uploads/2/Double-Bed.png'
-                alt='furniture'
+                src={galleryPromotedProduct.src}
+                alt={galleryPromotedProduct.alt}
               />
             </div>
             <div className={styles.content}>
