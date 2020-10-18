@@ -197,6 +197,8 @@
   background-color: gray;
   margin-bottom: 50px;
   height: 400px;
+  display: flex;
+  // align-self: stretch;
 
   .furniture {
     color: $topBar-color-a;
@@ -208,34 +210,33 @@
     margin: 0;
     padding: 0;
     text-transform: capitalize;
+    display: flex;
+    position: relative;
+    right: -900px;
+    top: -50px;
 
     li {
-      display: inline-block;
-      line-height: 85px;
+      display: flex;
       margin: 0 5px 0 0;
       color: white;
-      font-size: 30px;
+      font-size: 20px;
 
       a {
         @extend %hover-effect;
         color: $topBar-color-a;
         font-size: 14px;
+        display: flex;
+        align-items: center;
 
         &:hover {
           color: $topBar-color;
         }
       }
     }
-
-    a::before {
-      content: "\00BB";
-    }
   }
 
   h2 {
-    display: inline-block;
     color: $topBar-color-a;
-    padding-right: 700px;
   }
 }
 
