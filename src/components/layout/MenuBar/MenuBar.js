@@ -4,8 +4,9 @@ import PropTypes from 'prop-types';
 import ProductSearch from '../../features/ProductSearch/ProductSearch';
 
 import styles from './MenuBar.module.scss';
+import { Link } from 'react-router-dom';
 
-const MenuBar = ({ children }) => (
+const MenuBar = ({ id, children }) => (
   <div className={styles.root}>
     <div className='container'>
       <div className='row align-items-center'>
@@ -15,12 +16,12 @@ const MenuBar = ({ children }) => (
         <div className={'col-auto ' + styles.menu}>
           <ul>
             <li>
-              <a href='/#' className={styles.active}>
-                Home
-              </a>
+              <a href='/#'>Home</a>
             </li>
             <li>
-              <a href='/#'>Furniture</a>
+              <Link id={id} exact to={'/shop/' + id} className={styles.active}>
+                Furniture
+              </Link>
             </li>
             <li>
               <a href='/#'>Chair</a>
@@ -46,6 +47,7 @@ const MenuBar = ({ children }) => (
 
 MenuBar.propTypes = {
   children: PropTypes.node,
+  id: PropTypes.string.isRequired,
 };
 
 export default MenuBar;

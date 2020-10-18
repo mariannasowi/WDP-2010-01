@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faListUl, faSearch, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './ProductSearch.module.scss';
-
+import { Link } from 'react-router-dom';
 const ProductSearch = () => (
   <form action='' className={styles.root}>
     <div className={styles.category}>
@@ -20,9 +20,9 @@ const ProductSearch = () => (
               </a>
             </li>
             <li>
-              <a href='#' value=''>
+              <Link exact to={'/product/furniture'}>
                 FURNITURE
-              </a>
+              </Link>
             </li>
             <li>
               <a href='#' value=''>
