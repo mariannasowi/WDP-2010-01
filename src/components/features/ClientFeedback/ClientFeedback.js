@@ -3,21 +3,40 @@ import PropTypes from 'prop-types';
 
 import styles from './ClientFeedback.module.scss';
 import Feedback from '../../common/Feedback/Feedback';
+import SwipeComponent from '../../common/SwipeComponent/SwipeComponent';
 
 class ClientFeedback extends React.Component {
   state = {
     activePage: 0,
+    manualPageChange: false,
+  };
+
+  handleLeftAction = () => {
+    const { activePage, manualPageChange } = this.state;
+    if (manualPageChange) {
+      this.setState({ manualPageChange: false });
+    } else {
+      this.setState({ activePage: activePage + 1 });
+    }
+  };
+
+  handleRightAction = () => {
+    const { activePage, manualPageChange } = this.state;
+    if (manualPageChange) {
+      this.setState({ manualPageChange: false });
+    } else if (activePage > 0) {
+      this.setState({ activePage: activePage - 1 });
+    }
   };
 
   handlePageChange(newPage) {
-    this.setState({ activePage: newPage });
+    this.setState({ activePage: newPage, manualPageChange: true });
   }
 
   render() {
     const { feedbacks } = this.props;
     const { activePage } = this.state;
 
-    const currentFeedbackProps = feedbacks[activePage];
     const pagesCount = Math.ceil(feedbacks.length);
 
     const dots = [];
@@ -31,6 +50,21 @@ class ClientFeedback extends React.Component {
             page {i}
           </a>
         </li>
+      );
+    }
+
+    const swipeContent = [];
+    for (let page = 0; page < pagesCount; page++) {
+      swipeContent.push(
+        <div className='row'>
+          {feedbacks
+            .slice(activePage, (activePage + 1))
+            .map(item => (
+              <div key={item.id} className={`col-12`}>
+                <Feedback {...item} />
+              </div>
+            ))}
+        </div>
       );
     }
 
@@ -50,7 +84,13 @@ class ClientFeedback extends React.Component {
           </div>
           <div className='row'>
             {feedbacks.length ? (
-              <Feedback {...currentFeedbackProps} />
+              <SwipeComponent
+                activePage={this.state.activePage}
+                rightAction={this.handleRightAction}
+                leftAction={this.handleLeftAction}
+              >
+                {swipeContent}
+              </SwipeComponent>
             ) : (
               <div className={styles.noComent}>There is no client feedbacks</div>
             )}
