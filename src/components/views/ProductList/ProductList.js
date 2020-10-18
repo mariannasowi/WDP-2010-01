@@ -1,24 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './ProductList.module.scss';
-import NewFurniture from '../../features/NewFurniture/NewFurniture';
 
-const ProductList = ({ category }) => {
+const ProductList = ({ name, category }) => {
   return (
     <div>
       <ul>
-        <h2>FURNITURE</h2>
+        <h2>{name}</h2>
         <li>
           <a href='/'>Home</a>
         </li>
       </ul>
-      <NewFurniture />
     </div>
   );
 };
 
 ProductList.propTypes = {
   category: PropTypes.string,
+  name: PropTypes.string,
 };
 
 export default ProductList;

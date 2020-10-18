@@ -5,8 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faListUl, faSearch, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './ProductSearch.module.scss';
-import { Link } from 'react-router-dom';
-const ProductSearch = () => (
+
+const ProductSearch = id => (
   <form action='' className={styles.root}>
     <div className={styles.category}>
       <FontAwesomeIcon className={styles.icon} icon={faListUl} />
@@ -20,9 +20,9 @@ const ProductSearch = () => (
               </a>
             </li>
             <li>
-              <Link exact to={'/product/furniture'}>
-                FURNITURE
-              </Link>
+              <a href='#' value=''>
+                Furniture
+              </a>
             </li>
             <li>
               <a href='#' value=''>
