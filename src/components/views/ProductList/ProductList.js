@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import styles from './ProductList.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBox';
 import PageNotFound from '../../views/PageNotFound/PageNotFound';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 const ProductList = ({ id, name, products, error }) => {
   if (error) return <PageNotFound />;
@@ -20,23 +22,19 @@ const ProductList = ({ id, name, products, error }) => {
           </ul>
         </div>
         <div className='container'>
-          <div className='row'>
-            <div className='col-9'>
-              <div className='row'>
-                {products &&
-                  products
-                    .filter(item => item.category === id)
-                    .map((product, i) => (
-                      <div key={i}>
-                        <div className='col'>
-                          <ProductBox {...product} />
-                        </div>
-                      </div>
-                    ))}
-              </div>
+          <div className='col-9'>
+            <div className='row'>
+              {products &&
+                products
+                  .filter(item => item.category === id)
+                  .map((product, i) => (
+                    <div key={i} className='col-4'>
+                      <ProductBox {...product} />
+                    </div>
+                  ))}
             </div>
-            <div className='col-3'></div>
           </div>
+          <div className='col-3'></div>
         </div>
       </div>
     );
