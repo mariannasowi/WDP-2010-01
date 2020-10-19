@@ -52,6 +52,12 @@
   }
 }
 
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .carousel {
   position: relative;
   width: 100%;
@@ -93,6 +99,7 @@
       position: absolute;
       background: $promotedProductBox-b;
       opacity: 0.5;
+      z-index: 1;
     }
 
     h2 {
@@ -171,4 +178,29 @@
   opacity: 0;
   transition: all 1s ease-in-out;
   visibility: hidden;
+}
+
+.imagesMobile {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .root {
+    :global(.col-4) > * {
+      display: none;
+    }
+  }
+
+  .imagesMobile {
+    display: block;
+  }
+
+  .imagesLarge {
+    display: none;
+  }
+
+  img {
+    max-height: 100%;
+    max-width: 100%;
+  }
 }
