@@ -76,8 +76,7 @@ class ClientFeedback extends React.Component {
               <div className={'col-auto ' + styles.heading}>
                 <h3>Client Feedback</h3>
               </div>
-              <div className={'col '}></div>
-              <div className={'col-auto ' + styles.dots}>
+                <div className={'col-auto ' + styles.dots}>
                 <ul>{dots}</ul>
               </div>
             </div>
