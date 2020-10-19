@@ -1,0 +1,42 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  padding: 2rem 0;
+
+  .wrapper {
+    border-top: 2px solid $brands-border;
+    border-bottom: 2px solid $brands-border;
+    justify-content: space-between;
+    align-items: center;
+
+    .arrow {
+      height: 92px;
+      width: 33px;
+      background-color: $brands-boxArrow;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      .icon {
+        color: $brands-arrow;
+        font-size: 20px;
+
+        &:hover {
+          color: $brands-hover;
+        }
+      }
+    }
+
+    .brandBox {
+      display: flex;
+
+      img {
+        width: 143px;
+        height: 92px;
+        object-fit: cover;
+        margin: 25px 15px;
+      }
+    }
+  }
+}

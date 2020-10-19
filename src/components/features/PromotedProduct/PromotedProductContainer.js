@@ -7,7 +7,7 @@ const mapStateToProps = state => {
   const promotedProduct = state.promotedProduct;
 
   return {
-    ...promotedProduct,
+    promotedProduct,
     hotDeal: getHotDeal(state),
   };
 };

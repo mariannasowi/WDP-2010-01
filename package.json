@@ -13,9 +13,9 @@
     "refactor": "run-s refactor:*",
     "refactor:format": "prettier --write \"src/**/*.{js,html,scss}\"",
     "refactor:lint": "eslint src/",
-    "refactor:stylelint": "stylelint 'src/**/*.scss' --syntax scss --fix",
-    "stylelint": "stylelint 'src/**/*.scss' --syntax scss",
-    "stylelint:fix": "stylelint 'src/**/*.scss' --syntax scss --fix",
+    "refactor:stylelint": "stylelint \"src/**/*.scss\" --syntax scss --fix",
+    "stylelint": "stylelint \"src/**/*.scss\" --syntax scss",
+    "stylelint:fix": "stylelint \"src/**/*.scss\" --syntax scss --fix",
     "build": "react-scripts build",
     "test": "react-scripts test --noStackTrace",
     "test-all": "react-scripts test --watchAll=false --noStackTrace",
@@ -53,7 +53,7 @@
     ]
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-brands-svg-icons": "^5.11.2",
     "@fortawesome/free-regular-svg-icons": "^5.11.2",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
@@ -66,11 +66,13 @@
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-id-swiper": "^4.0.0",
     "react-redux": "^7.1.1",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.1.2",
+    "react-scripts": "^3.4.3",
     "react-test-renderer": "^16.9.0",
-    "redux": "^4.0.4"
+    "redux": "^4.0.4",
+    "swiper": "^6.3.2"
   },
   "devDependencies": {
     "husky": "^3.1.0",
