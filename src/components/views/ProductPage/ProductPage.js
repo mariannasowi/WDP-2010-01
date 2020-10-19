@@ -22,6 +22,7 @@ import {
   faPinterestP,
 } from '@fortawesome/free-brands-svg-icons';
 import ProductImages from '../../common/ProductImages/ProductImages';
+import PageNotFound from '../../views/PageNotFound/PageNotFound';
 
 const ProductPage = ({
   id,
@@ -40,6 +41,7 @@ const ProductPage = ({
   availability,
   category,
   images,
+  error,
 }) => {
   const isProductAddedToCompare =
     compare &&
@@ -64,138 +66,171 @@ const ProductPage = ({
     addToFavourite(id);
   };
 
-  return (
-    <div className={styles.root}>
-      <div className='container'>
-        <div className='row'>
-          <div className='col-5'>
-            <div className={styles.photo}>
-              <img src={image} alt={name} />
+  if (error) return <PageNotFound />;
+  else
+    return (
+      <div className={styles.root}>
+        <div className={styles.menu}>
+          <div className='container'>
+            <div>
+              <div className='navbar'>
+                <h2>FURNITURE</h2>
+              </div>
+              <div>
+                <ul>
+                  <li>
+                    <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
+                    <a href='/'>Home</a>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
+                    <a href='/#'>Furniture </a>
+                  </li>
+                  <li>
+                    <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
+                    <a href='/#'>{category} </a>
+                  </li>
+                </ul>
+              </div>
             </div>
-            {typeof images == 'undefined' ? '' : <ProductImages images={images} />}
           </div>
-          <div className='col-7'>
+        </div>
+        <div className='container'>
+          <div className={styles.product}>
             <div className='row'>
-              <div className={`col-10 ${styles.content}`}>
-                <h5>{name}</h5>
-                <div className={styles.stars}>
-                  <ProductRating
-                    id={id}
-                    stars={stars}
-                    isStarred={isStarred}
-                    className={styles.star}
-                  />
-                  <p>(0 reviews) | Add your review</p>
+              <div className='col-5'>
+                <div className={styles.photo}>
+                  <img src={image} alt={name} />
                 </div>
+                {typeof images == 'undefined' ? '' : <ProductImages images={images} />}
               </div>
-              <div className={`col-2 ${styles.changePage}`}>
-                <Button variant='white'>
-                  <FontAwesomeIcon icon={faAngleLeft}>Left</FontAwesomeIcon>
-                </Button>
-                <Button variant='white'>
-                  <FontAwesomeIcon icon={faAngleRight}>Right</FontAwesomeIcon>
-                </Button>
-              </div>
-            </div>
-            <div className={styles.line}></div>
-            <div className={styles.prices}>
-              <div className={styles.oldPrice}>{oldPrice}</div>
-              <div className={styles.price}>
-                <Button noHover>$ {price}</Button>
-              </div>
-            </div>
-            <div className={styles.line}></div>
-            <div className={styles.actions}>
-              <div className={styles.buttons}>
-                <Button variant='white'>
-                  <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO
-                  CART
-                </Button>
-                <Button
-                  className={heart ? styles.heart : ''}
-                  variant='white'
-                  onClick={addToFavouriteHandler}
-                >
-                  <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
-                </Button>
-                <Button
-                  className={isProductAddedToCompare ? styles.productIsCompared : ''}
-                  variant='white'
-                  onClick={compareHandler}
-                >
-                  <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
-                </Button>
-                <Button variant='white'>
-                  <FontAwesomeIcon icon={faEnvelope}>Post</FontAwesomeIcon>
-                </Button>
-              </div>
-              <div className={styles.buttons}>
-                <p>Quantity:</p>
-                <input type='number' value='1' step='1'></input>
-                <Button variant='quantity'>
-                  <FontAwesomeIcon icon={faMinus}>Minus</FontAwesomeIcon>
-                </Button>
-                <Button variant='quantity'>
-                  <FontAwesomeIcon icon={faPlus}>Plus</FontAwesomeIcon>
-                </Button>
-              </div>
-            </div>
-            <div className={styles.line}></div>
-            <div className={styles.overview}>
-              <h5>Quick overview</h5>
-              <p>{description}</p>
-            </div>
-            <div className={styles.line}></div>
-            <div className={styles.overview}>
-              <p>
-                <span>Availability: </span>
-                {availability}
-              </p>
-              <p>
-                <span>Category: </span>
-                {category}
-              </p>
-            </div>
-            <div className={styles.line}></div>
-            <div className={styles.actions}>
-              <div className={styles.buttons}>
-                <Button variant='white' className={styles.buttonFacebook}>
-                  <FontAwesomeIcon icon={faFacebookF} className={styles.facebook}>
-                    Facebook
-                  </FontAwesomeIcon>{' '}
-                  Share
-                </Button>
-                <Button variant='white' className={styles.buttonGoogle}>
-                  <FontAwesomeIcon icon={faGooglePlusG} className={styles.google}>
-                    Google+
-                  </FontAwesomeIcon>
-                  Google+
-                </Button>
-                <Button variant='white' className={styles.buttonPinterest}>
-                  <FontAwesomeIcon icon={faPinterestP} className={styles.pinterest}>
-                    Pinterest
-                  </FontAwesomeIcon>
-                  Pinterest
-                </Button>
-                <Button variant='white' className={styles.buttonTwitter}>
-                  <FontAwesomeIcon icon={faTwitter} className={styles.twitter}>
-                    Twitter
-                  </FontAwesomeIcon>
-                  Tweet
-                </Button>
-                <Button variant='white' className={styles.buttonLinkedin}>
-                  <FontAwesomeIcon icon={faLinkedinIn} className={styles.linkedin}>
-                    Linkedin
-                  </FontAwesomeIcon>
-                  Linkedin
-                </Button>
+              <div className='col-7'>
+                <div className='row'>
+                  <div className={`col-10 ${styles.content}`}>
+                    <h5>{name}</h5>
+                    <div className={styles.stars}>
+                      <ProductRating
+                        id={id}
+                        stars={stars}
+                        isStarred={isStarred}
+                        className={styles.star}
+                      />
+                      <p>(0 reviews) | Add your review</p>
+                    </div>
+                  </div>
+                  <div className={`col-2 ${styles.changePage}`}>
+                    <Button variant='white'>
+                      <FontAwesomeIcon icon={faAngleLeft}>Left</FontAwesomeIcon>
+                    </Button>
+                    <Button variant='white'>
+                      <FontAwesomeIcon icon={faAngleRight}>Right</FontAwesomeIcon>
+                    </Button>
+                  </div>
+                </div>
+                <div className={styles.line}></div>
+                <div className={styles.prices}>
+                  <div className={styles.oldPrice}>{oldPrice}</div>
+                  <div className={styles.price}>
+                    <Button noHover>$ {price}</Button>
+                  </div>
+                </div>
+                <div className={styles.line}></div>
+                <div className={styles.actions}>
+                  <div className={styles.buttons}>
+                    <Button variant='white'>
+                      <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO
+                      CART
+                    </Button>
+                    <Button
+                      className={heart ? styles.heart : ''}
+                      variant='white'
+                      onClick={addToFavouriteHandler}
+                    >
+                      <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
+                    </Button>
+                    <Button
+                      className={
+                        isProductAddedToCompare ? styles.productIsCompared : ''
+                      }
+                      variant='white'
+                      onClick={compareHandler}
+                    >
+                      <FontAwesomeIcon icon={faExchangeAlt}>
+                        Add to compare
+                      </FontAwesomeIcon>
+                    </Button>
+                    <Button variant='white'>
+                      <FontAwesomeIcon icon={faEnvelope}>Post</FontAwesomeIcon>
+                    </Button>
+                  </div>
+                  <div className={styles.buttons}>
+                    <p>Quantity:</p>
+                    <input type='number' value='1' step='1'></input>
+                    <Button variant='quantity'>
+                      <FontAwesomeIcon icon={faMinus}>Minus</FontAwesomeIcon>
+                    </Button>
+                    <Button variant='quantity'>
+                      <FontAwesomeIcon icon={faPlus}>Plus</FontAwesomeIcon>
+                    </Button>
+                  </div>
+                </div>
+                <div className={styles.line}></div>
+                <div className={styles.overview}>
+                  <h5>Quick overview</h5>
+                  <p>{description}</p>
+                </div>
+                <div className={styles.line}></div>
+                <div className={styles.overview}>
+                  <p>
+                    <span>Availability: </span>
+                    {availability}
+                  </p>
+                  <p>
+                    <span>Category: </span>
+                    {category}
+                  </p>
+                </div>
+                <div className={styles.line}></div>
+                <div className={styles.actions}>
+                  <div className={styles.buttons}>
+                    <Button variant='white' className={styles.buttonFacebook}>
+                      <FontAwesomeIcon icon={faFacebookF} className={styles.facebook}>
+                        Facebook
+                      </FontAwesomeIcon>{' '}
+                      Share
+                    </Button>
+                    <Button variant='white' className={styles.buttonGoogle}>
+                      <FontAwesomeIcon icon={faGooglePlusG} className={styles.google}>
+                        Google+
+                      </FontAwesomeIcon>
+                      Google+
+                    </Button>
+                    <Button variant='white' className={styles.buttonPinterest}>
+                      <FontAwesomeIcon icon={faPinterestP} className={styles.pinterest}>
+                        Pinterest
+                      </FontAwesomeIcon>
+                      Pinterest
+                    </Button>
+                    <Button variant='white' className={styles.buttonTwitter}>
+                      <FontAwesomeIcon icon={faTwitter} className={styles.twitter}>
+                        Twitter
+                      </FontAwesomeIcon>
+                      Tweet
+                    </Button>
+                    <Button variant='white' className={styles.buttonLinkedin}>
+                      <FontAwesomeIcon icon={faLinkedinIn} className={styles.linkedin}>
+                        Linkedin
+                      </FontAwesomeIcon>
+                      Linkedin
+                    </Button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
 };
 
 ProductPage.propTypes = {
