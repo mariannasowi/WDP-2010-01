@@ -52,19 +52,14 @@ class ClientFeedback extends React.Component {
         </li>
       );
     }
-
     const swipeContent = [];
     for (let page = 0; page < pagesCount; page++) {
       swipeContent.push(
-        <div className='row'>
-          {feedbacks
-            .slice(activePage, (activePage + 1))
-            .map(item => (
-              <div key={item.id} className={`col-12`}>
-                <Feedback {...item} />
-              </div>
-            ))}
-        </div>
+        feedbacks.slice(activePage, activePage + 1).map(item => (
+          <div key={item.id} className={`col-12`}>
+            <Feedback {...item} />
+          </div>
+        ))
       );
     }
 
@@ -76,7 +71,7 @@ class ClientFeedback extends React.Component {
               <div className={'col-auto ' + styles.heading}>
                 <h3>Client Feedback</h3>
               </div>
-                <div className={'col-auto ' + styles.dots}>
+              <div className={'col-auto ' + styles.dots}>
                 <ul>{dots}</ul>
               </div>
             </div>
