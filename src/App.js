@@ -10,6 +10,7 @@ import MainLayout from './components/layout/MainLayout/MainLayout';
 import Homepage from './components/views/Homepage/Homepage';
 import ProductList from './components/views/ProductList/ProductListContainer';
 import ProductPage from './components/views/ProductPage/ProductPageContainer';
+import NotFound from './components/views/PageNotFound/PageNotFound';
 import BlogArticle from './components/views/BlogArticle/BlogArticle';
 
 const App = () => (
@@ -22,6 +23,7 @@ const App = () => (
           <Route exact path={'/shop/furniture'} component={ProductList} />
           <Route exact path={'/product/:productId'} component={ProductPage} />
           <Route exact path={'/blog/:blogId'} component={BlogArticle} />
+          <Route path='*' component={NotFound} />
         </Switch>
       </MainLayout>
     </BrowserRouter>

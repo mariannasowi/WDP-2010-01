@@ -104,3 +104,32 @@
     }
   }
 }
+
+@media (max-width: 992px) {
+  .root {
+    .panelBar {
+      margin-bottom: 60px;
+    }
+
+    .heading {
+      padding-top: 30px;
+      width: 100%;
+    }
+
+    .h2 {
+      transform: translateX(-20px);
+    }
+
+    .menu {
+      text-align: center;
+      position: absolute;
+      transform: translateY(50px);
+    }
+
+    .dots {
+      text-align: right;
+      transform: translateY(30px);
+      width: auto;
+    }
+  }
+}
