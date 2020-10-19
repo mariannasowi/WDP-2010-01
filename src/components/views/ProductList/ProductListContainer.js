@@ -6,7 +6,7 @@ import ProductList from './ProductList';
 const mapStateToProps = (state, props) => {
   const category = getCategoryById(state, props.match.params.categoryId);
   return {
-    category,
+    ...category,
     count: getCount(state),
     compare: state.compare,
     products: getAll(state),

@@ -4,22 +4,26 @@ import styles from './ProductList.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBox';
 import PageNotFound from '../../views/PageNotFound/PageNotFound';
 
-const ProductList = ({ category, products, error }) => {
+const ProductList = ({ id, name, products, error }) => {
   if (error) return <PageNotFound />;
   else
     return (
       <div>
-        <ul>
-          <h2>{category && category.name}</h2>
-          <li>
-            <a href='/'>Home</a>
-          </li>
-        </ul>
+        <div className='navbar'>
+          <h2>{name}</h2>
+        </div>
+        <div>
+          <ul>
+            <li>
+              <a href='/'>Home</a>
+            </li>
+          </ul>
+        </div>
         <div className='container'>
           <div className='row'>
             {products &&
               products
-                .filter(item => item.category === category.id)
+                .filter(item => item.category === id)
                 .map((product, i) => (
                   <div key={i}>
                     <div className='col'>
