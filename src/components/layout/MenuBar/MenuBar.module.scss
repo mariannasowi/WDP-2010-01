@@ -108,7 +108,9 @@
 
     .hamburger_label {
       display: flex;
-      flex: auto
+      flex: auto;
+      position: relative;
+      top: 5px;
     }
 
     .icon {
