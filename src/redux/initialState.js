@@ -13,7 +13,7 @@ const initialState = {
     { id: 'topRated', name: 'Top rated' },
   ],
   galleryPromotedProduct: {
-    src:'https://www.pngfind.com/pngs/m/55-553255_double-bed-png-bed-png-transparent-png.png',
+    src:'https://www.freepnglogos.com/uploads/bed-png/bed-17.png',
     alt:'furniture'
   },
   products: [
