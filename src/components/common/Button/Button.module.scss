@@ -88,3 +88,11 @@
     color: $button-next-back-hover;
   }
 }
+
+.green {
+  @extend .main;
+  background-color: $compare-color;
+  border-radius: 3px;
+  box-shadow: 1px 1px 5px rgba($black, 0.4);
+  text-transform: uppercase;
+}
