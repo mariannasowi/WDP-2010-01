@@ -26,12 +26,12 @@ class LatestBlog extends React.Component {
     for (let i = 0; i < pagesCount; i++) {
       dots.push(
         <li key={i}>
-          <a
+          <button
             onClick={() => this.handlePageChange(i)}
             className={i === activePage && styles.active}
           >
             page {i}
-          </a>
+          </button>
         </li>
       );
     }

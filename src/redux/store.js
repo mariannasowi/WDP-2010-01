@@ -18,7 +18,8 @@ const reducers = {
   compare: compareProductsReducer,
   viewport: viewportReducer,
   brands: brandsReducer,
-  gallery: galleryReducer
+  gallery: galleryReducer,
+  posts: postsReducer,
 };
 
 // add blank reducers for initial state properties without reducers

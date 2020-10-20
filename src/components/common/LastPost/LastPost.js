@@ -26,7 +26,7 @@ const LastPost = ({ id, date, comments, title, description, image }) => (
         </div>
       </div>
       <h4>
-        <a href='#'>{title}</a>
+        <a href='/#'>{title}</a>
       </h4>
       <p className={styles.description}>{description}</p>
       <div className={styles.button}>
