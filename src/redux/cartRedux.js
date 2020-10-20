@@ -7,18 +7,85 @@ const reducerName = 'cart';
 const createActionName = name => `app/${reducerName}/${name}`;
 
 /* action types */
-const ADD_PRODUCT = createActionName('ADD_PRODUCT');
+const ADD_TO_CART = createActionName('ADD_TO_CART');
+const REMOVE_FROM_CART = createActionName('REMOVE_FROM_CART');
+const TOGGLE_CART = createActionName('TOGGLE_CART');
+const CHANGE_QUANTITY = createActionName('CHANGE_QUANTITY');
 
 /* action creators */
-export const addProduct = payload => ({ payload, type: ADD_PRODUCT });
+export const addToCart = payload => ({ payload, type: ADD_TO_CART });
+export const removeFromCart = payload => ({ payload, type: REMOVE_FROM_CART });
+export const toggleCart = payload => ({ payload, type: TOGGLE_CART });
+export const changeQuantity = payload => ({ payload, type: CHANGE_QUANTITY });
 
 /* reducer */
 export default function reducer(statePart = [], action = {}) {
   switch (action.type) {
-    case ADD_PRODUCT: {
+    case ADD_TO_CART: {
+      const isInCart = statePart.products.reduce(
+        (acc, product) => acc || product.id === action.payload.id,
+        false
+      );
+      const setTotalPrice = (statePart.totalPrice += action.payload.price);
+      const newStatePart = isInCart
+        ? statePart.products.filter(product => {
+            if (product.id === action.payload.id) {
+              if (product.quantity == null) {
+                product.quantity = 1;
+              }
+              product.quantity = product.quantity + 1;
+            }
+            return [statePart.products];
+          })
+        : [...statePart.products, action.payload];
+      return {
+        products: newStatePart,
+        isOpen: true,
+        totalPrice: setTotalPrice,
+      };
+    }
+    case REMOVE_FROM_CART: {
+      const setTotalPrice = statePart.totalPrice - action.payload.summaryPrice;
       return {
         ...statePart,
-        products: [...statePart.products, action.payload],
+        products: statePart.products.filter(prod => prod.id !== action.payload.id),
+        totalPrice: setTotalPrice,
+      };
+    }
+    case TOGGLE_CART: {
+      return {
+        ...statePart,
+        isOpen: action.payload,
+      };
+    }
+    case CHANGE_QUANTITY: {
+      let newTotalPrice;
+      const newStatePart = statePart.products.filter(product => {
+        if (product.id === action.payload.id) {
+          if (product.quantity == null) {
+            product.quantity = 1;
+          }
+          if (action.payload.type === 'increase') {
+            product.quantity = product.quantity + 1;
+            newTotalPrice = statePart.totalPrice + product.price;
+            return [statePart.products];
+          }
+          if (action.payload.type === 'decrease') {
+            if (product.quantity > 1) {
+              newTotalPrice = statePart.totalPrice - product.price;
+              product.quantity = product.quantity - 1;
+              return [statePart.products];
+            } else {
+              newTotalPrice = statePart.totalPrice;
+            }
+          }
+        }
+        return [statePart.products];
+      });
+      return {
+        products: newStatePart,
+        isOpen: true,
+        totalPrice: newTotalPrice,
       };
     }
     default:
