@@ -26,12 +26,10 @@ const ControlBar = props => {
         </div>
     
       <div className={styles.checkbox}>
-          <div>
-          <input type='checkbox' id='hamburger' className={styles.list}></input>
+          <input type='checkbox' className={styles.list}></input>
           <FontAwesomeIcon className={styles.icon} icon={faThLarge} />
-          <input type='checkbox' id='hamburger' className={styles.collection}></input>
+          <input type='checkbox' className={styles.collection}></input>
           <FontAwesomeIcon className={styles.icon} icon={faThList} />    
-          </div>
       </div>
     </div>
   );
