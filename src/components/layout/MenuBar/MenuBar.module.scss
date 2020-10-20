@@ -63,7 +63,7 @@
 
 .hamburger {
   position: absolute;
-  top:52%;
+  top:53%;
   left: 80%;
   display:none;
   margin:0px;
@@ -82,35 +82,17 @@
   cursor: pointer;
 }
 
-@media (max-width: 999px) and (min-width: 521px) {
-
-.menu {
-  align-self: stretch;
-  margin: 10px -15px;
-   }
-}
-
   @media (max-width: 520px) {
   .root {
     .product_search {
       flex: 70%;
-      
-      
-    & span {
-      margin: 0px;
-      padding: 0px;
-      line-height: .8;
-      text-align: left;
-      display: flex;
-    }  
-
     }
 
     .hamburger_label {
       display: flex;
       flex: auto;
       position: relative;
-      top: 5px;
+      top: 8px;
     }
 
     .icon {
@@ -127,7 +109,7 @@
       visibility: collapse;
       height: 0;
       overflow-y: auto;
-      width: 100vw;      
+      top: 10px;
       ul {
         flex-wrap: wrap;
         border: 1px solid $form-border-color;

@@ -9,7 +9,7 @@ const MenuBar = ({ children }) => (
   <div className={styles.root}>
     <div className='container'>
       <div className='row align-items-center'>
-        <div className={'col-md-12 col-lg-6 ' + styles.product_search}>
+      <div className='col'>
           <ProductSearch />
         </div>
 
