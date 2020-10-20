@@ -24,6 +24,7 @@ const Gallery = (props) => {
 
   const [pictureNumber, setPictureNumber] = useState(0);
 
+  const [slideNumber, setSlideNumber] = useState(0);
 
   const categoryProducts = props[activeCategory];
   const handleCategoryChange = (item) => {
@@ -38,6 +39,18 @@ const Gallery = (props) => {
       }
     });
     setPictureNumber(productNo);
+  };
+
+  const handleSlideChangeRight = event => {
+    event.preventDefault();
+    let newSlideNumber = slideNumber + 6;
+    setSlideNumber(newSlideNumber);
+  };
+
+  const handleSlideChangeLeft = event => {
+    event.preventDefault();
+    let newSlideNumber = slideNumber - 6;
+    setSlideNumber(newSlideNumber);
   };
 
   return (
@@ -110,16 +123,18 @@ const Gallery = (props) => {
               </div>
             ))}
             <div className={styles.miniatures}>
-              <Button className={styles.button} variant='small'>
+              <Button className={styles.button} variant='small'
+                onClick={handleSlideChangeLeft}>
                 <FontAwesomeIcon icon={faAngleLeft}></FontAwesomeIcon>
               </Button>
-              {categoryProducts.slice(0, 6).map(product => (
+              {categoryProducts.slice(slideNumber, slideNumber + 6).map(product => (
                 <div key={product.id} className={styles.imgWrapper}
                   onClick={() => handleProductChange(product.id)}>
                   <img alt={product.name} src={product.image} />
                 </div>
               ))}
-              <Button className={styles.button} variant='small'>
+              <Button className={styles.button} variant='small' 
+                onClick={handleSlideChangeRight}>
                 <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
               </Button>
             </div>
