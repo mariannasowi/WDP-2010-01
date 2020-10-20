@@ -14,7 +14,7 @@ const initialState = {
   ],
   galleryPromotedProduct: {
     src:'https://www.freepnglogos.com/uploads/bed-png/bed-17.png',
-    alt:'furniture'
+    alt:'furniture',
   },
   products: [
     {
@@ -61,7 +61,7 @@ const initialState = {
       newFurniture: true,
       heart: false,
       addCompare: false,
-      topSeller: true,
+      // topSeller: true,
     },
     {
       id: 'aenean-ru-bristique-2',
@@ -815,6 +815,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
       availability: 'in Stock',
       newFurniture: true,
+      topRated: true,
     },
     {
       id: 'aenean-ru-bristique-54',

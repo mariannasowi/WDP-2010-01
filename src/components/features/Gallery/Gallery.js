@@ -22,9 +22,23 @@ const Gallery = (props) => {
   
   const [activeCategory, setActiveCategory] = useState(defaultTab);
 
-  const categoryProducts = props[activeCategory];
+  const [pictureNumber, setPictureNumber] = useState(0);
 
-  
+
+  const categoryProducts = props[activeCategory];
+  const handleCategoryChange = (item) => {
+    setActiveCategory(item);
+  };
+
+  const handleProductChange = (productId) => {
+    let productNo=0;
+    categoryProducts.forEach(function (element, index) {
+      if (element.id === productId){
+        productNo = index;
+      }
+    });
+    setPictureNumber(productNo);
+  };
 
   return (
     <div className={styles.root}>
@@ -38,7 +52,9 @@ const Gallery = (props) => {
               <ul>
                 {categories.map(item => (
                   <li key={item.id}>
-                    <a className={item.id === activeCategory && styles.active}>
+                    <a className={item.id === activeCategory && styles.active}
+                      onClick={() => handleCategoryChange(item.id)}
+                    >
                       {item.name}
                     </a>
                   </li>
@@ -46,7 +62,7 @@ const Gallery = (props) => {
               </ul>
             </div>
 
-            {categoryProducts.slice(0, 1).map(product => (
+            {categoryProducts.slice(pictureNumber, pictureNumber+1).map(product => (
               <div key={product.id} className={styles.product}>
                 <div className={styles.photo}>
                   <img alt={product.name} src={product.image} />
@@ -98,7 +114,8 @@ const Gallery = (props) => {
                 <FontAwesomeIcon icon={faAngleLeft}></FontAwesomeIcon>
               </Button>
               {categoryProducts.slice(0, 6).map(product => (
-                <div key={product.id} className={styles.imgWrapper}>
+                <div key={product.id} className={styles.imgWrapper}
+                  onClick={() => handleProductChange(product.id)}>
                   <img alt={product.name} src={product.image} />
                 </div>
               ))}
