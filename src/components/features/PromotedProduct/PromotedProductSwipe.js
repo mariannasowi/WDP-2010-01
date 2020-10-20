@@ -9,30 +9,19 @@ import SwipeComponent from '../../common/SwipeComponent/SwipeComponent';
 class PromotedProductSwipe extends React.Component {
   state = {
     activePage: 0,
-    manualPageChange: false,
   };
 
   handleLeftAction = () => {
-    const { activePage, manualPageChange } = this.state;
-    if (manualPageChange) {
-      this.setState({ manualPageChange: false });
-    } else {
-      this.setState({ activePage: activePage + 1 });
-    }
+    const { activePage } = this.state;
+    this.setState({ activePage: activePage + 1 });
   };
 
   handleRightAction = () => {
-    const { activePage, manualPageChange } = this.state;
-    if (manualPageChange) {
-      this.setState({ manualPageChange: false });
-    } else if (activePage > 0) {
+    const { activePage } = this.state;
+    if (activePage > 0) {
       this.setState({ activePage: activePage - 1 });
     }
   };
-
-  handlePageChange(newPage) {
-    this.setState({ activePage: newPage, manualPageChange: true });
-  }
 
   render() {
     const { images, title, spanTitle, subTitle, button } = this.props;
