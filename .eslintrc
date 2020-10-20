@@ -14,6 +14,14 @@
     }
   },
   "settings": {
+    "import/resolver": "my-awesome-npm-module",
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    },
     "react": {
       "version": "detect"
     }

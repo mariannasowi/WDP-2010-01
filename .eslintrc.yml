@@ -1,0 +1,4 @@
+settings:
+  import/cache:
+    lifetime: 5  # 30 is the default
+  import/internal-regex: ^@scope/
