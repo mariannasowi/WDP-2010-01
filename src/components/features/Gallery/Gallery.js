@@ -78,7 +78,9 @@ const Gallery = (props) => {
             {categoryProducts.slice(pictureNumber, pictureNumber+1).map(product => (
               <div key={product.id} className={styles.product}>
                 <div className={styles.photo}>
-                  <img alt={product.name} src={product.image} />
+                  <div className = {styles.fadeIn}>
+                    <img alt={product.name} src={product.image} />
+                  </div>
                 </div>
                 <div className={styles.buttons}>
                   <div className={styles.buttonWrapper}>
