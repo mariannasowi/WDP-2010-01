@@ -1,9 +1,11 @@
 import React from 'react';
+import styles from "./ControlBar.module.scss"
+;
 
 const ControlBar = props => {
   return (
-    <div>
-      <div>
+    <div className={styles.wrapper}>
+      <div className={styles.sort}>
         <label htmlFor='sortBy'>Sort By</label>
         <select id='sortBy' class='custom-select'>
           <option value='1'>Price lowest first</option>
@@ -12,7 +14,7 @@ const ControlBar = props => {
           <option value='4'>Stars asceding</option>
         </select>
       </div>
-      <div>
+      <div className={styles.show}>
         <label htmlFor='show'>Show</label>
         <select id='show' class='custom-select'>
           <option value='12'>12</option>
@@ -21,7 +23,7 @@ const ControlBar = props => {
           <option value='48'>48</option>
         </select>
         </div>
-      <div>
+      <div  className={styles.checkbox}>
           <div>
             <input type="checkbox"/>
             <input type="checkbox"/>

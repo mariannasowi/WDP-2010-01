@@ -1,0 +1,50 @@
+
+.wrapper {
+display:flex;
+justify-content: flex-end;
+}
+
+.sort {
+    display: flex;
+    align-items: center;
+    margin-right: 3rem;
+}
+
+.show {
+    display: flex;
+    align-items: center;
+    margin-right: 3rem;
+
+}
+
+.show label
+ {
+    display: flex;
+    margin-right: 20px;
+    align-items: center;
+    justify-content: center;
+    justify-content: center;
+    position: relative;
+    top:4px;
+
+}
+
+.sort label
+ {
+    display: flex;
+    margin-right: 20px;
+    align-items: center;
+    justify-content: center;
+    justify-content: center;
+    width: 100px;
+    position: relative;
+    top:4px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+}
+
+
+
