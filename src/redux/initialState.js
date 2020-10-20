@@ -13,8 +13,8 @@ const initialState = {
     { id: 'topRated', name: 'Top rated' },
   ],
   galleryPromotedProduct: {
-    src:'https://www.freepnglogos.com/uploads/bed-png/bed-17.png',
-    alt:'furniture'
+    src: 'https://www.freepnglogos.com/uploads/bed-png/bed-17.png',
+    alt: 'furniture',
   },
   products: [
     {
@@ -1391,6 +1391,92 @@ const initialState = {
       text:
         'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable.',
       image: 'https://fwcdn.pl/ppo/01/40/140/449871.2.jpg',
+    },
+  ],
+  articles: [
+    {
+      id: 0,
+      title: 'Colors',
+      name: 'Jordan Dive',
+      date: '10-07-2020',
+      text:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      comments: [
+        {
+          id: 0,
+          content:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+          name: 'Anna Field',
+        },
+        {
+          id: 1,
+          content:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+          name: 'Andre Bryn',
+        },
+      ],
+    },
+    {
+      id: 1,
+      title: 'Elements',
+      name: 'Mike Robertson',
+      date: '19-11-2020',
+      text:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      comments: [
+        {
+          id: 0,
+          content:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+          name: 'Kristin Max',
+        },
+        {
+          id: 1,
+          content:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+          name: 'Paulo Biber',
+        },
+        {
+          id: 2,
+          content:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+          name: 'Martha Timor',
+        },
+        {
+          id: 3,
+          content:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+          name: 'Aleksandra Unnam',
+        },
+      ],
+    },
+    {
+      id: 2,
+      title: 'Trends',
+      name: 'Kate Poshe',
+      date: '27-05-2020',
+      text:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      comments: [
+        {
+          id: 0,
+          content:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+          name: 'Mark Antonio',
+        },
+        {
+          id: 1,
+          content:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+          name: 'Filipe Agasi',
+        },
+        {
+          id: 2,
+          content:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+          name: 'Dora Punto',
+        },
+      ],
     },
   ],
   cart: {
