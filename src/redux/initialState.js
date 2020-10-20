@@ -1234,6 +1234,7 @@ const initialState = {
       availability: 'in Stock',
       newFurniture: true,
       hotDeal: true,
+      promotedProductEndTime: '2020-11-20T14:48:17.261Z'
     },
     {
       id: 'aenean-ru-bristique-83',
@@ -1249,6 +1250,7 @@ const initialState = {
       availability: 'in Stock',
       newFurniture: true,
       hotDeal: true,
+      promotedProductEndTime: '2020-12-14T14:48:17.261Z'
     },
     {
       id: 'aenean-ru-bristique-84',
@@ -1265,6 +1267,7 @@ const initialState = {
       availability: 'in Stock',
       newFurniture: true,
       hotDeal: true,
+      promotedProductEndTime: '2020-09-20T12:48:17.261Z'
     },
   ],
   promotedProduct: {
