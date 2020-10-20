@@ -8,6 +8,7 @@ const props = {
   count: 2,
   compare: { products: [{ id: '1' }, { id: '2' }] },
   addToFavourite: () => {},
+  addToCart: () => {},
 };
 
 describe('Component ProductBox', () => {

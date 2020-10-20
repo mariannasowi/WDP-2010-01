@@ -5,10 +5,12 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
 import ViewportListener from '../../features/ViewportListener/ViewportListener';
+import CartMini from '../../features/CartMini/CartMiniContainer';
 
 const MainLayout = ({ children }) => (
   <div>
     <ViewportListener />
+    <CartMini />
     <Header />
     {children}
     <Footer />

@@ -21,6 +21,7 @@ const ProductBox = ({
   count,
   compare,
   addToFavourite,
+  addToCart,
   heart,
 }) => {
   const isProductAddedToCompare =
@@ -46,6 +47,12 @@ const ProductBox = ({
     addToFavourite(id);
   };
 
+  const addToCartHandler = event => {
+    event.preventDefault();
+    addToCart({ id, name, price, image });
+    document.body.classList.add('slide');
+  };
+
   return (
     <div className={styles.root}>
       <div className={styles.photo}>
@@ -55,7 +62,7 @@ const ProductBox = ({
           <Button variant='small' className={styles.button}>
             Quick View
           </Button>
-          <Button variant='small' className={styles.button}>
+          <Button variant='small' className={styles.button} onClick={addToCartHandler}>
             <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
           </Button>
         </div>
@@ -110,6 +117,7 @@ ProductBox.propTypes = {
   count: PropTypes.number.isRequired,
   compare: PropTypes.object.isRequired,
   addToFavourite: PropTypes.func.isRequired,
+  addToCart: PropTypes.func.isRequired,
 };
 
 export default ProductBox;
