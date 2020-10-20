@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from "./ControlBar.module.scss"
-;
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faThLarge, faThList } from '@fortawesome/free-solid-svg-icons';
 
 const ControlBar = props => {
   return (
@@ -23,11 +24,13 @@ const ControlBar = props => {
           <option value='48'>48</option>
         </select>
         </div>
-      <div  className={styles.checkbox}>
+    
+      <div className={styles.checkbox}>
           <div>
-            <input type="checkbox"/>
-            <input type="checkbox"/>
-
+          <input type='checkbox' id='hamburger' className={styles.list}></input>
+          <FontAwesomeIcon className={styles.icon} icon={faThLarge} />
+          <input type='checkbox' id='hamburger' className={styles.collection}></input>
+          <FontAwesomeIcon className={styles.icon} icon={faThList} />    
           </div>
       </div>
     </div>
