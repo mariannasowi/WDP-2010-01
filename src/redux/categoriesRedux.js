@@ -10,6 +10,8 @@ export const numberOfProductsByCategory = ({ products, categories }) =>
   });
 export const getActiveFilterCategory = ({ filter: { activeCategory } }) =>
   activeCategory;
+export const getActiveFilterColor = ({ filter: { activeColor } }) => activeColor;
+export const getFilterColors = ({ filter: { colors } }) => colors;
 
 /* reducer */
 export default function reducer(statePart = [], action = {}) {

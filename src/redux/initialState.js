@@ -8,6 +8,8 @@ const initialState = {
   ],
   filter: {
     activeCategory: 'bed',
+    activeColor: 'blue',
+    colors: [{ name: 'red' }, { name: 'blue' }, { name: 'brown' }, { name: 'green' }],
   },
   galleryTabs: [
     { id: 'featured', name: 'Featured' },
