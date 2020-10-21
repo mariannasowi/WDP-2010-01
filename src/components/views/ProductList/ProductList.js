@@ -1,13 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './ProductList.module.scss';
-import ProductBox from '../../common/ProductBox/ProductBox';
 import PageNotFound from '../../views/PageNotFound/PageNotFound';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import ProductListImages from '../ProductListImages/ProductListImages';
 
-const ProductList = ({ id, name, products, error }) => {
+const ProductList = ({ error }) => {
   if (error) return <PageNotFound />;
   else
     return (
@@ -15,7 +11,6 @@ const ProductList = ({ id, name, products, error }) => {
         <ProductListImages />
         <div className='col-3'></div>
       </div>
-      
     );
 };
 
