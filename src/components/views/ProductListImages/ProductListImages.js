@@ -6,8 +6,11 @@ import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 const ProductListImages = ({ id, name, products}) => {
   return (
-    <div>
-      {products &&
+    <div className='container'>
+      <div className='row'>
+        <div className='col-9'>
+          <div className='row'>
+            {products &&
     products
       .filter(item => item.category === id)
       .map((product, i) => (
@@ -15,6 +18,9 @@ const ProductListImages = ({ id, name, products}) => {
           <ProductBox {...product} />
         </div>
       ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 
