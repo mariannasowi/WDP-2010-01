@@ -6,6 +6,9 @@ const initialState = {
     { id: 'table', name: 'Table' },
     { id: 'dining', name: 'Dining' },
   ],
+  filter: {
+    activeCategory: 'bed',
+  },
   galleryTabs: [
     { id: 'featured', name: 'Featured' },
     { id: 'topSeller', name: 'Top seller' },
@@ -13,8 +16,8 @@ const initialState = {
     { id: 'topRated', name: 'Top rated' },
   ],
   galleryPromotedProduct: {
-    src:'https://www.freepnglogos.com/uploads/bed-png/bed-17.png',
-    alt:'furniture'
+    src: 'https://www.freepnglogos.com/uploads/bed-png/bed-17.png',
+    alt: 'furniture',
   },
   products: [
     {

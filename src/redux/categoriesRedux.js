@@ -8,6 +8,8 @@ export const numberOfProductsByCategory = ({ products, categories }) =>
     );
     return { id, quantity: productInCurrentCategory.length, name };
   });
+export const getActiveFilterCategory = ({ filter: { activeCategory } }) =>
+  activeCategory;
 
 /* reducer */
 export default function reducer(statePart = [], action = {}) {
