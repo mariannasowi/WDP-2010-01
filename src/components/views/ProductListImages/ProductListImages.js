@@ -4,8 +4,11 @@ import ProductBox from '../../common/ProductBox/ProductBox';
 
 const ProductListImages = ({ id, products}) => {
   return (
-    <div>
-      {products &&
+    <div className='container'>
+      <div className='row'>
+        <div className='col-9'>
+          <div className='row'>
+            {products &&
     products
       .filter(item => item.category === id)
       .map((product, i) => (
@@ -13,6 +16,9 @@ const ProductListImages = ({ id, products}) => {
           <ProductBox {...product} />
         </div>
       ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

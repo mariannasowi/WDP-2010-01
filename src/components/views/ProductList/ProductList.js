@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import PageNotFound from '../../views/PageNotFound/PageNotFound';
-import ProductListImages from '../ProductListImages/ProductListImages';
+import ProductListImages from '../ProductListImages/ProductListImagesContainer';
 
 const ProductList = ({ error }) => {
   if (error) return <PageNotFound />;
