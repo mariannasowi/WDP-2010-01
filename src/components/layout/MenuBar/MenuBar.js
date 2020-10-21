@@ -6,7 +6,7 @@ import ProductSearch from '../../features/ProductSearch/ProductSearch';
 import styles from './MenuBar.module.scss';
 import { Link } from 'react-router-dom';
 
-const MenuBar = ({ id, children }) => (
+const MenuBar = ({ children }) => (
   <div className={styles.root}>
     <div className='container'>
       <div className='row align-items-center'>
@@ -57,7 +57,6 @@ const MenuBar = ({ id, children }) => (
 
 MenuBar.propTypes = {
   children: PropTypes.node,
-  id: PropTypes.string.isRequired,
 };
 
 export default MenuBar;

@@ -22,19 +22,21 @@ const ProductList = ({ id, name, products, error }) => {
           </ul>
         </div>
         <div className='container'>
-          <div className='col-9'>
-            <div className='row'>
-              {products &&
-                products
-                  .filter(item => item.category === id)
-                  .map((product, i) => (
-                    <div key={i} className='col-4'>
-                      <ProductBox {...product} />
-                    </div>
-                  ))}
+          <div className='row'>
+            <div className='col-9'>
+              <div className='row'>
+                {products &&
+                  products
+                    .filter(item => item.category === id)
+                    .map((product, i) => (
+                      <div key={i} className='col-4'>
+                        <ProductBox {...product} />
+                      </div>
+                    ))}
+              </div>
             </div>
+            <div className='col-3'></div>
           </div>
-          <div className='col-3'></div>
         </div>
       </div>
     );
