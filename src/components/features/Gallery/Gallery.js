@@ -35,7 +35,7 @@ const Gallery = props => {
               <ul>
                 {categories.map(item => (
                   <li key={item.id}>
-                    <button className={item.id === activeCategory && styles.active}>
+                    <button className={item.id === activeCategory ? styles.active : ''}>
                       {item.name}
                     </button>
                   </li>
@@ -125,7 +125,7 @@ const Gallery = props => {
 };
 Gallery.propTypes = {
   galleryPromotedProduct: PropTypes.object,
-  galleryTabs: PropTypes.object,
+  galleryTabs: PropTypes.array,
 };
 
 export default Gallery;

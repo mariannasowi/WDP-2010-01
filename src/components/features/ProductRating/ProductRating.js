@@ -43,7 +43,7 @@ ProductRating.propTypes = {
   id: PropTypes.string.isRequired,
   stars: PropTypes.number.isRequired,
   isStarred: PropTypes.bool,
-  setStars: PropTypes.func.isRequired,
+  setStars: PropTypes.func,
 };
 
 export default ProductRating;

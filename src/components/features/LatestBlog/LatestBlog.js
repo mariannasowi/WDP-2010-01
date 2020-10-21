@@ -28,7 +28,7 @@ class LatestBlog extends React.Component {
         <li key={i}>
           <button
             onClick={() => this.handlePageChange(i)}
-            className={i === activePage && styles.active}
+            className={i === activePage ? styles.active : ''}
           >
             page {i}
           </button>

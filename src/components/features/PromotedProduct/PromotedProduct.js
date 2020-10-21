@@ -23,7 +23,7 @@ const PromotedProduct = ({ hotDeal, promotedProduct }) => {
 
 PromotedProduct.propTypes = {
   hotDeal: PropTypes.array.isRequired,
-  promotedProduct: PropTypes.bool.isRequired,
+  promotedProduct: PropTypes.object.isRequired,
 };
 
 export default PromotedProduct;
