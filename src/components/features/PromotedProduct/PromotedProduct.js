@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './PromotedProduct.module.scss';
 import PromotedProductSlider from './PromotedProductSlider';
+import PromotedProductSwipe from './PromotedProductSwipe';
 import PromotedProductCarousel from './PromotedProductCarousel';
 
 const PromotedProduct = ({ hotDeal, promotedProduct }) => {
@@ -12,8 +13,11 @@ const PromotedProduct = ({ hotDeal, promotedProduct }) => {
           <div className='col-4'>
             <PromotedProductCarousel hotDeal={hotDeal} />
           </div>
-          <div className='col-8'>
+          <div className={`col-md-12 col-lg-8 ${styles.imagesLarge}`}>
             <PromotedProductSlider {...promotedProduct} />
+          </div>
+          <div className={`col-md-12 col-lg-8 ${styles.imagesMobile}`}>
+            <PromotedProductSwipe {...promotedProduct} />
           </div>
         </div>
       </div>
