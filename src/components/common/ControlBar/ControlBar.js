@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "./ControlBar.module.scss"
+import styles from './ControlBar.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faThLarge, faThList } from '@fortawesome/free-solid-svg-icons';
 
@@ -8,7 +8,7 @@ const ControlBar = props => {
     <div className={styles.wrapper}>
       <div className={styles.sort}>
         <label htmlFor='sortBy'>Sort By</label>
-        <select id='sortBy' class='custom-select'>
+        <select id='sortBy' className='custom-select'>
           <option value='1'>Price lowest first</option>
           <option value='2'>Price higher first</option>
           <option value='3'>Stars descending</option>
@@ -17,19 +17,17 @@ const ControlBar = props => {
       </div>
       <div className={styles.show}>
         <label htmlFor='show'>Show</label>
-        <select id='show' class='custom-select'>
+        <select id='show' className='custom-select'>
           <option value='12'>12</option>
           <option value='24'>24</option>
           <option value='36'>36</option>
           <option value='48'>48</option>
         </select>
-        </div>
-    
-      <div className={styles.checkbox}>
-          <input type='checkbox' className={styles.list}></input>
-          <FontAwesomeIcon className={styles.icon} icon={faThLarge} />
-          <input type='checkbox' className={styles.collection}></input>
-          <FontAwesomeIcon className={styles.icon} icon={faThList} />    
+      </div>
+
+      <div className={styles.icons}>
+        <FontAwesomeIcon className={styles.iconLarge} icon={faThLarge} />
+        <FontAwesomeIcon className={styles.iconList} icon={faThList} />
       </div>
     </div>
   );
