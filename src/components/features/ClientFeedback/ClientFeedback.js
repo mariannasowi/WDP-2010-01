@@ -42,13 +42,13 @@ class ClientFeedback extends React.Component {
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
       dots.push(
-        <li>
-          <a
+        <li key={i}>
+          <button
             onClick={() => this.handlePageChange(i)}
-            className={i === activePage && styles.active}
+            className={i === activePage ? styles.active : ''}
           >
             page {i}
-          </a>
+          </button>
         </li>
       );
     }
@@ -96,7 +96,6 @@ class ClientFeedback extends React.Component {
 }
 
 ClientFeedback.propTypes = {
-  children: PropTypes.node.isRequired,
   feedbacks: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
