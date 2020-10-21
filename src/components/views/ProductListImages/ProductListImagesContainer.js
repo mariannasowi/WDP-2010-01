@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { setCompare, getCount } from '../../../redux/compareRedux';
 import { addToFavourite, getCategoryById, getAll } from '../../../redux/productsRedux';
-import ProductList from './ProductList';
+import ProductListImages from './ProductListImages';
 
 const mapStateToProps = (state, props) => {
   const category = getCategoryById(state, props.match.params.categoryId);
@@ -18,4 +18,4 @@ const mapDispatchToProps = dispatch => ({
   addToFavourite: value => dispatch(addToFavourite(value)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProductList);
+export default connect(mapStateToProps, mapDispatchToProps)(ProductListImages);

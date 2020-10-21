@@ -6,7 +6,7 @@ import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 const ProductListImages = ({ id, name, products}) => {
   return (
-    <div >
+    <div>
       {products &&
     products
       .filter(item => item.category === id)
@@ -17,6 +17,7 @@ const ProductListImages = ({ id, name, products}) => {
       ))}
     </div>
   );
+
 };
 
 ProductListImages.propTypes = {
