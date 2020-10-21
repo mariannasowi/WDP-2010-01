@@ -1,32 +1,37 @@
 import React, { useEffect, useState } from 'react';
 import styles from './../PromotedProductBox/PromotedProductBox.module.scss';
+import PropTypes from 'prop-types';
 
 const PromotedProductTimeCounter = ({ endTime }) => {
   const productEndTime = new Date(endTime);
 
-  const [currentTime, setCurrentTime] = useState(0);
-  const [timeDiff, setTimeDiff] = useState(0);
-  const [sec, setSec] = useState(0);
-  const [min, setMin] = useState(0);
-  const [hours, setHours] = useState(0);
-  const [days, setDays] = useState(0);
+  const [timer, setTimer] = useState({
+    sec: 0,
+    min: 0,
+    hours: 0,
+    days: 0,
+  });
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentTime(new Date());
-      setTimeDiff(productEndTime - currentTime);
-      setSec(Math.floor(timeDiff / 1000) % 60);
-      setMin(Math.floor(timeDiff / ( 60 * 1000)) % 60);
-      setHours(Math.floor(timeDiff / ( 60 * 60 * 1000)) % 60);
-      setDays(Math.floor(timeDiff / ( 60 * 60 * 24 *1000)));
-      if (timeDiff <= 0) clearInterval(interval);
+      const currentTime = new Date();
+      const diff = productEndTime - currentTime;
+      setTimer({
+        timeDiff: diff,
+        sec: Math.floor(diff / 1000) % 60,
+        min: Math.floor(diff / (60 * 1000)) % 60,
+        hours: Math.floor(diff / (60 * 60 * 1000)) % 24,
+        days: Math.floor(diff / (60 * 60 * 24 * 1000)),
+      });
+      if (diff <= 0) clearInterval(interval);
     }, 1000);
     return () => clearInterval(interval);
-  }, [currentTime]);
+  }, [productEndTime, timer]);
 
+  const { sec, min, hours, days, timeDiff } = timer;
 
   if (timeDiff <= 0) {
-    return <p>Promotion os over</p>;
+    return <p>Promotion is over</p>;
   }
 
   return (
@@ -49,6 +54,10 @@ const PromotedProductTimeCounter = ({ endTime }) => {
       </div>
     </div>
   );
+};
+
+PromotedProductTimeCounter.propTypes = {
+  endTime: PropTypes.string.isRequired,
 };
 
 export default PromotedProductTimeCounter;
