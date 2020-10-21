@@ -4,6 +4,7 @@ import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBoxContainer';
 import ProductsCompare from '../ProductsCompare/ProductsCompareContainer';
 import SwipeComponent from '../../common/SwipeComponent/SwipeComponent';
+import FilterByCategoryContainer from '../../common/FilterByCategory/FilterByCategoryContainer';
 
 class NewFurniture extends React.Component {
   state = {
@@ -80,6 +81,7 @@ class NewFurniture extends React.Component {
     return (
       <div className={styles.root}>
         <div className='container'>
+          <FilterByCategoryContainer />
           <div className={styles.panelBar}>
             <div className='row no-gutters align-items-end'>
               <div className={'col-auto ' + styles.heading}>
