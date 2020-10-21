@@ -80,7 +80,6 @@ class NewFurniture extends React.Component {
     return (
       <div className={styles.root}>
         <div className='container'>
-          <ControlBar />
           <div className={styles.panelBar}>
             <div className='row no-gutters align-items-end'>
               <div className={'col-auto ' + styles.heading}>
