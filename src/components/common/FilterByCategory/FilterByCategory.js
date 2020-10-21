@@ -12,7 +12,6 @@ const FilterByCategory = ({ numberOfProductsByCategory, activeCategory }) => {
             </p>
           ) : (
             <p>
-              {' '}
               <span>{name}</span> - <span>{quantity}</span>
             </p>
           )}
