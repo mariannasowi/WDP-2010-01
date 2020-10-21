@@ -269,18 +269,6 @@
   }
 }
 
-.fadeIn {
-  opacity: 1;
-  transition: all 1s ease-in-out;
-  visibility: visible;
-}
-
-.fadeOut {
-  opacity: 0;
-  transition: all 1s ease-in-out;
-  visibility: hidden;
-}
-
 .rightPanel {
   background-color: $gallery-background-color;
   position: relative;
@@ -323,4 +311,16 @@
       margin-top: 20px;
     }
   }
+}
+
+.fadeIn {
+  opacity: 1;
+  transition: all 1s ease-in-out;
+  visibility: visible;
+}
+
+.fadeOut {
+  opacity: 0;
+  transition: all 1s ease-in-out;
+  visibility: hidden;
 }
