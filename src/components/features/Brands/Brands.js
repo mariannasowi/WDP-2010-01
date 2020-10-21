@@ -45,7 +45,7 @@ class Brands extends React.Component {
         <div key={page} className={styles.brandBox}>
           {brands.slice(page, page + 6).map(brand => (
             <div key={brand.id} className={styles.box}>
-              <img src={brands.image} alt={brand.name} />
+              <img src={brand.image} alt={brand.name} />
             </div>
           ))}
         </div>
