@@ -6,34 +6,15 @@ import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 const ProductListImages = ({ id, name, products}) => {
   return (
-    <div>
-      <div className='navbar'>
-        <h2>{name}</h2>
-      </div>
-      <div>
-        <ul>
-          <li>
-            <a href='/'>Home</a>
-          </li>
-        </ul>
-      </div>
-      <div className='container'>
-        <div className='row'>
-          <div className='col-9'>
-            <div className='row'>
-              {products &&
-                  products
-                    .filter(item => item.category === id)
-                    .map((product, i) => (
-                      <div key={i} className='col-4'>
-                        <ProductBox {...product} />
-                      </div>
-                    ))}
-            </div>
-          </div>
-          <div className='col-3'></div>
+    <div >
+      {products &&
+    products
+      .filter(item => item.category === id)
+      .map((product, i) => (
+        <div key={i} className='col-4'>
+          <ProductBox {...product} />
         </div>
-      </div>
+      ))}
     </div>
   );
 };
