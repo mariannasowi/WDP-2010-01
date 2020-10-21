@@ -22,7 +22,7 @@
         list-style: none;
         display: flex;
         align-items: stretch;
-        width: auto;  
+        width: auto;
       }
     }
 
@@ -63,17 +63,17 @@
 
 .hamburger {
   position: absolute;
-  top:53%;
+  top: 53%;
   left: 80%;
-  display:none;
-  margin:0px;
-  padding: 0px
+  display: none;
+  margin: 0px;
+  padding: 0px;
 }
 
 .hamburger_label {
   display: none;
-  margin:0px;
-  padding: 0px
+  margin: 0px;
+  padding: 0px;
 }
 
 .icon {
@@ -82,7 +82,7 @@
   cursor: pointer;
 }
 
-  @media (max-width: 520px) {
+@media (max-width: 520px) {
   .root {
     .product_search {
       flex: 70%;
@@ -101,7 +101,7 @@
 
     .hamburger:checked ~ .menu {
       visibility: visible;
-      height: 100vh;
+      height: 400px;
     }
 
     .menu {
@@ -110,6 +110,7 @@
       height: 0;
       overflow-y: auto;
       top: 10px;
+
       ul {
         flex-wrap: wrap;
         border: 1px solid $form-border-color;

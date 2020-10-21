@@ -191,7 +191,7 @@ $product-root-color: $veryLightGray;
 $gallery-theme-color: $orange;
 $gallery-frame-medium-color: $mediumDarkGray;
 $gallery-frame-light-color: $veryLightGray;
-$gallery-background-color:  $lightGrayishBlue;
+$gallery-background-color: $lightGrayishBlue;
 $gallery-buttons-hints-color: $black;
 $gallery-price: $white;
 $gallery-price-bigger-font: $compare-color;
@@ -199,7 +199,6 @@ $gallery-price-bigger-font: $compare-color;
 /* OTHER */
 $base-padding: 24px;
 $transition: all 0.25s;
-$white: #fff;
 %hover-effect {
   transition: $transition;
 }

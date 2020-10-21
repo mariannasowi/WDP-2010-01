@@ -97,40 +97,37 @@
   }
 }
 
-
-
 @media (max-width: 999px) and (min-width: 521px) {
-  
   .menu {
-  margin:0px !important;
-  padding: 0px !important;
+    margin: 0px !important;
+    padding: 0px !important;
   }
-  
+
   .center {
-    display:flex;
+    display: flex;
     justify-content: center;
   }
-  
-   .root {
+
+  .root {
     display: flex;
-  } 
-   
-    .searchField {
-      input {
-        width: 100%;
-      }
+  }
+
+  .searchField {
+    input {
+      width: 100%;
     }
-  
-    .category {
-      select {
-        width: 100%;
-      }
+  }
+
+  .category {
+    select {
+      width: 100%;
     }
+  }
 }
 
 @media (max-width: 520px) {
   .root {
-  margin: 10px 10px -10px 10px;
+    margin: 10px 10px -10px 10px;
   }
 
   .searchField {
