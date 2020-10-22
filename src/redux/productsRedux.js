@@ -17,6 +17,11 @@ export const getProductById = ({ products }, productId) => {
   return filtered.length ? filtered[0] : { error: true };
 };
 
+export const getArticleById = ({ articles }, articleId) => {
+  const filtered = articles.filter(article => article.id === articleId);
+  return filtered.length ? filtered[0] : { error: true };
+};
+
 /* action name creator */
 const createActionName = name => `products/${name}`;
 
