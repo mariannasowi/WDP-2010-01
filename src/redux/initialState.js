@@ -6,6 +6,16 @@ const initialState = {
     { id: 'table', name: 'Table' },
     { id: 'dining', name: 'Dining' },
   ],
+  galleryTabs: [
+    { id: 'featured', name: 'Featured' },
+    { id: 'topSeller', name: 'Top seller' },
+    { id: 'saleOff', name: 'Sale off' },
+    { id: 'topRated', name: 'Top rated' },
+  ],
+  galleryPromotedProduct: {
+    src: 'https://www.freepnglogos.com/uploads/bed-png/bed-17.png',
+    alt: 'furniture',
+  },
   products: [
     {
       id: 'aenean-ru-bristique-1',
@@ -51,6 +61,7 @@ const initialState = {
       newFurniture: true,
       heart: false,
       addCompare: false,
+      topSeller: true,
     },
     {
       id: 'aenean-ru-bristique-2',
@@ -101,6 +112,7 @@ const initialState = {
       newFurniture: true,
       heart: true,
       addCompare: true,
+      topSeller: true,
     },
     {
       id: 'aenean-ru-bristique-5',
@@ -201,6 +213,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
       availability: 'in Stock',
       newFurniture: true,
+      topSeller: true,
     },
     {
       id: 'aenean-ru-bristique-12',
@@ -326,6 +339,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
       availability: 'in Stock',
       newFurniture: true,
+      topSeller: true,
     },
     {
       id: 'aenean-ru-bristique-21',
@@ -428,6 +442,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
       availability: 'in Stock',
       newFurniture: true,
+      topSeller: true,
     },
     {
       id: 'aenean-ru-bristique-28',
@@ -1219,6 +1234,7 @@ const initialState = {
       availability: 'in Stock',
       newFurniture: true,
       hotDeal: true,
+      promotedProductEndTime: '2020-11-20T14:48:17.261Z',
     },
     {
       id: 'aenean-ru-bristique-83',
@@ -1234,6 +1250,7 @@ const initialState = {
       availability: 'in Stock',
       newFurniture: true,
       hotDeal: true,
+      promotedProductEndTime: '2020-12-14T14:48:17.261Z',
     },
     {
       id: 'aenean-ru-bristique-84',
@@ -1250,6 +1267,7 @@ const initialState = {
       availability: 'in Stock',
       newFurniture: true,
       hotDeal: true,
+      promotedProductEndTime: '2020-09-20T12:48:17.261Z',
     },
     {
       id: 'aenean-ru-bristique-84',
@@ -1496,10 +1514,10 @@ const initialState = {
     { id: 'Brand4', name: 'Brand4', image: 'https://i.postimg.cc/rmP6Pg0w/9.jpg' },
     { id: 'Brand5', name: 'Brand5', image: 'https://i.postimg.cc/sg4gNdVf/10.jpg' },
     { id: 'Brand6', name: 'Brand6', image: 'https://i.postimg.cc/9MKm7cBb/12.jpg' },
-    // { id: 'Brand7', name: 'Brand7', image: 'https://i.postimg.cc/CLyMML5L/14.jpg' },
-    // { id: 'Brand8', name: 'Brand8', image: 'https://i.postimg.cc/wThq18R5/16.jpg' },
-    // { id: 'Brand9', name: 'Brand9', image: 'https://i.postimg.cc/HLPHqTFm/17.jpg' },
-    // { id: 'Brand10', name: 'Brand10', image: 'https://i.postimg.cc/C5bgnk5M/18.jpg' },
+    { id: 'Brand7', name: 'Brand7', image: 'https://i.postimg.cc/CLyMML5L/14.jpg' },
+    { id: 'Brand8', name: 'Brand8', image: 'https://i.postimg.cc/wThq18R5/16.jpg' },
+    { id: 'Brand9', name: 'Brand9', image: 'https://i.postimg.cc/HLPHqTFm/17.jpg' },
+    { id: 'Brand10', name: 'Brand10', image: 'https://i.postimg.cc/C5bgnk5M/18.jpg' },
   ],
   productCategories: [
     { id: 'furniture', name: 'Furniture' },
