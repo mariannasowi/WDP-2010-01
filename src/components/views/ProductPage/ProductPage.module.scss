@@ -246,3 +246,78 @@
   background-color: $product-bg-color;
   padding: $base-padding 0;
 }
+
+.boxsecond {
+  margin-top: 60px;
+  border: 1px solid $veryLightGray;
+
+  .navigation {
+    width: 50%;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+
+      li {
+        width: 100%;
+        text-align: center;
+
+        a {
+          line-height: 2.5rem;
+          display: block;
+          font-weight: bold;
+          border-right: 1px solid $veryLightGray;
+          border-bottom: 1px solid $veryLightGray;
+          cursor: pointer;
+          text-transform: uppercase;
+          text-decoration: none;
+        }
+
+        a.second {
+          color: $orange;
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  .reviewBox {
+    display: flex;
+    flex-direction: column;
+    padding: 35px 35px 70px;
+    color: $mediumGrayColor;
+
+    p:nth-of-type(2) {
+      font-weight: bold;
+    }
+  }
+
+  .formReview {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 16px;
+
+    .inputReview {
+      width: 100%;
+    }
+
+    .spacing {
+      margin-top: 15px;
+    }
+
+    .buttonContinue {
+      width: 100%;
+      background-color: $black;
+      color: $white;
+      border: none;
+
+      &:hover {
+        background-color: $orange;
+      }
+    }
+  }
+}
