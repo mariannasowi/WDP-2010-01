@@ -13,8 +13,8 @@ const initialState = {
     { id: 'topRated', name: 'Top rated' },
   ],
   galleryPromotedProduct: {
-    src:'https://www.freepnglogos.com/uploads/bed-png/bed-17.png',
-    alt:'furniture'
+    src: 'https://www.freepnglogos.com/uploads/bed-png/bed-17.png',
+    alt: 'furniture',
   },
   products: [
     {
@@ -1234,7 +1234,7 @@ const initialState = {
       availability: 'in Stock',
       newFurniture: true,
       hotDeal: true,
-      promotedProductEndTime: '2020-11-20T14:48:17.261Z'
+      promotedProductEndTime: '2020-11-20T14:48:17.261Z',
     },
     {
       id: 'aenean-ru-bristique-83',
@@ -1250,7 +1250,7 @@ const initialState = {
       availability: 'in Stock',
       newFurniture: true,
       hotDeal: true,
-      promotedProductEndTime: '2020-12-14T14:48:17.261Z'
+      promotedProductEndTime: '2020-12-14T14:48:17.261Z',
     },
     {
       id: 'aenean-ru-bristique-84',
@@ -1267,7 +1267,7 @@ const initialState = {
       availability: 'in Stock',
       newFurniture: true,
       hotDeal: true,
-      promotedProductEndTime: '2020-09-20T12:48:17.261Z'
+      promotedProductEndTime: '2020-09-20T12:48:17.261Z',
     },
   ],
   promotedProduct: {
@@ -1319,7 +1319,16 @@ const initialState = {
     {
       id: 'How to design your space?',
       date: '15 JAN 2020',
-      comments: '4 comments',
+      comments: [
+        {
+          idComment: '1',
+          comment: 'comment1',
+        },
+        {
+          idComment: '2',
+          comment: 'comment2',
+        },
+      ],
       title: 'How to design your space?',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -1329,7 +1338,12 @@ const initialState = {
     {
       id: 'Six Tips for Choosing the Perfect Sofa',
       date: '12 JAN 2020',
-      comments: '4 comments',
+      comments: [
+        {
+          idComment: '1',
+          comment: 'comment1',
+        },
+      ],
       title: 'Six Tips for Choosing the Perfect Sofa',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -1339,7 +1353,20 @@ const initialState = {
     {
       id: 'Functional, Comfortable and Beautiful',
       date: '5 JAN 2020',
-      comments: '4 comments',
+      comments: [
+        {
+          idComment: '1',
+          comment: 'comment1',
+        },
+        {
+          idComment: '2',
+          comment: 'comment2',
+        },
+        {
+          idComment: '3',
+          comment: 'comment3',
+        },
+      ],
       title: 'Functional, Comfortable and Beautiful',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -1349,7 +1376,20 @@ const initialState = {
     {
       id: 'How To Choose A Mattress in 5 Easy Steps',
       date: '19 DEC 2019',
-      comments: '4 comments',
+      comments: [
+        {
+          idComment: '1',
+          comment: 'comment1',
+        },
+        {
+          idComment: '2',
+          comment: 'comment2',
+        },
+        {
+          idComment: '3',
+          comment: 'comment3',
+        },
+      ],
       title: 'How To Choose A Mattress in 5 Easy Steps',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',

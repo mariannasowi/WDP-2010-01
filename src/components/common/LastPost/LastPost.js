@@ -5,6 +5,7 @@ import styles from './LastPost.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendar, faComment } from '@fortawesome/free-solid-svg-icons';
 import Button from '../Button/Button';
+import CountComments from '../../features/CountComments/CountCommentsContainer';
 
 const LastPost = ({ id, date, comments, title, description, image }) => (
   <div className={styles.root}>
@@ -20,7 +21,8 @@ const LastPost = ({ id, date, comments, title, description, image }) => (
         </div>
         <div className='col-6'>
           <p>
-            <FontAwesomeIcon icon={faComment}></FontAwesomeIcon> {comments}
+            <FontAwesomeIcon icon={faComment}></FontAwesomeIcon>
+            <CountComments />
           </p>
         </div>
       </div>
