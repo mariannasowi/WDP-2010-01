@@ -72,6 +72,7 @@
     "react-scripts": "^3.4.3",
     "react-test-renderer": "^16.9.0",
     "redux": "^4.0.4",
+    "redux-persist": "^6.0.0",
     "swiper": "^6.3.2"
   },
   "devDependencies": {
