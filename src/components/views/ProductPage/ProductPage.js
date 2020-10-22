@@ -36,6 +36,7 @@ const ProductPage = ({
   count,
   compare,
   addToFavourite,
+  addToCart,
   heart,
   description,
   availability,
@@ -64,6 +65,12 @@ const ProductPage = ({
   const addToFavouriteHandler = event => {
     event.preventDefault();
     addToFavourite(id);
+  };
+
+  const addToCartHandler = event => {
+    event.preventDefault();
+    addToCart({ id, name, price, image });
+    document.body.classList.add('slide');
   };
 
   if (error) return <PageNotFound />;
@@ -137,7 +144,7 @@ const ProductPage = ({
                 <div className={styles.line}></div>
                 <div className={styles.actions}>
                   <div className={styles.buttons}>
-                    <Button variant='white'>
+                    <Button variant='white' onClick={addToCartHandler}>
                       <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO
                       CART
                     </Button>
@@ -252,6 +259,7 @@ ProductPage.propTypes = {
   availability: PropTypes.string,
   category: PropTypes.string,
   images: PropTypes.array,
+  addToCart: PropTypes.func.isRequired,
 };
 
 export default ProductPage;
