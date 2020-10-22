@@ -10,6 +10,15 @@ import postsReducer from './postsRedux ';
 import brandsReducer from './brandsRedux';
 import galleryReducer from './galleryRedux';
 
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+
+const persistConfig = {
+  key: 'root',
+  storage,
+  whitelist: ['cart'],
+};
+
 // define reducers
 const reducers = {
   cart: cartReducer,
@@ -18,7 +27,7 @@ const reducers = {
   compare: compareProductsReducer,
   viewport: viewportReducer,
   brands: brandsReducer,
-  gallery: galleryReducer
+  gallery: galleryReducer,
 };
 
 // add blank reducers for initial state properties without reducers
@@ -29,12 +38,14 @@ Object.keys(initialState).forEach(item => {
 });
 
 const combinedReducers = combineReducers(reducers);
+const persistedReducer = persistReducer(persistConfig, combinedReducers);
 
 // create store
 const store = createStore(
-  combinedReducers,
+  persistedReducer,
   initialState,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
 export default store;
+export const persistor = persistStore(store);
