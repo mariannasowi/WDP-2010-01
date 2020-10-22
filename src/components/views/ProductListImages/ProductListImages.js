@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ProductBox from '../../common/ProductBox/ProductBoxContainer';
 
-const ProductListImages = ({ id, products, name}) => {
+const ProductListImages = ({id, products, name}) => {
   return (
     <div>
       <h2>{name}</h2>
       <div className='container'>
         <div className='row'>
-          <div className='col-9'>
+          <div className='col'>
             <div className='row'>
               {products &&
               products
