@@ -29,7 +29,9 @@ class PromotedProductSwipe extends React.Component {
 
     const swipeContent = [];
     for (let page = 0; page < pagesCount; page++) {
-      swipeContent.push(<img src={images[page].image} alt={images[page].imageAlt} />);
+      swipeContent.push(
+        <img src={images[page].image} alt={images[page].imageAlt} key={page} />
+      );
     }
 
     return (

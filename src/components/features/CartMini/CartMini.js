@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './CartMini.module.scss';
@@ -49,7 +49,7 @@ const CartMini = ({
         <div className={styles.title}>
           <p>Shopping bag</p>
         </div>
-        {products.length == 0 && (
+        {products.length === 0 && (
           <div className={styles.isEmpty}>
             <p>Your bag is currently empty.</p>
           </div>
@@ -124,7 +124,7 @@ CartMini.propTypes = {
   toggleCart: PropTypes.func,
   removeFromCart: PropTypes.func.isRequired,
   changeQuantity: PropTypes.func.isRequired,
-  products: PropTypes.object.isRequired,
+  products: PropTypes.array.isRequired,
 };
 
 CartMini.defaultProps = {
