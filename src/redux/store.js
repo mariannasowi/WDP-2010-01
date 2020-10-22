@@ -28,6 +28,7 @@ const reducers = {
   viewport: viewportReducer,
   brands: brandsReducer,
   gallery: galleryReducer,
+  posts: postsReducer,
 };
 
 // add blank reducers for initial state properties without reducers

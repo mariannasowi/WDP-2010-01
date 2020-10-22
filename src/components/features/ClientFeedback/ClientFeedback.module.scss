@@ -40,7 +40,7 @@
 
     ul {
       margin: 0;
-      padding: 0 0 0 1rem;
+      padding: 0 0 2px 1rem;
       list-style: none;
       background-color: $clientFeedback-dots-bc;
       transform: translateY(15px);
@@ -50,7 +50,7 @@
       display: inline-block;
       margin-left: 0.5rem;
 
-      a {
+      button {
         @extend %hover-effect;
         display: block;
         width: 13px;
@@ -59,6 +59,8 @@
         background-color: $clientFeedback-dots-a;
         font-size: 0;
         opacity: 2;
+        border: none;
+        outline: none;
 
         &.active,
         &:hover {

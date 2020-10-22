@@ -57,7 +57,7 @@ const ProductBox = ({
   return (
     <div className={styles.root}>
       <div className={styles.photo}>
-        <Link id={id} exact to={'/product/' + id}>
+        <Link id={id} to={'/product/' + id}>
           <img src={image} alt={name} />
         </Link>
         {promo && <div className={styles.sale}>{promo}</div>}

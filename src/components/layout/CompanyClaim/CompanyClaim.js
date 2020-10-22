@@ -26,7 +26,7 @@ const CompanyClaim = ({ cartCount, toggleCart, isOpen }) => {
             </p>
           </div>
           <div className='col text-center'>
-            <Link exact to='/'>
+            <Link to={'/'}>
               <img src='/images/logo.png' alt='Bazar' />
             </Link>
           </div>
