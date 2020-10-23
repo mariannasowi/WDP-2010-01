@@ -191,7 +191,7 @@ $product-root-color: $veryLightGray;
 $gallery-theme-color: $orange;
 $gallery-frame-medium-color: $mediumDarkGray;
 $gallery-frame-light-color: $veryLightGray;
-$gallery-background-color:  $lightGrayishBlue;
+$gallery-background-color: $lightGrayishBlue;
 $gallery-buttons-hints-color: $black;
 $gallery-price: $white;
 $gallery-price-bigger-font: $compare-color;
@@ -199,6 +199,7 @@ $gallery-price-bigger-font: $compare-color;
 /* OTHER */
 $base-padding: 24px;
 $transition: all 0.25s;
+
 %hover-effect {
   transition: $transition;
 }
@@ -210,3 +211,13 @@ $clientFeedback-h-color: $orange;
 $clientFeedback-dots-bc: $white;
 $clientFeedback-dots-a: $veryLightGray;
 $clientFeedback-hover-dc: $orange;
+
+/* FILTER BY CATEGORIES COMPONENT */
+$filterCategory-circle-font: $white;
+$filterCategory-theme-color: $orange;
+$filterCategory-black-color: $black;
+
+/* FILTER BY COLOR COMPONENT */
+$colorCategory-circle-font: $white;
+$colorCategory-theme-color: $orange;
+$colorCategory-black-color: $black;

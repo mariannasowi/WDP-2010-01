@@ -1,0 +1,64 @@
+@import "../../../styles/settings.scss";
+
+.borderLine {
+  padding: 1rem;
+  border-top: 1px solid $colorCategory-black-color;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  left: 80%;
+}
+
+.colorBox {
+  display: flex;
+  justify-content: center;
+  border-radius: 2px;
+  display: flex;
+  width: 25px;
+  flex-direction: row;
+  margin-left: 0%;
+  margin-right: 15px;
+}
+
+.colorBoxActive {
+  display: flex;
+  justify-content: center;
+  border-radius: 2px;
+  display: flex;
+  width: 25px;
+  flex-direction: row;
+  margin-left: 10%;
+  margin-right: 15px;
+}
+
+.activeText {
+  color: $colorCategory-theme-color;
+  margin-left: 0rem;
+  width: 150px;
+  display: flex;
+  justify-content: start;
+}
+
+.Text {
+  color: $colorCategory-theme-color;
+  margin-left: 0rem;
+  color: $filterCategory-black-color;
+  width: 150px;
+  display: flex;
+  justify-content: start;
+  margin-right: 1rem;
+}
+
+.fontDecoration:first-letter {
+  text-transform: capitalize;
+}
+
+.title {
+  font-weight: bold;
+  position: relative;
+  top: 15px;
+}

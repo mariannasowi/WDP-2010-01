@@ -1,22 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './FilterByColor.module.scss';
 
 const FilterByColor = ({ colors, activeColor }) => {
   return (
-    <div>
-      {colors.map(({ name }, index) => (
-        <div key={index}>
-          {activeColor === name ? (
-            <p>
-              <b>{name}</b>
-            </p>
-          ) : (
-            <p>
-              <span>{name}</span>
-            </p>
-          )}
-        </div>
-      ))}
+    <div className={styles.wrapper}>
+      <p>
+        <span className={styles.title}>FILTER BY COLOR</span>
+      </p>
+      <div className={styles.borderLine}>
+        {colors.map(({ name }, index) => (
+          <div key={index}>
+            {activeColor === name ? (
+              <p className={styles.activeText}>
+                <span
+                  className={styles.colorBoxActive}
+                  style={{ background: name }}
+                ></span>
+                <span className={styles.fontDecoration}>{name}</span>
+              </p>
+            ) : (
+              <p className={styles.Text}>
+                <span className={styles.colorBox} style={{ background: name }}></span>
+                <span className={styles.fontDecoration}>{name}</span>
+              </p>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
