@@ -1,7 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './ProductPage.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faFacebookF,
+  faGooglePlusG,
+  faLinkedinIn,
+  faTwitter,
+  faPinterestP,
+} from '@fortawesome/free-brands-svg-icons';
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import {
   faAngleLeft,
   faAngleRight,
@@ -11,18 +15,16 @@ import {
   faPlus,
   faShoppingBasket,
 } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import Button from '../../common/Button/Button';
-import ProductRating from '../../features/ProductRating/ProductRatingContainer';
-import { faHeart } from '@fortawesome/free-regular-svg-icons';
-import {
-  faFacebookF,
-  faGooglePlusG,
-  faLinkedinIn,
-  faTwitter,
-  faPinterestP,
-} from '@fortawesome/free-brands-svg-icons';
 import ProductImages from '../../common/ProductImages/ProductImages';
+import ProductRating from '../../features/ProductRating/ProductRatingContainer';
 import PageNotFound from '../../views/PageNotFound/PageNotFound';
+
+import styles from './ProductPage.module.scss';
 
 const ProductPage = ({
   id,

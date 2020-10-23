@@ -14,7 +14,7 @@ const initialState = {
   ],
   galleryPromotedProduct: {
     src:'https://www.freepnglogos.com/uploads/bed-png/bed-17.png',
-    alt:'furniture'
+    alt:'furniture',
   },
   products: [
     {

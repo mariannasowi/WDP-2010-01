@@ -1,14 +1,14 @@
 import { combineReducers, createStore } from 'redux';
-import initialState from './initialState';
 
+import brandsReducer from './brandsRedux';
 import cartReducer from './cartRedux';
 import categoriesReducer from './categoriesRedux';
-import productsReducer from './productsRedux';
 import compareProductsReducer from './compareRedux';
-import viewportReducer from './viewportRedux';
-import postsReducer from './postsRedux ';
-import brandsReducer from './brandsRedux';
 import galleryReducer from './galleryRedux';
+import initialState from './initialState';
+//import postsReducer from './postsRedux';
+import productsReducer from './productsRedux';
+import viewportReducer from './viewportRedux';
 
 // define reducers
 const reducers = {
@@ -18,7 +18,7 @@ const reducers = {
   compare: compareProductsReducer,
   viewport: viewportReducer,
   brands: brandsReducer,
-  gallery: galleryReducer
+  gallery: galleryReducer,
 };
 
 // add blank reducers for initial state properties without reducers

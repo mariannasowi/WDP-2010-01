@@ -1,16 +1,17 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-
-import styles from './PromotedProductBox.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import {
   faExchangeAlt,
   faShoppingBasket,
   faEye,
 } from '@fortawesome/free-solid-svg-icons';
-import { faHeart } from '@fortawesome/free-regular-svg-icons';
-import Button from '../Button/Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import ProductRating from '../../features/ProductRating/ProductRatingContainer';
+import Button from '../Button/Button';
+
+import styles from './PromotedProductBox.module.scss';
 
 const PromotedProductBox = ({
   id,

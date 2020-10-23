@@ -1,13 +1,14 @@
-import React from 'react';
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+import ProductRating from '../../features/ProductRating/ProductRatingContainer';
+import Button from '../Button/Button';
 
 import styles from './ProductBox.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
-import Button from '../Button/Button';
-import ProductRating from '../../features/ProductRating/ProductRatingContainer';
-import { faHeart } from '@fortawesome/free-regular-svg-icons';
-import { Link } from 'react-router-dom';
 
 const ProductBox = ({
   id,

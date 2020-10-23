@@ -1,17 +1,16 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import store from './redux/store';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import './styles/bootstrap.scss';
 import './styles/global.scss';
-
 import MainLayout from './components/layout/MainLayout/MainLayout';
+import BlogArticle from './components/views/BlogArticle/BlogArticle';
 import Homepage from './components/views/Homepage/Homepage';
+import NotFound from './components/views/PageNotFound/PageNotFound';
 import ProductList from './components/views/ProductList/ProductList';
 import ProductPage from './components/views/ProductPage/ProductPageContainer';
-import NotFound from './components/views/PageNotFound/PageNotFound';
-import BlogArticle from './components/views/BlogArticle/BlogArticle';
+import store from './redux/store';
 
 const App = () => (
   <Provider store={store}>

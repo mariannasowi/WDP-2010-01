@@ -1,9 +1,11 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './NewFurniture.module.scss';
+import React from 'react';
+
 import ProductBox from '../../common/ProductBox/ProductBoxContainer';
-import ProductsCompare from '../ProductsCompare/ProductsCompareContainer';
 import SwipeComponent from '../../common/SwipeComponent/SwipeComponent';
+import ProductsCompare from '../ProductsCompare/ProductsCompareContainer';
+
+import styles from './NewFurniture.module.scss';
 
 class NewFurniture extends React.Component {
   state = {

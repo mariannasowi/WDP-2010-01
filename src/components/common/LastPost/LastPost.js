@@ -1,11 +1,12 @@
-import React from 'react';
+import { faCalendar, faComment } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+import Button from '../Button/Button';
 
 import styles from './LastPost.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCalendar, faComment } from '@fortawesome/free-solid-svg-icons';
-import Button from '../Button/Button';
-import { Link } from 'react-router-dom';
 
 const LastPost = ({ id, date, comments, title, description, image }) => (
   <div className={styles.root}>

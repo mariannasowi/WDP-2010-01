@@ -1,8 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
+import Feedback from '../../common/Feedback/Feedback';
 
 import styles from './ClientFeedback.module.scss';
-import Feedback from '../../common/Feedback/Feedback';
 
 class ClientFeedback extends React.Component {
   state = {
