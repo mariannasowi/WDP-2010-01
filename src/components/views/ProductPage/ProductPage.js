@@ -23,6 +23,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import ProductImages from '../../common/ProductImages/ProductImages';
 import PageNotFound from '../../views/PageNotFound/PageNotFound';
+import ProductView from '../../features/ProductView/ProductView';
 
 const ProductPage = ({
   id,
@@ -227,80 +228,7 @@ const ProductPage = ({
                 </div>
               </div>
             </div>
-            <div className={`row ${styles.boxsecond}`}>
-              <div className='col'>
-                <nav className={styles.navigation}>
-                  <ul>
-                    <li>
-                      <a>Description</a>
-                    </li>
-                    <li>
-                      <a className={styles.second}>Reviews(0)</a>
-                    </li>
-                    <li>
-                      <a>Specification</a>
-                    </li>
-                    <li>
-                      <a>Custom tab</a>
-                    </li>
-                  </ul>
-                </nav>
-                <div className={styles.reviewBox}>
-                  <p>There are no reviews for this product.</p>
-                  <p>Add a review</p>
-                  <p>Your Rating</p>
-
-                  <div className={'d-flex'}>
-                    <span>Bad</span>
-                    <div className={`ml-4 mr-4 ${styles.stars}`}>
-                      <ProductRating
-                        id={id}
-                        stars={stars}
-                        isStarred={isStarred}
-                        className={styles.star}
-                      />
-                    </div>
-                    <span>Good</span>
-                  </div>
-                  <form className={styles.formReview}>
-                    <p>Yor review</p>
-                    <div className={styles.textareaWrapper}>
-                      <textarea className={`${styles.inputReview}`} rows='6'></textarea>
-                    </div>
-                    <div className={`${styles.spacing} row`}>
-                      <div className={'col-xs-12 col-md-5'}>
-                        <input
-                          type='text'
-                          name='name'
-                          id='name'
-                          placeholder='Name*'
-                          required
-                          className={'col-12 p-2'}
-                        />
-                      </div>
-                      <div className={'col-xs-12 col-md-5'}>
-                        <input
-                          type='text'
-                          name='mail'
-                          id='mail'
-                          placeholder='Email*'
-                          required
-                          className={'col-12 p-2'}
-                        />
-                      </div>
-                      <div className={'col-md-2'}>
-                        <button
-                          className={`${styles.buttonContinue} p-2`}
-                          type='submit'
-                        >
-                          Continue
-                        </button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
+            <ProductView />
           </div>
         </div>
       </div>
