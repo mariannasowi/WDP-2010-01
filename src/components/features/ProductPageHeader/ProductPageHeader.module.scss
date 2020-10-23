@@ -1,0 +1,26 @@
+@import "../../../styles/settings.scss";
+
+.content {
+  h5 {
+    font-size: 22px;
+    line-height: 24px;
+    letter-spacing: 1px;
+  }
+
+  .stars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+
+    a {
+      text-decoration: none;
+      color: $stars-color;
+    }
+
+    p {
+      padding-left: 10px;
+      font-size: 14px;
+      color: $product-p-color;
+    }
+  }
+}

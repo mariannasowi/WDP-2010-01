@@ -1,0 +1,22 @@
+@import "../../../styles/settings.scss";
+
+.buttons {
+  padding: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+
+  p {
+    padding: 5px 10px 0 0;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  input {
+    width: 60px;
+    border: 1px solid $product-border-color;
+    padding-left: 25px;
+    margin: 0 10px;
+    height: 35px;
+  }
+}
