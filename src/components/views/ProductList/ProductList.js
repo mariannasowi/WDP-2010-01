@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import PageNotFound from '../../views/PageNotFound/PageNotFound';
 import ProductListImages from '../../features/ProductListImages/ProductListImagesContainer';
 
