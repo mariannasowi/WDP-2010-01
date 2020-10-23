@@ -5,24 +5,22 @@
   background-color: $menuBar-root-bgc;
 
   :global(.container) > :global(.row) {
-    height: auto;
+    height: 84px;
   }
 
   .menu {
+    display: flex;
     align-self: stretch;
-    margin: 10px 0px;
 
     ul {
       margin: 0;
       padding: 0;
       display: flex;
-      justify-content: space-between;
 
       li {
         list-style: none;
         display: flex;
         align-items: stretch;
-        width: auto;
       }
     }
 
@@ -38,7 +36,6 @@
       border-top: 4px solid $menuBar-a-border;
       font-weight: 500;
       letter-spacing: 1px;
-      justify-content: center;
 
       &:hover,
       &.active {
@@ -82,6 +79,24 @@
   cursor: pointer;
 }
 
+@media (max-width: 999px) and (min-width: 521px) {
+  .root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    padding-bottom: 28px;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    padding-top: 14px;
+  }
+}
+
 @media (max-width: 520px) {
   .root {
     .product_search {
@@ -110,6 +125,8 @@
       height: 0;
       overflow-y: auto;
       top: 10px;
+      background: $menuBar-root-bgc;
+      z-index: 9999;
 
       ul {
         flex-wrap: wrap;
@@ -117,7 +134,7 @@
 
         li {
           flex: 100%;
-          width: 100vw;
+          width: 100%;
           justify-content: center;
           border-bottom: 1px solid $form-border-color;
         }
