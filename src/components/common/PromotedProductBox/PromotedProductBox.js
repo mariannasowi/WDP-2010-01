@@ -26,7 +26,7 @@ const PromotedProductBox = ({
   compare,
   heart,
   isStarred,
-  promotedProductEndTime
+  promotedProductEndTime,
 }) => {
   const isProductAddedToCompare =
     compare &&

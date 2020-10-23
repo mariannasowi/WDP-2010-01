@@ -1,0 +1,22 @@
+@import "../../../styles/settings.scss";
+
+.prices {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  font-size: 20px;
+  padding: 5px 0;
+}
+
+.oldPrice {
+  text-decoration: line-through;
+  color: $product-oldPrice-color;
+  padding-right: 20px;
+  padding-top: 5px;
+}
+
+.price {
+  padding: 5px;
+  color: $product-icon-color;
+  background-color: $product-border-color;
+}
