@@ -8,6 +8,7 @@ const CountComments = props => {
   return (
     <div>
       <FontAwesomeIcon icon={faComment}></FontAwesomeIcon> {comments.length}
+      <span> comments</span>
     </div>
   );
 };
