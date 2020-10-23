@@ -1,29 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faComment } from '@fortawesome/free-solid-svg-icons';
 
-class CountComments extends React.Component {
-  render() {
-    const { posts } = this.props;
-    let numberOfComments = [];
-    posts.forEach(element => {
-      numberOfComments.push(element.comments.length);
-    });
-
-    return <p>{numberOfComments}</p>;
-  }
-}
+const CountComments = props => {
+  const comments = props.comments;
+  return (
+    <div>
+      <FontAwesomeIcon icon={faComment}></FontAwesomeIcon> {comments.length}
+    </div>
+  );
+};
 
 CountComments.propTypes = {
-  posts: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      date: PropTypes.string,
-      comments: PropTypes.array,
-      title: PropTypes.string,
-      description: PropTypes.string,
-      image: PropTypes.string,
-    })
-  ),
+  comments: PropTypes.array,
 };
 
 export default CountComments;

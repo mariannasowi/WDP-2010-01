@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 import styles from './LastPost.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCalendar, faComment } from '@fortawesome/free-solid-svg-icons';
+import { faCalendar } from '@fortawesome/free-solid-svg-icons';
 import Button from '../Button/Button';
-import CountComments from '../../features/CountComments/CountCommentsContainer';
+import CountComments from '../../features/CountComments/CountComments';
 
 const LastPost = ({ id, date, comments, title, description, image }) => (
   <div className={styles.root}>
@@ -20,10 +20,7 @@ const LastPost = ({ id, date, comments, title, description, image }) => (
           </p>
         </div>
         <div className='col-6'>
-          <p>
-            <FontAwesomeIcon icon={faComment}></FontAwesomeIcon>
-            <CountComments />
-          </p>
+          <CountComments comments={comments} />
         </div>
       </div>
       <h4>
