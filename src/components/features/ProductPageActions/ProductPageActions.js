@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './ProductPage.module.scss';
+import styles from './ProductPageActions.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faEnvelope,
@@ -70,7 +70,7 @@ const ProductPageActions = ({
       </div>
       <div className={styles.buttons}>
         <p>Quantity:</p>
-        <input type='number' value='1' step='1'></input>
+        <input type='number' placeholder='1' step='1'></input>
         <Button variant='quantity'>
           <FontAwesomeIcon icon={faMinus}>Minus</FontAwesomeIcon>
         </Button>
@@ -83,7 +83,7 @@ const ProductPageActions = ({
 };
 
 ProductPageActions.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.string,
   heart: PropTypes.bool,
   image: PropTypes.string,
   setCompare: PropTypes.func.isRequired,

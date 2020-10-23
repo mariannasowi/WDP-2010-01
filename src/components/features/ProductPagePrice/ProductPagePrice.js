@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './ProductPage.module.scss';
+import styles from './ProductPagePrice.module.scss';
 import Button from '../../common/Button/Button';
 
 const ProductPagePrice = ({ price, oldPrice }) => (

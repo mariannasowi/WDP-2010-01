@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './ProductPage.module.scss';
-import ProductRating from '../../features/ProductRating/ProductRatingContainer';
+import styles from './ProductPageHeader.module.scss';
+import ProductRating from '../ProductRating/ProductRatingContainer';
 
 const ProductPageHeader = ({ name, id, stars, isStarred }) => (
-  <div>
+  <div className={styles.content}>
     <h5>{name}</h5>
     <div className={styles.stars}>
       <ProductRating
