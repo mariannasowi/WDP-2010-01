@@ -24,7 +24,6 @@ const ControlBar = () => {
           <option value='48'>48</option>
         </select>
       </div>
-
       <div className={styles.icons}>
         <FontAwesomeIcon className={styles.iconLarge} icon={faThLarge} />
         <FontAwesomeIcon className={styles.iconList} icon={faThList} />
