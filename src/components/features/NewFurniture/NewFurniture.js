@@ -4,8 +4,6 @@ import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBoxContainer';
 import ProductsCompare from '../ProductsCompare/ProductsCompareContainer';
 import SwipeComponent from '../../common/SwipeComponent/SwipeComponent';
-import ControlBar from '../../common/ControlBar/ControlBar';
-
 class NewFurniture extends React.Component {
   state = {
     activePage: 0,
