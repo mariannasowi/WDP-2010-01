@@ -19,9 +19,39 @@ const Gallery = props => {
 
   const defaultTab = categories.find(category => category.name === 'Top seller').id;
 
-  const [activeCategory] = useState(defaultTab);
+  const [activeCategory, setActiveCategory] = useState(defaultTab);
+
+  const [pictureNumber, setPictureNumber] = useState(0);
+
+  const [slideNumber, setSlideNumber] = useState(0);
 
   const categoryProducts = props[activeCategory];
+
+  const handleCategoryChange = item => {
+    setActiveCategory(item);
+  };
+
+  const handleProductChange = productId => {
+    let productNo = 0;
+    categoryProducts.forEach(function(element, index) {
+      if (element.id === productId) {
+        productNo = index;
+      }
+    });
+    setPictureNumber(productNo);
+  };
+
+  const handleSlideChangeRight = event => {
+    event.preventDefault();
+    let newSlideNumber = slideNumber + 6;
+    setSlideNumber(newSlideNumber);
+  };
+
+  const handleSlideChangeLeft = event => {
+    event.preventDefault();
+    let newSlideNumber = slideNumber - 6;
+    setSlideNumber(newSlideNumber);
+  };
 
   return (
     <div className={styles.root}>
@@ -35,7 +65,10 @@ const Gallery = props => {
               <ul>
                 {categories.map(item => (
                   <li key={item.id}>
-                    <button className={item.id === activeCategory ? styles.active : ''}>
+                    <button
+                      className={item.id === activeCategory ? styles.active : ''}
+                      onClick={() => handleCategoryChange(item.id)}
+                    >
                       {item.name}
                     </button>
                   </li>
@@ -43,10 +76,12 @@ const Gallery = props => {
               </ul>
             </div>
 
-            {categoryProducts.slice(0, 1).map(product => (
+            {categoryProducts.slice(pictureNumber, pictureNumber + 1).map(product => (
               <div key={product.id} className={styles.product}>
                 <div className={styles.photo}>
-                  <img alt={product.name} src={product.image} />
+                  <div className={styles.fadeIn}>
+                    <img alt={product.name} src={product.image} />
+                  </div>
                 </div>
                 <div className={styles.buttons}>
                   <div className={styles.buttonWrapper}>
@@ -91,15 +126,27 @@ const Gallery = props => {
               </div>
             ))}
             <div className={styles.miniatures}>
-              <Button className={styles.button} variant='small'>
+              <Button
+                className={styles.button}
+                variant='small'
+                onClick={handleSlideChangeLeft}
+              >
                 <FontAwesomeIcon icon={faAngleLeft}></FontAwesomeIcon>
               </Button>
-              {categoryProducts.slice(0, 6).map(product => (
-                <div key={product.id} className={styles.imgWrapper}>
+              {categoryProducts.slice(slideNumber, slideNumber + 6).map(product => (
+                <div
+                  key={product.id}
+                  className={styles.imgWrapper}
+                  onClick={() => handleProductChange(product.id)}
+                >
                   <img alt={product.name} src={product.image} />
                 </div>
               ))}
-              <Button className={styles.button} variant='small'>
+              <Button
+                className={styles.button}
+                variant='small'
+                onClick={handleSlideChangeRight}
+              >
                 <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
               </Button>
             </div>

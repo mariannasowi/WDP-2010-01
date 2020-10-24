@@ -92,6 +92,9 @@
     border-top: none;
     background-color: $gallery-background-color;
     position: relative;
+    opacity: 1;
+    transition: all 1s ease-in-out;
+    visibility: visible;
 
     .photo {
       background-position: center;
@@ -259,7 +262,7 @@
         background-color: rgba($gallery-buttons-hints-color, 0.6);
       }
 
-      &:first-of-type:after {
+      &:active:after {
         opacity: 0;
       }
     }
@@ -308,4 +311,16 @@
       margin-top: 20px;
     }
   }
+}
+
+.fadeIn {
+  opacity: 1;
+  transition: all 1s ease-in-out;
+  visibility: visible;
+}
+
+.fadeOut {
+  opacity: 0;
+  transition: all 1s ease-in-out;
+  visibility: hidden;
 }

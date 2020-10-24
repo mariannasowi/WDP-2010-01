@@ -6,7 +6,8 @@ import { addToFavourite, getProductById } from '../../../redux/productsRedux';
 const mapStateToProps = (state, props) => {
   const product = getProductById(state, props.match.params.productId);
   return {
-    ...product,
+    product,
+    category: product.category,
     count: getCount(state),
     compare: state.compare,
   };
