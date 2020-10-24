@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './FilterByCategory.module.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 const FilterByCategory = ({ numberOfProductsByCategory, activeCategory }) => {
   return (
@@ -13,13 +15,17 @@ const FilterByCategory = ({ numberOfProductsByCategory, activeCategory }) => {
           <div key={index}>
             {activeCategory === id ? (
               <p className={styles.textWrapper}>
-                <span className={styles.activeText}>&gt;&nbsp;&nbsp;&nbsp;{name}</span>
+                <span className={styles.activeText}>
+                  <FontAwesomeIcon className={styles.icon} icon={faChevronRight} />
+                  {name}
+                </span>
                 <span className={styles.categoriesCircleActive}>{quantity}</span>
               </p>
             ) : (
               <p className={styles.textWrapper}>
                 <span className={styles.ordinaryText}>
-                  &gt;&nbsp;&nbsp;&nbsp;{name}
+                  <FontAwesomeIcon className={styles.icon} icon={faChevronRight} />
+                  {name}
                 </span>
                 <span className={styles.categoriesCircle}>{quantity}</span>
               </p>
