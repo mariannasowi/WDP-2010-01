@@ -23,7 +23,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import ProductImages from '../../common/ProductImages/ProductImages';
 import PageNotFound from '../../views/PageNotFound/PageNotFound';
-import ProductView from '../../features/ProductView/ProductView';
+import ProductDetails from '../../features/ProductDetails/ProductDetails';
 
 const ProductPage = ({
   id,
@@ -72,7 +72,7 @@ const ProductPage = ({
     return (
       <div className={styles.root}>
         <div className={styles.menu}>
-          <div className='container'>
+          <div className={`container ${styles.box}`}>
             <div>
               <div className='navbar'>
                 <h2>FURNITURE</h2>
@@ -228,9 +228,9 @@ const ProductPage = ({
                 </div>
               </div>
             </div>
-            <ProductView />
           </div>
         </div>
+        <ProductDetails id={id} stars={stars} isStarred={isStarred} />
       </div>
     );
 };
