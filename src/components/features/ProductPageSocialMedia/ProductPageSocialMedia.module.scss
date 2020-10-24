@@ -1,0 +1,86 @@
+@import "../../../styles/settings.scss";
+
+.buttons {
+  padding: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+
+  p {
+    padding: 5px 10px 0 0;
+    font-weight: 500;
+    font-size: 16px;
+  }
+}
+
+.actions .buttons {
+  .facebook {
+    color: $facebook-color;
+    padding-right: 2px;
+  }
+
+  .buttonFacebook:hover {
+    background-color: $facebook-color;
+    border-color: $facebook-color;
+
+    .facebook {
+      color: $product-icon-color;
+    }
+  }
+
+  .google {
+    color: $google-color;
+    padding-right: 5px;
+  }
+
+  .buttonGoogle:hover {
+    background-color: $google-color;
+    border-color: $google-color;
+
+    .google {
+      color: $product-icon-color;
+    }
+  }
+
+  .twitter {
+    color: $twitter-color;
+    padding-right: 5px;
+  }
+
+  .buttonTwitter:hover {
+    background-color: $twitter-color;
+    border-color: $twitter-color;
+
+    .twitter {
+      color: $product-icon-color;
+    }
+  }
+
+  .pinterest {
+    color: $pinterest-color;
+    padding-right: 5px;
+  }
+
+  .buttonPinterest:hover {
+    background-color: $pinterest-color;
+    border-color: $pinterest-color;
+
+    .printerest {
+      color: $product-icon-color;
+    }
+  }
+
+  .linkedin {
+    color: $linkedin-color;
+    padding-right: 5px;
+  }
+
+  .buttonLinkedin:hover {
+    background-color: $linkedin-color;
+    border-color: $linkedin-color;
+
+    .linkedin {
+      color: $product-icon-color;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import "../../../styles/settings.scss";
+
+.photo {
+  position: relative;
+  padding: 0 10px 0 10px;
+  width: 100%;
+  height: 400px;
+  background-color: $product-photo-bgc;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.content {
+  h5 {
+    font-size: 22px;
+    line-height: 24px;
+    letter-spacing: 1px;
+  }
+}
+
+.line {
+  margin: 5px;
+  border-bottom: 1px solid $product-photo-bgc;
+  position: relative;
+}
+
+.product {
+  position: relative;
+  top: -350px;
+  background-color: $product-bg-color;
+  padding: $base-padding 0;
+}

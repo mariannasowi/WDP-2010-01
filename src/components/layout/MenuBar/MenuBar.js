@@ -4,15 +4,17 @@ import ProductSearch from '../../features/ProductSearch/ProductSearch';
 import styles from './MenuBar.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const MenuBar = ({ children }) => (
   <div className={styles.root}>
     <div className='container'>
       <div className='row align-items-center'>
-      <div className='col'>
-          <ProductSearch />
+        <div className='col'>
+          <div className='productSearchWrapper'>
+            <ProductSearch />
+          </div>
         </div>
-
         <input type='checkbox' id='hamburger' className={styles.hamburger}></input>
         <label htmlFor='hamburger' className={styles.hamburger_label}>
           <FontAwesomeIcon className={styles.icon} icon={faBars} />
@@ -26,19 +28,29 @@ const MenuBar = ({ children }) => (
               </a>
             </li>
             <li>
-              <a href='/#'>Furniture</a>
+              <Link exact to={'/shop/furniture'}>
+                Furniture
+              </Link>
             </li>
             <li>
-              <a href='/#'>Chair</a>
+              <Link exact to={'/shop/chair'}>
+                Chair
+              </Link>
             </li>
             <li>
-              <a href='/#'>Table</a>
+              <Link exact to={'/shop/table'}>
+                Table
+              </Link>
             </li>
             <li>
-              <a href='/#'>Sofa</a>
+              <Link exact to={'/shop/sofa'}>
+                Sofa
+              </Link>
             </li>
             <li>
-              <a href='/#'>Bedroom</a>
+              <Link exact to={'/shop/bedroom'}>
+                Bedroom
+              </Link>
             </li>
             <li>
               <a href='/#'>Blog</a>
