@@ -52,10 +52,10 @@ class NewFurniture extends React.Component {
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
       dots.push(
-        <li>
+        <li key={i}>
           <div
             onClick={() => this.handlePageChange(i)}
-            className={i === activePage && styles.active}
+            className={i === activePage ? styles.active : ''}
           >
             page {i}
           </div>
@@ -66,7 +66,7 @@ class NewFurniture extends React.Component {
     const swipeContent = [];
     for (let page = 0; page < pagesCount; page++) {
       swipeContent.push(
-        <div className='row'>
+        <div key={page} className='row'>
           {categoryProducts
             .slice(activePage * itemsPerPage, (activePage + 1) * itemsPerPage)
             .map(item => (
@@ -90,7 +90,7 @@ class NewFurniture extends React.Component {
                   {categories.map(item => (
                     <li key={item.id}>
                       <div
-                        className={item.id === activeCategory && styles.active}
+                        className={item.id === activeCategory ? styles.active : ''}
                         onClick={() => this.handleCategoryChange(item.id)}
                       >
                         {item.name}

@@ -15,7 +15,7 @@ const mapStateToProps = state => ({
   saleOff: getSalesOff(state),
   topRated: getTopRated(state),
   galleryTabs: getGalleryTabs(state),
-  galleryPromotedProduct: getGalleryPromotedProduct(state)
+  galleryPromotedProduct: getGalleryPromotedProduct(state),
 });
 
 export default connect(mapStateToProps)(Gallery);

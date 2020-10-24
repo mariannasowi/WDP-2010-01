@@ -6,7 +6,7 @@ import { faListUl, faSearch, faCaretDown } from '@fortawesome/free-solid-svg-ico
 
 import styles from './ProductSearch.module.scss';
 
-const ProductSearch = () => (
+const ProductSearch = id => (
   <form action='' className={styles.root}>
     <div className={styles.category}>
       <FontAwesomeIcon className={styles.icon} icon={faListUl} />
@@ -15,37 +15,37 @@ const ProductSearch = () => (
           <span value=''>Select a category</span>
           <ul className={styles.listCategoryItems}>
             <li>
-              <a href='#' value=''>
+              <a href='/#' value=''>
                 HOME
               </a>
             </li>
             <li>
-              <a href='#' value=''>
+              <a href='/#' value=''>
                 FURNITURE
               </a>
             </li>
             <li>
-              <a href='#' value=''>
+              <a href='/#' value=''>
                 CHAIR
               </a>
             </li>
             <li>
-              <a href='#' value=''>
+              <a href='/#' value=''>
                 TABLE
               </a>
             </li>
             <li>
-              <a href='#' value=''>
+              <a href='/#' value=''>
                 SOFA
               </a>
             </li>
             <li>
-              <a href='#' value=''>
+              <a href='/#' value=''>
                 BEDROOM
               </a>
             </li>
             <li>
-              <a href='#' value=''>
+              <a href='/#' value=''>
                 BLOG
               </a>
             </li>

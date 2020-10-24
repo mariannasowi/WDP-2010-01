@@ -45,7 +45,7 @@
         text-align: center;
 
         &:last-of-type {
-          a {
+          button {
             font-size: 16px;
             border-right: 1px solid $gallery-frame-light-color;
           }
@@ -54,7 +54,7 @@
     }
   }
 
-  .menu a {
+  .menu button {
     line-height: 2.5rem;
     display: block;
     position: relative;
@@ -64,12 +64,12 @@
     cursor: pointer;
     text-transform: uppercase;
     text-decoration: none;
+    outline: none;
     @extend %hover-effect;
 
     &.active,
     &:hover {
       color: $gallery-theme-color;
-
 
       &::before {
         content: "";
@@ -92,6 +92,9 @@
     border-top: none;
     background-color: $gallery-background-color;
     position: relative;
+    opacity: 1;
+    transition: all 1s ease-in-out;
+    visibility: visible;
 
     .photo {
       background-position: center;
@@ -123,7 +126,7 @@
         padding: 5px;
         position: relative;
         opacity: 0;
-        left:6px;
+        left: 6px;
 
         &::before {
           content: "";
@@ -144,10 +147,10 @@
         text-align: center;
         cursor: pointer;
         @extend %hover-effect;
-        
+
         &:hover {
           color: $gallery-theme-color;
-          background: rgba(0,0,0,0);
+          background: rgba(0, 0, 0, 0);
           border-color: $gallery-buttons-hints-color;
 
           + span {
@@ -259,7 +262,7 @@
         background-color: rgba($gallery-buttons-hints-color, 0.6);
       }
 
-      &:first-of-type:after {
+      &:active:after {
         opacity: 0;
       }
     }
@@ -308,4 +311,16 @@
       margin-top: 20px;
     }
   }
+}
+
+.fadeIn {
+  opacity: 1;
+  transition: all 1s ease-in-out;
+  visibility: visible;
+}
+
+.fadeOut {
+  opacity: 0;
+  transition: all 1s ease-in-out;
+  visibility: hidden;
 }
