@@ -6,7 +6,7 @@ import {
   faAngleRight,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-//import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
 import Button from '../../common/Button/Button';
@@ -14,17 +14,14 @@ import ProductRating from '../ProductRating/ProductRating';
 
 import styles from './Gallery.module.scss';
 
-const Gallery = (props) => {
-
-  const {galleryTabs: categories, galleryPromotedProduct} = props;
+const Gallery = props => {
+  const { galleryTabs: categories, galleryPromotedProduct } = props;
 
   const defaultTab = categories.find(category => category.name === 'Top seller').id;
-  
+
   const [activeCategory] = useState(defaultTab);
 
   const categoryProducts = props[activeCategory];
-
-  
 
   return (
     <div className={styles.root}>
@@ -38,9 +35,9 @@ const Gallery = (props) => {
               <ul>
                 {categories.map(item => (
                   <li key={item.id}>
-                    <a className={item.id === activeCategory && styles.active}>
+                    <button className={item.id === activeCategory ? styles.active : ''}>
                       {item.name}
-                    </a>
+                    </button>
                   </li>
                 ))}
               </ul>
@@ -85,7 +82,7 @@ const Gallery = (props) => {
                 </div>
                 <div className={styles.stars}>
                   <h6>{product.name}</h6>
-                  <ProductRating 
+                  <ProductRating
                     id={product.id}
                     stars={product.stars}
                     isStarred={true}
@@ -109,10 +106,7 @@ const Gallery = (props) => {
           </div>
           <div className={'col-6 ' + styles.rightPanel}>
             <div className={styles.photo}>
-              <img
-                src={galleryPromotedProduct.src}
-                alt={galleryPromotedProduct.alt}
-              />
+              <img src={galleryPromotedProduct.src} alt={galleryPromotedProduct.alt} />
             </div>
             <div className={styles.content}>
               <div className={styles.contentPrice}>
@@ -128,6 +122,11 @@ const Gallery = (props) => {
       </div>
     </div>
   );
+};
+
+Gallery.propTypes = {
+  galleryPromotedProduct: PropTypes.object,
+  galleryTabs: PropTypes.array,
 };
 
 export default Gallery;

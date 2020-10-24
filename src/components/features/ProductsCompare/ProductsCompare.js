@@ -48,7 +48,6 @@ const ProductsCompare = ({ compare, unsetCompare }) => {
 ProductsCompare.propTypes = {
   compare: PropTypes.object.isRequired,
   unsetCompare: PropTypes.func.isRequired,
-  products: PropTypes.array.isRequired,
 };
 
 export default ProductsCompare;

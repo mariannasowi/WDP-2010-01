@@ -1,8 +1,9 @@
 import { faMobileAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 // import PropTypes from 'prop-types';
+
 import styles from './CompanyClaim.module.scss';
 
 const phoneIcon = <FontAwesomeIcon className={styles.icon} icon={faMobileAlt} />;
@@ -19,9 +20,9 @@ const CompanyClaim = () => (
           </p>
         </div>
         <div className='col text-center'>
-          <a href='/#'>
+          <Link to={'/'}>
             <img src='/images/logo.png' alt='Bazar' />
-          </a>
+          </Link>
         </div>
         <div className={`col text-right ${styles.cart}`}>
           <a href='/#' className={styles.cartBox}>

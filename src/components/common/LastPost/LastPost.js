@@ -2,7 +2,7 @@ import { faCalendar, faComment } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 import Button from '../Button/Button';
 
@@ -27,13 +27,14 @@ const LastPost = ({ id, date, comments, title, description, image }) => (
         </div>
       </div>
       <h4>
-        <a href='#'>{title}</a>
+        <a href='/#'>{title}</a>
       </h4>
       <p className={styles.description}>{description}</p>
       <div className={styles.button}>
-        <Link to={`/blog/${id}`}>
-          <Button variant='medium'>Read more</Button>
-        </Link>
+        <Button href={`/blog/${id}`} variant='medium'>
+          Read more
+        </Button>
+        Read more
       </div>
     </div>
   </div>
