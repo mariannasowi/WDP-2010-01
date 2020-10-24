@@ -57,7 +57,7 @@ const Gallery = props => {
     <div className={styles.root}>
       <div className='container'>
         <div className='row'>
-          <div className={'col-6 ' + styles.leftPanel}>
+          <div className={'col-6' + styles.leftPanel}>
             <div className={styles.heading}>
               <h3>Furniture gallery</h3>
             </div>
