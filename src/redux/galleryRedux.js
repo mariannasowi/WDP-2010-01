@@ -2,7 +2,8 @@
 
 export const getGalleryTabs = ({ galleryTabs }) => galleryTabs;
 
-export const getGalleryPromotedProduct = ({galleryPromotedProduct}) => galleryPromotedProduct;
+export const getGalleryPromotedProduct = ({ galleryPromotedProduct }) =>
+  galleryPromotedProduct;
 
 export const getSalesOff = ({ products }) =>
   products.filter(product => product.oldPrice !== undefined);

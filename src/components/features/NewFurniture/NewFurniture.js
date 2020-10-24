@@ -4,7 +4,6 @@ import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBoxContainer';
 import ProductsCompare from '../ProductsCompare/ProductsCompareContainer';
 import SwipeComponent from '../../common/SwipeComponent/SwipeComponent';
-import FilterByCategoryContainer from '../../common/FilterByCategory/FilterByCategoryContainer';
 
 class NewFurniture extends React.Component {
   state = {
@@ -77,7 +76,6 @@ class NewFurniture extends React.Component {
         </div>
       );
     }
-
     return (
       <div className={styles.root}>
         <div className='container'>
