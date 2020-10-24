@@ -3,7 +3,7 @@ import styles from './ControlBar.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faThLarge, faThList } from '@fortawesome/free-solid-svg-icons';
 
-const ControlBar = props => {
+const ControlBar = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.sort}>
