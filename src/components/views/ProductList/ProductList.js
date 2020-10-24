@@ -3,6 +3,7 @@ import PageNotFound from '../../views/PageNotFound/PageNotFound';
 import ProductListImages from '../../features/ProductListImages/ProductListImagesContainer';
 import ControlBar from '../../common/ControlBar/ControlBar';
 import styles from './ProductList.module.scss';
+import FilterByCategory from '../../common/FilterByCategory/FilterByCategoryContainer';
 
 const ProductList = ({ error }) => {
   if (error) return <PageNotFound />;
@@ -19,7 +20,9 @@ const ProductList = ({ error }) => {
           <div className='col-9'>
             <ProductListImages />
           </div>
-          <div className='col-3'></div>
+          <div className='col-3'>
+            <FilterByCategory />
+          </div>
         </div>
       </div>
     );

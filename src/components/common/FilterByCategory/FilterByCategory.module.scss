@@ -15,8 +15,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 20%;
-  left: 80%;
 }
 
 .textWrapper {
@@ -54,8 +52,11 @@
   margin-left: 1rem;
 }
 
-.title {
+.title span {
   font-weight: bold;
   position: relative;
-  top: 15px;
+}
+
+.title {
+  margin-bottom: 0px;
 }

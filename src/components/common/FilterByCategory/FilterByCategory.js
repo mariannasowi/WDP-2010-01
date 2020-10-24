@@ -5,8 +5,8 @@ import styles from './FilterByCategory.module.scss';
 const FilterByCategory = ({ numberOfProductsByCategory, activeCategory }) => {
   return (
     <div className={styles.wrapper}>
-      <p>
-        <span className={styles.title}>FILTER BY CATEGORIES</span>
+      <p className={styles.title}>
+        <span>FILTER BY CATEGORIES</span>
       </p>
       <div className={styles.borderLine}>
         {numberOfProductsByCategory.map(({ name, quantity, id }, index) => (
