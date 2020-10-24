@@ -96,3 +96,56 @@
     }
   }
 }
+
+@media (max-width: 999px) and (min-width: 521px) {
+  .productSearchWrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .root {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    position: relative;
+    left: 22%;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  .category {
+    select {
+      width: 100%;
+    }
+  }
+
+  .list {
+    line-height: 0.8;
+    left: -10px;
+  }
+}
+
+@media (max-width: 520px) {
+  .root {
+    margin: 10px 10px -10px 10px;
+  }
+
+  .searchField {
+    input {
+      width: 80%;
+    }
+  }
+
+  .category {
+    select {
+      width: 80%;
+    }
+  }
+
+  .list {
+    line-height: 0.8;
+    left: -10px;
+  }
+}
